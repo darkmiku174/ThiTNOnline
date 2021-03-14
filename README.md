@@ -2,9 +2,9 @@
 
 ## Danh sách thành viên
 
-- Nguyễn Quốc Bằngmd
+- Nguyễn Quốc Bằng
 
-- Nguyễn Hùng Vi
+- Nguyễn Hùng Vĩ
 
 - Đỗ Đức Minh
 
