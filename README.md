@@ -12,4 +12,4 @@
 
 ### Link resources
 
-- ![Figma link](https://www.figma.com/file/40hanmRhwgwFsyUjt4A4pO/Trac-Nghiem-Online)
+- [Figma link](https://www.figma.com/file/40hanmRhwgwFsyUjt4A4pO/Trac-Nghiem-Online)
