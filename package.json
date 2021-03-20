@@ -1,0 +1,28 @@
+{
+  "name": "thitnonline",
+  "version": "1.0.0",
+  "description": "## Danh sách thành viên",
+  "main": "index.js",
+  "scripts": {
+    "start": "node backend/server",
+    "server": "nodemon backend/server",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server \" \"npm run client\"",
+    "data:import": "node backend/seeder",
+    "data:destroy": "node backend/seeder -d"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darkmiku174/ThiTNOnline.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/darkmiku174/ThiTNOnline/issues"
+  },
+  "homepage": "https://github.com/darkmiku174/ThiTNOnline#readme",
+  "devDependencies": {
+    "concurrently": "^6.0.0",
+    "nodemon": "^2.0.7"
+  }
+}
