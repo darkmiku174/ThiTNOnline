@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$header1: 1.5rem;
+$header2: 2rem;
+$header3: 0.875rem;
+$medium-text: 0.875rem;
+$text: 0.75rem;
+
+html {
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: $header1;
+}
+
+h2 {
+  font-size: $header2;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: $header3;
+  font-weight: 600;
+  font-family: "Nunito Sans", sans-serif;
+  margin: 0.7rem 0;
+}
+
+p {
+  font-size: $medium-text;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.break {
+  background-color: #bcbcbc;
+  padding: 0.5px;
+  margin-bottom: 1rem;
+}
+
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@mixin grid($repeat, $min, $max) {
+  display: grid;
+  grid-template-columns: repeat($repeat, minmax($min, $max));
+}
+
+@import "baiThi";

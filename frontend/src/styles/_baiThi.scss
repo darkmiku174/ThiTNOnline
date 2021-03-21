@@ -1,0 +1,25 @@
+.main-content {
+  width: 90%;
+  margin: auto;
+}
+.stHome {
+  height: 90vh;
+  @include flex(space-between, center, row);
+}
+
+.left-column {
+  background-color: white;
+  border: 1px solid #bcbcbc;
+  border-radius: 0.5rem;
+}
+
+.right-column {
+  background-color: white;
+  border: 1px solid #bcbcbc;
+  border-radius: 0.5rem;
+}
+
+.infor {
+  margin-top: 2rem;
+  @include flex(space-between, initial, row);
+}
