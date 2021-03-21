@@ -1,25 +1,47 @@
-.main-content {
-  width: 90%;
-  margin: auto;
-}
+/* Student HomeScreen*/
 .stHome {
-  height: 90vh;
-  @include flex(space-between, center, row);
+  @include flex(space-between, flex-end, row);
+  flex-wrap: wrap-reverse;
+}
+
+/* Exam list */
+.row {
+  background: white;
+  border: 1px solid #bcbcbc;
+  border-radius: 0.7rem;
+  margin: 0.7rem;
 }
 
 .left-column {
-  background-color: white;
-  border: 1px solid #bcbcbc;
-  border-radius: 0.5rem;
+  flex: 2 1 40rem;
+  margin: 0.7rem 1.7rem;
 }
 
-.right-column {
-  background-color: white;
-  border: 1px solid #bcbcbc;
-  border-radius: 0.5rem;
+.card-exam {
+  width: 95%;
+  margin: 1.2rem auto;
 }
 
 .infor {
   margin-top: 2rem;
   @include flex(space-between, initial, row);
+}
+
+/* Student infor */
+.right-column {
+  flex: 1 1 17rem;
+  margin: 0.7rem 1.7rem;
+}
+
+.student-exam-infor {
+  width: 90%;
+  margin: 1.2rem auto;
+}
+
+@media (min-width: 600px) {
+  .infor {
+    p {
+      padding: 0 1rem !important;
+    }
+  }
 }

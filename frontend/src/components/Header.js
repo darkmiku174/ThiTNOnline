@@ -13,7 +13,11 @@ import { LinkContainer } from "react-router-bootstrap";
 const Header = () => {
   return (
     <header>
-      <Navbar bg="primary" expand="lg">
+      <Navbar
+        bg="primary"
+        expand="lg"
+        style={{ width: "90%", margin: "auto", boxShadow: "none" }}
+      >
         <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
