@@ -45,7 +45,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: white;
+  // color: white;
 }
 
 body {
@@ -76,6 +76,42 @@ body {
 @mixin grid($repeat, $min, $max) {
   display: grid;
   grid-template-columns: repeat($repeat, minmax($min, $max));
+}
+
+.normal-container {
+  @include flex(center, center, row);
+  .child-col {
+    .row {
+      background-color: white;
+      padding: 1.2rem;
+      border: 1px solid #bcbcbc;
+      border-radius: 0.625rem;
+    }
+  }
+}
+
+.parent-row {
+  width: 100%;
+  flex-wrap: wrap-reverse !important;
+}
+
+.left {
+  flex: 2 1 40rem;
+  margin: 1.2rem 0.6rem 1.2rem 0rem;
+}
+
+.right {
+  flex: 1 1 17rem;
+  margin: 1.2rem 0rem 1.2rem 0.6rem;
+}
+
+@media (max-width: 1034px) {
+  .left {
+    margin-right: 0;
+  }
+  .right {
+    margin-left: 0;
+  }
 }
 
 @import "head";

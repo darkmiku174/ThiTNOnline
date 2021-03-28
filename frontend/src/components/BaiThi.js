@@ -4,7 +4,7 @@ import { Card, ProgressBar } from "react-bootstrap";
 
 const BaiThi = ({ baithi }) => {
   return (
-    <Card className="card-exam">
+    <Card className="card-exam" style={{ margin: "1.2rem 0" }}>
       <Card.Body>
         <Link to={`/exams/details/${baithi.id}`}>
           <Card.Title>{baithi.name}</Card.Title>

@@ -1,24 +1,12 @@
 .question {
-  width: 90%;
-  margin: auto;
-  padding: 1.7rem 0;
+  padding: 1.2rem 0;
 }
-
-.student-infor {
-  width: 90%;
-  margin: 1.2rem auto;
-}
-
 .options {
-  width: 90%;
-  margin: 2rem auto;
+  width: 100%;
   @include flex(space-between, center, row);
+  padding: 1.2rem 0;
 }
 
 .question-list {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  button {
-    margin: 0.7rem auto;
-  }
+  @include flex(space-between, center, row);
 }

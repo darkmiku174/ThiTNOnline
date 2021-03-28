@@ -5,7 +5,7 @@ const Answer = ({ answer }) => {
   const an = `${answer.name}: ${answer.answer}`;
   console.log(an);
   return (
-    <div className="answer" style={{ margin: "1.2rem auto", width: "90%" }}>
+    <div className="answer" style={{ margin: "1.2rem 0", width: "100%" }}>
       <InputGroup>
         <InputGroup.Prepend
           style={{
