@@ -1,3 +1,11 @@
-.profile-container {
-  @include flex(space-between, center, row);
+// .profile-container {
+//   @include flex(space-between, center, row);
+// }
+.right {
+  .infor {
+    p {
+      color: white;
+      line-height: 2.2rem;
+    }
+  }
 }

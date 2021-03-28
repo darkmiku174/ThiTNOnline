@@ -4,7 +4,7 @@ import dsBaiThi from "../examSample.js";
 import dsHocSinh from "../studentSample.js";
 import { Container, Row, Col, Card } from "react-bootstrap";
 
-const HomeScreen = () => {
+const ExamListScreen = () => {
   const hocsinh = dsHocSinh.find((hocsinh) => hocsinh.id === "1");
   return (
     <Container className="normal-container" fluid>
@@ -48,4 +48,4 @@ const HomeScreen = () => {
   );
 };
 
-export default HomeScreen;
+export default ExamListScreen;

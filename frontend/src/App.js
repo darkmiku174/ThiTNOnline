@@ -1,6 +1,6 @@
 import "./App.css";
 import Header from "./components/Header";
-import HomeScreen from "./screens/HomeScreen";
+import ExamListScreen from "./screens/ExamListScreen";
 import ExamDetailScreen from "./screens/ExamDetailScreen";
 import LoginScreen from "./screens/LoginScreen";
 import ResetPasswordScreen from "./screens/ResetPasswordScreen";
@@ -20,7 +20,7 @@ function App() {
         <Route path="/profile" component={ProfileScreen} exact />
         <Route path="/resetpassword" component={ResetPasswordScreen} exact />
         <Route path="/" component={LoginScreen} exact />
-        <Route path="/exams" component={HomeScreen} exact />
+        <Route path="/exams" component={ExamListScreen} exact />
         <Route path="/exams/details/:id" component={ExamDetailScreen} />
       </section>
     </Router>
