@@ -55,7 +55,7 @@ body {
 
 /* Cover all screen */
 .main-content {
-  height: 90vh;
+  min-height: 80vh;
   width: 90%;
   margin: auto;
 }
@@ -81,8 +81,9 @@ body {
 
 .normal-container {
   @include flex(center, center, row);
+  margin-top: 2rem;
   .child-col {
-    .row {
+    .child-row {
       background-color: white;
       padding: 1.2rem;
       border: 1px solid $borderColor;
@@ -98,15 +99,28 @@ body {
 
 .left {
   flex: 2 1 40rem;
-  margin: 1.2rem 0.6rem 1.2rem 0rem;
+  margin: 0rem 0.6rem 1.2rem 0rem;
   min-height: 100%;
 }
 
 .right {
   flex: 1 1 17rem;
-  margin: 1.2rem 0rem 1.2rem 0.6rem;
+  margin: 0rem 0rem 1.2rem 0.6rem;
   min-height: 100%;
 }
+
+// .btn-profile {
+//   border-radius: 2rem !important;
+//   display: flex;
+//   width: 500px;
+// }
+
+// .profile-pic {
+//   background-color: white;
+//   width: 20px;
+//   height: 20px;
+//   border-radius: 50%;
+// }
 
 @media (max-width: 1034px) {
   .left {
@@ -122,3 +136,4 @@ body {
 @import "baiThi";
 @import "details";
 @import "profile";
+@import "teacher";

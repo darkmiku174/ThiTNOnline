@@ -1,10 +1,16 @@
 .login-container {
   width: 40%;
   margin: auto;
-  padding-top: 4rem;
+  height: 80vh;
+  // background-color: black;
+  @include flex(center, center, row) // padding-top: 1rem;
+    // display: flex;
+    // align-items: center;
+;
 }
 
 .login-form {
+  width: 100%;
   margin: auto;
   border: 1px solid $borderColor;
   border-radius: 1rem;
@@ -20,7 +26,8 @@
   display: flex;
   justify-content: space-between;
 }
-
-.btn {
-  margin: 2rem 0 !important;
+.login-form {
+  .btn {
+    margin: 2rem auto;
+  }
 }

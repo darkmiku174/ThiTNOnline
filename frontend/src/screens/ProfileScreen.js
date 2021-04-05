@@ -18,6 +18,7 @@ const ProfileScreen = () => {
               borderRadius: "0.625rem 0 0 0.625rem",
               height: "100%",
             }}
+            className="child-row"
           >
             <div style={{ width: "150px" }}>
               <img src={student.image} style={{ width: "100%" }} />
@@ -49,6 +50,7 @@ const ProfileScreen = () => {
               borderRadius: "0 0.625rem 0.625rem 0",
               height: "100%",
             }}
+            className="child-row"
           >
             <div>
               <h2>Thông tin khóa học</h2>

@@ -10,14 +10,14 @@ const ExamListScreen = () => {
     <Container className="normal-container" fluid>
       <Row className="parent-row">
         <Col className="left child-col">
-          <Row className="exam-list">
+          <Row className="exam-list child-row">
             {dsBaiThi.map((baithi) => (
               <BaiThi baithi={baithi} />
             ))}
           </Row>
         </Col>
         <Col className="right child-col">
-          <Row>
+          <Row className="child-row">
             <Card
               className="student-exam-infor"
               style={{

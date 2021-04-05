@@ -3,10 +3,16 @@
 }
 .options {
   width: 100%;
+  margin: 1.2rem 0;
   @include flex(space-between, center, row);
-  padding: 1.2rem 0;
 }
 
 .question-list {
-  @include flex(space-between, center, row);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  width: 100%;
+  .btn {
+    width: 50px;
+    margin: 0.7rem auto;
+  }
 }

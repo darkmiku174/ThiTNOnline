@@ -10,7 +10,7 @@ import {
 } from "react-bootstrap";
 import Answer from "../components/Answer";
 import dsHocSinh from "../studentSample";
-const ExamDetailScreen = ({ match }) => {
+const ExamDetailScreen = ({ match, history }) => {
   const examDetail = examDetails.find(
     (exam) => exam.examID === match.params.id
   );
@@ -18,11 +18,15 @@ const ExamDetailScreen = ({ match }) => {
   const hocsinh = dsHocSinh.find((hocsinh) => hocsinh.id === "1");
 
   const question = examDetail.questions.find((q) => q.id === questionId);
+
+  const submitAnswersHandler = () => {
+    history.push(`/exams/details/${match.params.id}/finish`);
+  };
   return (
     <Container className="normal-container" fluid>
       <Row className="parent-row">
         <Col className="left child-col">
-          <Row>
+          <Row className="child-row">
             <h2 className="question">{question.question}</h2>
             {question.answers.map((answer) => (
               <Answer answer={answer} />
@@ -38,18 +42,27 @@ const ExamDetailScreen = ({ match }) => {
           </Row>
         </Col>
         <Col className="right child-col">
-          <Row>
+          <Row className="child-row">
             <div className="student-infor">
               <div>Họ và tên: {hocsinh.name}</div>
               <div>MSSV: {hocsinh.sbd}</div>
               <div>Lớp: {hocsinh.class}</div>
             </div>
           </Row>
-          <Row className="question-list" style={{ marginTop: "2rem" }}>
-            {examDetail.questions.map((question) => (
-              <Button variant="primary">{question.id}</Button>
-            ))}
+          <Row style={{ marginTop: "1rem" }} className="child-row">
+            <div className="question-list">
+              {examDetail.questions.map((question) => (
+                <Button variant="primary">{question.id}</Button>
+              ))}
+            </div>
           </Row>
+          <Button
+            className="btn btn-block"
+            onClick={submitAnswersHandler}
+            style={{ marginTop: "2rem" }}
+          >
+            Kết thúc bài thi
+          </Button>
         </Col>
       </Row>
     </Container>

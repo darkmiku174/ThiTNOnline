@@ -108,7 +108,137 @@ const examDetails = [
         ],
       },
       {
-        id: "5",
+        id: "6",
+        question: "Why are you gay",
+        answers: [
+          {
+            id: "1",
+            name: "A",
+            answer: "Yes",
+          },
+          {
+            id: "2",
+            name: "B",
+            answer: "Yes",
+          },
+          {
+            id: "3",
+            name: "C",
+            answer: "Yes",
+          },
+          {
+            id: "4",
+            name: "D",
+            answer: "Yes",
+          },
+        ],
+      },
+      {
+        id: "7",
+        question: "Why are you gay",
+        answers: [
+          {
+            id: "1",
+            name: "A",
+            answer: "Yes",
+          },
+          {
+            id: "2",
+            name: "B",
+            answer: "Yes",
+          },
+          {
+            id: "3",
+            name: "C",
+            answer: "Yes",
+          },
+          {
+            id: "4",
+            name: "D",
+            answer: "Yes",
+          },
+        ],
+      },
+      {
+        id: "8",
+        question: "Why are you gay",
+        answers: [
+          {
+            id: "1",
+            name: "A",
+            answer: "Yes",
+          },
+          {
+            id: "2",
+            name: "B",
+            answer: "Yes",
+          },
+          {
+            id: "3",
+            name: "C",
+            answer: "Yes",
+          },
+          {
+            id: "4",
+            name: "D",
+            answer: "Yes",
+          },
+        ],
+      },
+      {
+        id: "9",
+        question: "Why are you gay",
+        answers: [
+          {
+            id: "1",
+            name: "A",
+            answer: "Yes",
+          },
+          {
+            id: "2",
+            name: "B",
+            answer: "Yes",
+          },
+          {
+            id: "3",
+            name: "C",
+            answer: "Yes",
+          },
+          {
+            id: "4",
+            name: "D",
+            answer: "Yes",
+          },
+        ],
+      },
+      {
+        id: "10",
+        question: "Why are you gay",
+        answers: [
+          {
+            id: "1",
+            name: "A",
+            answer: "Yes",
+          },
+          {
+            id: "2",
+            name: "B",
+            answer: "Yes",
+          },
+          {
+            id: "3",
+            name: "C",
+            answer: "Yes",
+          },
+          {
+            id: "4",
+            name: "D",
+            answer: "Yes",
+          },
+        ],
+      },
+      {
+        id: "11",
         question: "Why are you gay",
         answers: [
           {

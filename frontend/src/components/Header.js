@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   Navbar,
   Nav,
+  Image,
   NavDropdown,
   Form,
   FormControl,
@@ -9,9 +10,21 @@ import {
   Container,
 } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
+import Breadscrumbs from "./Breadscrumbs";
 
-const Header = () => {
+const getWindowWidth = () => {
+  const { innerWidth: w } = window;
+  return w;
+};
+
+const Header = (props) => {
+  const {
+    history,
+    location: { pathname },
+  } = props;
+  const pathnames = pathname.split("/").filter((x) => x);
+
   return (
     <header>
       <Navbar
@@ -19,23 +32,21 @@ const Header = () => {
         expand="lg"
         style={{ width: "90%", margin: "auto", boxShadow: "none" }}
       >
-        <Link to="/">
-          <Navbar.Brand href="#home">React-Bootstrap </Navbar.Brand>
-        </Link>
-
+        <Navbar.Brand href="/">React-Bootstrap </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
-            <LinkContainer to="/profile">
-              <Nav.Link>
-                <i className="fas fa-user"></i> Tài khoản
-              </Nav.Link>
-            </LinkContainer>
+            <Nav.Link href="profile" className="expand">
+              <Navbar.Text>
+                <i className="fas fa-user"></i> Profile{" "}
+              </Navbar.Text>
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
+      {pathnames.length > 0 ? <Breadscrumbs /> : ""}
     </header>
   );
 };
 
-export default Header;
+export default withRouter(Header);
