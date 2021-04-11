@@ -1,5 +1,6 @@
 .right {
   .infor {
+    @include flex(center, initial, column);
     p {
       color: white;
       line-height: 2.2rem;

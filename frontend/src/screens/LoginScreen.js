@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 const LoginScreen = ({ history }) => {
   const submitHandler = (e) => {
     e.preventDefault();
-    // To redirect to another screen(change the url)
     history.push("/exams");
   };
   return (

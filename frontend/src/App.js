@@ -23,7 +23,7 @@ function App() {
         <Route path="/" component={LoginScreen} exact />
         <Route path="/exams" component={ExamListScreen} exact />
         <Route path="/exams/details/:id" component={ExamDetailScreen} exact />
-        <Route path="/giangvien" component={TeacherScreen} exact />
+        <Route path="/giangvien/" component={TeacherScreen} exact />
       </section>
     </Router>
   );

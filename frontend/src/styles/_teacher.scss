@@ -18,6 +18,15 @@
   }
 }
 
+.side-bar {
+  div:first-child {
+    border-radius: 0.625rem 0 0 0rem;
+  }
+  div:hover {
+    background-color: #46a7f2;
+  }
+}
+
 .form-check {
   padding: 0px !important;
   padding-right: 2rem !important;

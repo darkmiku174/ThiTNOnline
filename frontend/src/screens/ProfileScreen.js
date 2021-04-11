@@ -10,9 +10,9 @@ const ProfileScreen = () => {
         <Col className="right child-col">
           <Row
             style={{
-              display: "fex",
-              alignItems: "center",
+              display: "flex",
               flexDirection: "column",
+              alignItems: "center",
               backgroundColor: "#2196f3",
               border: "none",
               borderRadius: "0.625rem 0 0 0.625rem",

@@ -64,7 +64,7 @@ body {
 .break {
   background-color: $borderColor;
   padding: 0.5px;
-  margin-bottom: 1rem;
+  // margin-bottom: 1rem;
 }
 
 @mixin flex($justify, $align, $direction) {
@@ -137,3 +137,5 @@ body {
 @import "details";
 @import "profile";
 @import "teacher";
+@import "addQuestion";
+@import "dethi";

@@ -11,10 +11,14 @@
 // }
 
 // /* Student infor */
-// .infor {
-//   margin-top: 2rem;
-//   @include flex(space-between, initial, row);
-// }
+.infor {
+  margin-top: 2rem;
+  @include flex(space-between, initial, row);
+}
+
+.progress {
+  margin-top: 1rem !important;
+}
 
 // .student-exam-infor {
 //   width: 90%;

@@ -36,7 +36,7 @@ const Header = (props) => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
-            <Nav.Link href="profile" className="expand">
+            <Nav.Link href="/profile" className="expand">
               <Navbar.Text>
                 <i className="fas fa-user"></i> Profile{" "}
               </Navbar.Text>
