@@ -7,6 +7,7 @@ import Dethi from "../components/Dethi";
 
 const TeacherScreen = () => {
   const [options, setOptions] = useState("account");
+
   return (
     <Container className="normal-container" fluid>
       <Row className="parent-row">

@@ -1,0 +1,32 @@
+.card-item {
+	width: 10rem;
+	height: 8rem;
+	margin: 2rem;
+
+}
+
+
+
+.card-group {
+ justify-content: space-evenly;
+ display: flex;
+}
+
+.card-container {
+	margin-top: 1rem;
+}
+
+.card-column {
+	margin-top: 1rem;
+	margin-left: 1rem;
+	width: 64%
+}
+.card-text1{
+    font-size:3rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    textAlign: center;
+    margin-left:20%;
+}
+
