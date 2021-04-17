@@ -1,11 +1,10 @@
 import React from "react";
 import SearchBar from "../components/SearchBar"
 import {Table,Card} from "react-bootstrap"
-const AdminExamTable = () =>{
+const AdminSubjectTable = () =>{
   return (
-<Card style={{display:"flex",marginTop:"1rem",width:"100%",height:"100%",marginLeft:"1rem"}}>
-<Card.Header style={{background:"white"}}><h2>Danh sách môn thi</h2></Card.Header>
-<Card.Body>
+<div>
+<h2>Danh sách môn học</h2>
 <SearchBar/>
   <Table striped bordered hover variant="dark" style={{width:"100%",marginTop:"1rem"}} >
     <thead>
@@ -41,9 +40,8 @@ const AdminExamTable = () =>{
       </tr>
     </tbody>
   </Table>
-  </Card.Body>
-</Card>
+  </div>
 )
 
 }
-export default AdminExamTable;
+export default AdminSubjectTable;

@@ -8,7 +8,7 @@ import ProfileScreen from "./screens/ProfileScreen";
 import TestScreen from "./screens/TestScreen";
 import ExamResultScreen from "./screens/ExamResultScreen";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import AdminExamList from "./screens/AdminExamList";
+import AdminSubjectList from "./screens/AdminSubjectList";
 
 function App() {
   return (
@@ -25,7 +25,7 @@ function App() {
         <Route path="/exams" component={ExamListScreen} exact />
         <Route path="/exams/details/:id" component={ExamDetailScreen} />
         <Route path="/exams/result" component={ExamResultScreen} exact />
-        <Route path="/admin/exams/list" component={AdminExamList}/>
+        <Route path="/admin/exams/list" component={AdminSubjectList}/>
       </section>
     </Router>
   );
