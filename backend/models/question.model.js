@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 
 var questionSchema  = new mongoose.Schema({
+    MaMH: String,
 	PhanHoi: String,
 	CauA: String,
 	CauB: String,
