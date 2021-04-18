@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
-import TeacherAccount from "../components/TeacherAccount";
-import Questions from "../components/Questions";
-import SubjectQuestion from "../components/SubjectQuestion";
-import Dethi from "../components/Dethi";
-
-const TeacherScreen = () => {
-  const [options, setOptions] = useState("account");
-
+import AdminSubjectTable from "../components/AdminSubjectTable";
+import SideNav from "../components/SideNav";
+import SubjectTimetable from "../components/SubjectTimetable";
+const AdminSubjectList = () => {
+  const [options, setOptions] = useState("subjectlist");
   return (
     <Container className="normal-container" fluid>
       <Row className="parent-row">
@@ -26,22 +23,22 @@ const TeacherScreen = () => {
           >
             <div
               style={{ color: "white", padding: "1.2rem", cursor: "pointer" }}
-              onClick={() => setOptions("account")}
+              onClick={() => setOptions("subjectlist")}
             >
-              Quản lý tài khoản
+              Quản lý thời gian biểu
             </div>
             <div className="break"></div>
 
             <div
               style={{ color: "white", padding: "1.2rem", cursor: "pointer" }}
-              onClick={() => setOptions("cauhoi")}
+              onClick={() => setOptions("timetable")}
             >
               Quản lý câu hỏi
             </div>
             <div className="break"></div>
             <div
               style={{ color: "white", padding: "1.2rem", cursor: "pointer" }}
-              onClick={() => setOptions("dethi")}
+              onClick={() => setOptions("chitiet")}
             >
               Quản lý đề thi
             </div>
@@ -62,14 +59,10 @@ const TeacherScreen = () => {
             }}
             className="child-row"
           >
-            {options === "account" ? (
-              <TeacherAccount />
-            ) : options === "cauhoi" ? (
-              <SubjectQuestion onClick={() => setOptions("question-details")} />
-            ) : options === "question-details" ? (
-              <Questions />
-            ) : options === "dethi" ? (
-              <Dethi />
+            {options === "subjectlist" ? (
+              <AdminSubjectTable />
+            ) : options === "timetable" ? (
+              <SubjectTimetable />
             ) : (
               ""
             )}
@@ -80,4 +73,5 @@ const TeacherScreen = () => {
   );
 };
 
-export default TeacherScreen;
+export default AdminSubjectList;
+
