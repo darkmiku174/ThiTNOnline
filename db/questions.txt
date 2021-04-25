@@ -1,0 +1,1765 @@
+
+{
+    MaMH:"M1",
+   PhanHoi: "Ý nào dưới đây là đúng: Hệ điều hành máy tính cá nhân",
+    CauA: "là phần mềm phải có để máy tính cá nhân có thể hoạt động",
+    CauB: "là phần mềm cài sẵn trong mọi máy tính cá nhân",
+    CauC:"là phần mềm không được thay đổi trong máy tính cá nhân.",
+    CauD:"là phần mềm do công ty Microsoft độc quyền xây dựng và phát triển.",
+    DapAn:"A",
+    ThangDiem:0.25,
+    PhanLoai:0
+}
+{
+    MaMH:"M1",
+   PhanHoi: "Ở tình huống nào dưới đây, máy tính thực thi công việc tốt hơn con người",
+    CauA: "Khi dịch một cuốn sách ",
+    CauB: "Khi chẩn đoán bệnh",
+    CauC:"Khi phân tích tâm lý một con người",
+    CauD:"Khi thực hiện một phép toán phức tạp",
+    DapAn:"D",
+    ThangDiem:0.5,
+    PhanLoai:1
+}
+{
+    MaMH:"M1",
+   PhanHoi: "Đọc các thông số cấu hình của một máy tính thông thường: 2GHz - 20GB - 256MB, bạn cho biết con số 256MB chỉ điều gì",
+    CauA: "Chỉ tốc độ của bộ vi xử lý",
+    CauB: "Chỉ dung lượng của đĩa cứng",
+    CauC:"Chỉ dung lượng của bộ nhớ chỉ đọc ROM",
+    CauD:"Chỉ dung lượng của bộ nhớ truy cập ngẫu nhiên RAM",
+    DapAn:"D",
+    ThangDiem:0.75,
+    PhanLoai:2
+}
+{
+    MaMH:"M1",
+   PhanHoi: "Mục đích chủ yếu của chính sách an ninh thông tin của một tổ chức là gì",
+    CauA: "Quản lý việc đầu tư của công ty`",
+    CauB: "Theo dõi và kiểm soát thông tin, dữ liệu nhạy cảm",
+    CauC:"Mô tả họat động kinh doanh",
+    CauD:"Thu nhập thông tin thị trường",
+    DapAn:"B",
+    ThangDiem:1,
+    PhanLoai:3
+}
+{
+    MaMH:"M1",
+   PhanHoi: "Ổ cứng là",
+    CauA: "Thiết bị lưu trữ trong vì nó ở bên trong vỏ máy ",
+    CauB: "Thiết bị lưu trữ ngoài",
+    CauC:"Là thiết bị nhập/xuất dữ liệu ",
+    CauD:"Thiết bị chỉ đọc dữ liệu",
+    DapAn:"B",
+    ThangDiem:0.25,
+    PhanLoai:0
+}
+{
+    MaMH:"M1",
+   PhanHoi: "Đâu là một ví dụ của chính sách mật khẩu tốt",
+    CauA: "Chọn một mật khẩu có ít hơn 6 mẫu tự",
+    CauB: "Mật khẩu phải giống lý lịch người sử dụng (ví dụ ngày tháng năm sinh, quê quán)",
+    CauC:"Không bao giờ cho người khác biết mật khẩu của bạn",
+    CauD:"Chỉ thay đổi mật khẩu sau một thời gian dài",
+    DapAn:"C",
+    ThangDiem:0.5,
+    PhanLoai:1
+}
+{
+    MaMH:"M1",
+   PhanHoi: "Đâu là một ví dụ về phần mềm máy tính",
+    CauA: "Đĩa mềm ",
+    CauB: "Hệ điều hành ",
+    CauC:"Đĩa CD ",
+    CauD:"Cả ba ý trên",
+    DapAn:"B",
+    ThangDiem:0.75,
+    PhanLoai:2
+}
+{
+    MaMH:"M1",
+   PhanHoi: "Bạn đã cài đặt một đĩa hoàn toàn mới và bạn muốn định dạng nó. Mục đích của công việc định dạng là gì",
+    CauA: "Phục hồi dữ liệu bị mất trong đĩa",
+    CauB: "Tạo một đĩa chỉ đọc",
+    CauC:"Tạo một đĩa để đọc và chấp nhận dữ liệu",
+    CauD:" Làm cho nhiều người sử dụng có thể truy nhập được đĩa",
+    DapAn:"C",
+    ThangDiem:1,
+    PhanLoai:3
+}
+{
+    MaMH:"M1",
+   PhanHoi: "Đơn vị đo lượng tin là",
+    CauA: "Hz ",
+    CauB: "KHz ",
+    CauC:"GHz ",
+    CauD:"bit",
+    DapAn:"D",
+    ThangDiem:0.25,
+    PhanLoai:0
+}
+{
+    
+    MaMH:"M1",
+   PhanHoi: "Đặt màn hình máy tính như thế nào là tốt nhất cho mắt bạn",
+    CauA: "Không có ánh sáng chiếu vào",
+    CauB: "Không đối diện với cửa ra vào, cửa số, bóng đèn.",
+    CauC:"Đối diện với cửa ra vào, cửa số, bóng đèn ",
+    CauD:"Cả hai điều kiện a và b",
+    DapAn:"B",
+    ThangDiem:0.5,
+    PhanLoai:1
+}
+{
+    MaMH:"M1",
+   PhanHoi: "Bạn đã cài đặt một bộ xử lý mới có tốc độ đồng hồ cao hơn vào máy của bạn. Điều này có thể có kết quả gì",
+    CauA: "Máy tính của bạn sẽ chạy nhanh hơn",
+    CauB: "ROM (Read Only Memory) sẽ có dung lượng lớn hơn",
+    CauC:"RAM (Random Access Memory) sẽ có dung lượng lớn hơn",
+    CauD:"Đĩa cứng máy tính sẽ lưu trữ dữ liệu nhiều hơn",
+    DapAn:"A",
+    ThangDiem:0.75,
+    PhanLoai:2
+}
+{
+    MaMH:"M1",
+   PhanHoi: "Bạn nhận được một bức thư điện tử chứa tệp tin đính kèm mà bạn không nhận biết ra, bạn sẽ xử lý thế nào trong tình huống này để đảm bảo an toàn? ",
+    CauA: "Mở tệp tin này ra để kiểm tra loại tệp tin",
+    CauB: "Chuyển thư này cho ai đó mà bạn nghĩ rằng bạn có thể nhận biết được",
+    CauC:"Quét tập tin này bằng chương trình chống virus",
+    CauD:"Lưu bản sao tập tin này vào đĩa cứng và mở bản sao này",
+    DapAn:"C",
+    ThangDiem:1,
+    PhanLoai:3
+}
+{
+    MaMH:"M1",
+   PhanHoi: "Câu nào chưa đúng trong số các câu sau?",
+    CauA: "Phần mềm thương mại – commercial software: có đăng ký bản quyền : không cho phép sao chép dưới bất kỳ hình thức nào.",
+    CauB: "Phần mềm chia sẻ - Shareware: có bản quyền, dùng thử trước khi mua. Nếu muốn tiếp tục sử dụng chương trình thì được khuyến khích trả tiền cho tác giả.",
+    CauC:"Phần mềm miễn phí - Freeware: cho phép người khác tự do sử dụng hoàn toàn hoặc theo một số yêu cầu bắt buộc. Ví dụ phải kèm tên tác giả …",
+    CauD:"Phần mềm nguồn mở - Open source software: công bố một phần mã nguồn để mọi người tham gia phát triển",
+    DapAn:"D",
+    ThangDiem:0.25,
+    PhanLoai:0
+}
+{
+    MaMH:"M1",
+   PhanHoi: "Câu nào dưới đây không đúng",
+    CauA: "Vi rút máy tính lây nhiễm qua dùng chung máy tính",
+    CauB: "Vi rút máy tính lây nhiễm khi sao chép qua đĩa mềm, đĩa CD",
+    CauC:"Vi rút máy tính lây nhiễm khi sao chép qua mạng",
+    CauD:"Vi rút máy tính lây nhiễm qua Internet",
+    DapAn:"A",
+    ThangDiem:0.5,
+    PhanLoai:1
+}
+{
+    MaMH:"M1",
+   PhanHoi: "Chữ viết tắt MB thường gặp trong các tài liệu về máy tính có nghĩa là gì: ",
+    CauA: "là đơn vị đo độ phân giải màn hình",
+    CauB: "là đơn vị đo cường độ âm thanh",
+    CauC:"là đơn vị đo tốc độ xử lý ",
+    CauD:"là đơn vị đo khả năng lưu trữ",
+    DapAn:"D",
+    ThangDiem:0.75,
+    PhanLoai:2
+}
+{
+    MaMH:"M1",
+   PhanHoi: "Chọn câu thích hợp để phân biệt giữa phần mềm ứng dụng và phần mềm hệ điều hành",
+    CauA: "Phần mềm ứng dụng cần nhiều không gian trong đĩa cứng hơn phần mềm hệ điều hành để chạy",
+    CauB: "Phần mềm hệ điều hành cần phần mềm ứng dụng để chạy",
+    CauC:"Phần mềm hệ điều hành cần nhiều bộ nhớ hơn phần mềm ứng dụng để chạy",
+    CauD:"Phần mềm ứng dụng cần phần mềm hệ điều hành để chạy",
+    DapAn:"D",
+    ThangDiem:1,
+    PhanLoai:3
+}
+{
+    MaMH:"M1",
+   PhanHoi: "Chọn câu trả lời đúng nhất: Đĩa cứng là",
+    CauA: "Thiết bị lưu trữ trong ",
+    CauB: "Thiết bị lưu trữ ngoài",
+    CauC:"Thiết bị lưu trữ nhanh ",
+    CauD:"Thiết bị nhập/xuất dữ liệu",
+    DapAn:"B",
+    ThangDiem:0.25,
+    PhanLoai:0
+}
+{
+    MaMH:"M1",
+   PhanHoi: "Chọn câu trả lời thích hợp nhất: “Tại sao phải định kì sử dụng công cụ chống phân mảnh đĩa cứng",
+    CauA: "để ổ đĩa cứng máy tính lâu hỏng",
+    CauB: "để tốc độ truy xuất dữ liệu từ đĩa cứng nhanh hơn",
+    CauC:"để tạo ra nhiều không gian trống hơn trong đĩa cứng",
+    CauD:"để nén dữ liệu trong đĩa cứng tốt hơn",
+    DapAn:"B",
+    ThangDiem:0.5,
+    PhanLoai:1
+}
+{
+    MaMH:"M1",
+   PhanHoi: "CPU có nghĩa là",
+    CauA: "Case Processing Unit",
+    CauB: "Common Processing Unit",
+    CauC:"Control Processing Unit ",
+    CauD:"Central Processing Unit",
+    DapAn:"D",
+    ThangDiem:0.75,
+    PhanLoai:2
+}
+{
+    MaMH:"M1",
+   PhanHoi: "Để chọn một hàng (row) trong một bảng biểu, bạn có thể thực hiện bằng cách:",
+    CauA: "Nhấn chuột vào phía ngoài bên trái của dòng đó",
+    CauB: "Nhấn đúp chuột vào vị trí bất kỳ của bảng đó",
+    CauC:"Nhấn chuột 3 lần vào một vị trí bất kỳ trong bảng",
+    CauD:"Cả hai cách A và B đều được",
+    DapAn:"A",
+    ThangDiem:1,
+    PhanLoai:3
+}
+{
+    MaMH:"M1",
+   PhanHoi: "Khẳng định nào dưới đây là sai:",
+    CauA: "cài đặt phần mềm, trò chơi từ đĩa CD có bản quyền là không vi phạm luật bản quyền",
+    CauB: "cài đặt phần mềm, trò chơi bị bẻ khoá là vi phạm luật bản quyền",
+    CauC:"cài đặt phần mềm, trò chơi từ đĩa CD sao chép là vi phạm luật bản quyền",
+    CauD:"cài đặt phần mềm, trò chơi từ đĩa CD đi mượn là vi phạm luật bản quyền",
+    DapAn:"B",
+    ThangDiem:0.25,
+    PhanLoai:0
+}
+{
+    MaMH:"M1",
+   PhanHoi: "Hệ điều hành không phải trả phí bản quyền khi sử dụng là hệ điều hành",
+    CauA: "MS-WINDOWS 2000 ",
+    CauB: "MS DOS",
+    CauC:"LINUX ",
+    CauD:"Cả C và B",
+    DapAn:"C",
+    ThangDiem:0.5,
+    PhanLoai:1
+}
+{
+    MaMH:"M1",
+   PhanHoi: "Thuật ngữ kỹ thuật trong mua và bán hàng qua mạng Internet là gì",
+    CauA: "Hệ thống điện tử (E-system) ",
+    CauB: "Mạng điện tử (E-network)",
+    CauC:"Thương mại điện tử (E-commerce) ",
+    CauD:"Thương mại Internet (I-Commerce)",
+    DapAn:"C",
+    ThangDiem:0.75,
+    PhanLoai:2
+}
+{
+    MaMH:"M1",
+   PhanHoi: "Khả năng xử lý của máy tính phụ thuộc vào:",
+    CauA: "tốc độ CPU, dung lượng bộ nhớ RAM, Dung lượng và tốc độ ổ cứng",
+    CauB: "Yếu tố đa nhiệm",
+    CauC:"Hiện tượng phân mảnh đĩa",
+    CauD:"Cả 3 phần trên",
+    DapAn:"D",
+    ThangDiem:1,
+    PhanLoai:3
+}
+{
+    MaMH:"M1",
+   PhanHoi: "Khi mua thiết bị ngoại vi cho máy tính, thường có các đĩa CD đi kèm chứa chương trình điều khiển thiết bị đó. Các chương trình điều khiển thiết bị thuộc loại phần mềm nào",
+    CauA: "Phần mềm hệ điều hành ",
+    CauB: "Phần mềm ứng dụng",
+    CauC:"Phần mềm hệ thống ",
+    CauD:"Phần mềm chia sẻ (Shareware)",
+    DapAn:"C",
+    ThangDiem:0.25,
+    PhanLoai:0
+}
+{
+    MaMH:"M1",
+   PhanHoi: "Khi nói về ưu điểm của làm việc từ xa (Tele-working), ý nào sau đây không đúng?",
+    CauA: "Giảm thời gian đi lại ",
+    CauB: "Tập trung vào công việc cao hơn",
+    CauC:"Tăng cường sự liên hệ trực tiếp ",
+    CauD:"Giảm không gian văn phòng",
+    DapAn:"C",
+    ThangDiem:0.5,
+    PhanLoai:1
+}
+{
+    MaMH:"M1",
+   PhanHoi: "Tại sao máy tính xách tay có thể gây rủi ro về an ninh của công ty",
+    CauA: "Bởi vì chúng dễ bị hỏng hơn máy tính để bàn",
+    CauB: "Bởi vì thông tin không thể được lưu giữ theo cách thức mã hoá trong máy tính xách tay",
+    CauC:"Bởi vì thông tin trong máy tính xách tay không thể được bảo vệ bằng các chương trình chống virus",
+    CauD:"Bởi vì những người không được phép có thể đọc được những thông tin mật nếu máy tính bị lấy cắp",
+    DapAn:"D",
+    ThangDiem:0.75,
+    PhanLoai:2
+}
+{
+    MaMH:"M1",
+   PhanHoi: "Khi sử dụng hồ sơ điện tử thay cho hồ sơ giấy, ví dụ như bảng các trực tuyến chẳng hạn, bạn thấy ưu điểm nào sau đây nổi bật nhất?",
+    CauA: "Độ tin cậy gia tăng ",
+    CauB: "Quản lý an ninh tốt hơn",
+    CauC:"Việc tiêu thụ giấy giảm ",
+    CauD:"Không bao giờ xảy ra sai sót",
+    DapAn:"C",
+    ThangDiem:1,
+    PhanLoai:3
+}
+{
+    MaMH:"M1",
+   PhanHoi: "Lợi ích của GUI (Graphic User Interface) là gì",
+    CauA: "GUI giảm thời gian tải từ Internet xuống",
+    CauB: "GUI làm cho bàn phím trở nên lỗi thời",
+    CauC:"GUI tăng cường cho sự hoạt động của thẻ mạch đồ họa (graphic card)",
+    CauD:"GUI cho phép dùng con chuột để thao tác với máy tính",
+    DapAn:"D",
+    ThangDiem:0.25,
+    PhanLoai:0
+}
+{
+    MaMH:"M1",
+   PhanHoi: "Lợi thế của mua hàng trực tuyến so với mua hàng bình thường ở cửa hàng là gì?",
+    CauA: "Việc thanh toán đảm bảo an ninh hơn",
+    CauB: "Việc xác định tình trạng của hàng hóa dễ dàng hơn",
+    CauC:"Có thể mua hàng trong suốt 24h trong một ngày",
+    CauD:"Hàng hóa đã mua dễ trả lại hơn",
+    DapAn:"C",
+    ThangDiem:0.5,
+    PhanLoai:1
+}
+{
+    MaMH:"M1",
+   PhanHoi: "Lời khuyên khi sử dụng mật khẩu máy tính là:",
+    CauA: "Mật khẩu ngắn, đơn giản",
+    CauB: "Mật khẩu dễ nhớ (ví dụ dùng ngày sinh, quê quán)",
+    CauC:"Nếu hay quên thì nên ghi lại.",
+    CauD:"Không bao giờ cho người khác biết mật khẩu của bạn.",
+    DapAn:"D",
+    ThangDiem:0.75,
+    PhanLoai:2
+}
+{
+    MaMH:"M1",
+   PhanHoi: "Lời khuyên nào sau đây là đúng",
+    CauA: "Mật khẩu ngắn dễ nhớ tốt hơn mật khẩu phức tạp khó nhớ",
+    CauB: "Mật khẩu thay đổi thường xuyên tốt hơn mật khẩu cố định",
+    CauC:"Mật khẩu dùng chung nhiều người tiện hơn mỗi người dùng riêng của mình",
+    CauD:"Cả ba ý trên đều sai",
+    DapAn:"B",
+    ThangDiem:1,
+    PhanLoai:3
+}
+{
+
+    MaMH:"M1",
+   PhanHoi: "Virus máy tính",
+    CauA: "Chỉ họat động khi phần mềm bị sao chép trái phép.",
+    CauB: "Là một chương trình máy tính",
+    CauC:"Là phần cứng chỉ phá họai các phần khác",
+    CauD:"Là một loại nấm mốc trên bề mặt đĩa",
+    DapAn:"B",
+    ThangDiem:0.25,
+    PhanLoai:0
+}
+{
+    MaMH:"M1",
+   PhanHoi: "Mục đích của công việc định dạng đĩa là gì",
+    CauA: "Sắp xếp lại dữ liệu trên đĩa",
+    CauB: "Khôi phục lại dữ liệu trên đĩa",
+    CauC:"Tạo một đĩa trắng đúng khuôn dạng để lưu trữ dữ liệu",
+    CauD:"Làm cho nhiều người sử dụng có thể truy nhập được đĩa",
+    DapAn:"B",
+    ThangDiem:0.5,
+    PhanLoai:1
+}
+{
+    MaMH:"M1",
+   PhanHoi: "Nếu một máy tính bị nghi ngờ là nhiễm virus thì cách thức tốt nhất để kiểm tra và diệt virus là gì?",
+    CauA: "Cài đặt lại hệ điều hành, sau đó cài đặt lại tất cả các chương trình ứng dụng khác",
+    CauB: "Cài đặt một chương trình chống virus, quét virus các ổ đĩa của máy tính và cho chương trình này loại bỏ virus",
+    CauC:"Lưu trữ dự phòng các tệp tin của máy tính và hồi phục chúng bằng việc sử dụng những tập tin dự phòng này",
+    CauD:"Khởi động lại máy tính và sau đó xóa tất cả những tập tin bị nghi ngờ nhiễm virus",
+    DapAn:"A",
+    ThangDiem:0.75,
+    PhanLoai:2
+}
+{
+    MaMH:"M1",
+   PhanHoi: "Nếu sắp theo thứ tự từ khả năng lưu trữ từ cao đến thấp, bạn chọn phương án nào trong số các phương án sau:",
+    CauA: "Đĩa cứng - đĩa DVD - đĩa CD - đĩa mềm ",
+    CauB: "Đĩa DVD - đĩa cứng - đĩa CD - đĩa mềm",
+    CauC:"Đĩa cứng - đĩa mềm - đĩa CD - đĩa DVD ",
+    CauD:"Đĩa cứng - đĩa mềm - đĩa DVD - đĩa CD",
+    DapAn:"B",
+    ThangDiem:1,
+    PhanLoai:3
+}
+{
+    MaMH:"M1",
+   PhanHoi: "Nhìn vào các tham số cấu hình của một máy vi tính: 1.8GHz, 20GB, 256MB bạn có thể cho biết, con số 20GB chỉ điều gì",
+    CauA: "tốc độ xử lý của CPU. ",
+    CauB: "dung lượng của ổ đĩa cứng",
+    CauC:"tốc độ vòng quay của ổ cứng ",
+    CauD:"dung lượng của đĩa CD mà máy có thể đọc được",
+    DapAn:"B",
+    ThangDiem:0.25,
+    PhanLoai:0
+}
+{
+    MaMH:"M1",
+   PhanHoi: "Virus máy tính có khả năng",
+    CauA: "Xóa tất cả các tệp tin đã có trên đĩa CD ",
+    CauB: "Tự sao chép để lây nhiễm",
+    CauC:"Lây lan qua màn hình",
+    CauD:"Cả 3 mục trên",
+    DapAn:"D",
+    ThangDiem:0.5,
+    PhanLoai:1
+}
+{
+    MaMH:"M1",
+   PhanHoi: "Phần mềm Windows, Linux và OS2 có đặc điểm gì chung",
+    CauA: "Tất cả đều là phần mềm ứng dụng",
+    CauB: "Tất cả đều là dịch vụ dải tần rộng (Broadband Service)",
+    CauC:"Tất cả đều là phần mềm điều khiển thiết bị phần cứng",
+    CauD:"Tất cả đều là hệ điều hành",
+    DapAn:"B",
+    ThangDiem:0.75,
+    PhanLoai:2
+    
+}
+{
+    MaMH:"M1",
+   PhanHoi: "Phát biểu nào sau đây không đúng?",
+    CauA: "Có hai loại phần mềm, đó là phần mềm hệ thống và phần mềm ứng dụng",
+    CauB: "Phần mềm ứng dụng bao gồm hệ điều hành, các chương trình điều khiển thiết bị...",
+    CauC:"Có rất nhiều các phần mềm hệ điều hành, tiêu biều như MS Windows, Linux, Unix...",
+    CauD:"Đĩa CD phần mềm đi cùng thiết bị chứa phần mềm hệ thống cho phép thiết bị được nhận diện và làm việc tốt với hệ điều hành.",
+    DapAn:"b",
+    ThangDiem:1,
+    PhanLoai:3
+}
+{
+    MaMH:"M2",
+   PhanHoi: "We managed ---------- home before the rain started.",
+    CauA: "to get",
+    CauB: "get",
+    CauC:"getting",
+    CauD:"got",
+    DapAn:"A",
+    ThangDiem:0.25,
+    PhanLoai:0
+}
+{
+    MaMH:"M2",
+   PhanHoi: "£ 300 for shoes! That’s -------------!",
+    CauA: "such expensive",
+    CauB: "so rich",
+    CauC:"so expensive",
+    CauD:"so a high price",
+    DapAn:"C",
+    ThangDiem:0.5,
+    PhanLoai:1
+}
+{
+    MaMH:"M2",
+   PhanHoi: "When my children were little we -------- hours playing in the garden.",
+    CauA: "used to spending",
+    CauB: "used to spend",
+    CauC:"are used to spending",
+    CauD:"are used to spend",
+    DapAn:"B",
+    ThangDiem:0.75,
+    PhanLoai:2
+}
+{
+    MaMH:"M2",
+   PhanHoi: "I really need -------- new jacket.",
+    CauA: "a",
+    CauB: "any",
+    CauC:"some",
+    CauD:"a few",
+    DapAn:"A",
+    ThangDiem:1,
+    PhanLoai:3
+}
+{
+    MaMH:"M2",
+   PhanHoi: "-----------is still a major world problem.",
+    CauA: "poor",
+    CauB: "poorment",
+    CauC:"poverty",
+    CauD:"poorness",
+    DapAn:"C",
+    ThangDiem:0.25,
+    PhanLoai:0
+}
+{
+    MaMH:"M2",
+   PhanHoi: "After he ------------ his driving test he bought a car.",
+    CauA: "had passed",
+    CauB: "pass",
+    CauC:"passed",
+    CauD:"passing",
+    DapAn:"A",
+    ThangDiem:0.5,
+    PhanLoai:1
+}
+{
+    MaMH:"M2",
+   PhanHoi: "When I got to the office, I ----------- that I had forgot to lock the door",
+    CauA: "realized",
+    CauB: "had realized",
+    CauC:"realize",
+    CauD:"have realized",
+    DapAn:"A",
+    ThangDiem:0.75,
+    PhanLoai:2
+}
+{
+    MaMH:"M2",
+   PhanHoi: "When she was 21 she -------------- across the United States.",
+    CauA: "drove",
+    CauB: "drive",
+    CauC:"driven",
+    CauD:"was driving",
+    DapAn:"A",
+    ThangDiem:1,
+    PhanLoai:3
+}
+{
+    MaMH:"M2",
+   PhanHoi: "He often ------------ so nervous before his exams.",
+    CauA: "feels",
+    CauB: "felt",
+    CauC:"was feeling",
+    CauD:"had felt",
+    DapAn:"A",
+    ThangDiem:0.25,
+    PhanLoai:0
+}
+{
+    MaMH:"M2",
+   PhanHoi: "How long have you ------------- he was a liar.",
+    CauA: "been knowing",
+    CauB: "knew",
+    CauC:"know",
+    CauD:"known",
+    DapAn:"D",
+    ThangDiem:0.5,
+    PhanLoai:1
+}
+{
+    MaMH:"M2",
+   PhanHoi: "I’m sorry. I don’t understand what -----------------.",
+    CauA: "you say",
+    CauB: "you’re saying",
+    CauC:"you will say",
+    CauD:"you would say",
+    DapAn:"B",
+    ThangDiem:0.75,
+    PhanLoai:2
+}
+{
+    MaMH:"M2",
+   PhanHoi: "------------- to the radio when you get up everyday?",
+    CauA: "Do you listen",
+    CauB: "Are you listening",
+    CauC:"Was you listening",
+    CauD:"Did you listen",
+    DapAn:"A",
+    ThangDiem:1,
+    PhanLoai:3
+}
+{
+    MaMH:"M2",
+   PhanHoi: "My sweetheart --------------- smoking next week.",
+    CauA: "will give up",
+    CauB: "is going to give up",
+    CauC:"gives up",
+    CauD:"gave up",
+    DapAn:"B",
+    ThangDiem:0.25,
+    PhanLoai:0
+}
+{
+    MaMH:"M2",
+   PhanHoi: "There is no red wine? I -------------- white, then.",
+    CauA: "am going to have",
+    CauB: "have",
+    CauC:"will have",
+    CauD:"am having",
+    DapAn:"C",
+    ThangDiem:0.5,
+    PhanLoai:1
+}
+{
+    MaMH:"M2",
+   PhanHoi: "When the phone rang she ------------ a letter",
+    CauA: "writes",
+    CauB: "will write",
+    CauC:"has written",
+    CauD:"was writing",
+    DapAn:"D",
+    ThangDiem:0.75,
+    PhanLoai:2
+}
+{
+    MaMH:"M2",
+   PhanHoi: "As the sun ------------ I decided to go out.",
+    CauA: "shines",
+    CauB: "has shone",
+    CauC:"shine",
+    CauD:"was shining",
+    DapAn:"D",
+    ThangDiem:1,
+    PhanLoai:3
+}
+{
+    MaMH:"M2",
+   PhanHoi: "I------------- your uncle tomorrow, so I’ll give him your note.",
+    CauA: "have seen",
+    CauB: "shall have seen",
+    CauC:"see",
+    CauD:"am going to see",
+    DapAn:"D",
+    ThangDiem:0.25,
+    PhanLoai:0
+}
+{
+    MaMH:"M2",
+   PhanHoi: "-------------- study hard when you were at school?",
+    CauA: "Must you",
+    CauB: "Had you",
+    CauC:"Did you have to",
+    CauD:"Were you",
+    DapAn:"C",
+    ThangDiem:0.5,
+    PhanLoai:1
+}
+{
+    MaMH:"M2",
+   PhanHoi: "She is tired because she ------------- all day.",
+    CauA: "is studied",
+    CauB: "has been studying",
+    CauC:"had been studying",
+    CauD:"studied",
+    DapAn:"B",
+    ThangDiem:0.75,
+    PhanLoai:2
+}
+{
+    MaMH:"M2",
+   PhanHoi: "Has your teacher ever ------------ angry with you?",
+    CauA: "get",
+    CauB: "getting",
+    CauC:"got",
+    CauD:"gets",
+    DapAn:"C",
+    ThangDiem:1,
+    PhanLoai:3
+}
+{
+    MaMH:"M2",
+   PhanHoi: "He ----------",
+    CauA: "will be here soon",
+    CauB: "will here be soon",
+    CauC:"will be soon here",
+    CauD:"be soon will here",
+    DapAn:"A",
+    ThangDiem:0.25,
+    PhanLoai:0
+}
+{
+    MaMH:"M2",
+   PhanHoi: "They------------ to the theatre twice so far this month",
+    CauA: "are going",
+    CauB: "go",
+    CauC:"went",
+    CauD:"have been",
+    DapAn:"D",
+    ThangDiem:0.5,
+    PhanLoai:1
+}
+{
+    MaMH:"M2",
+   PhanHoi: "My daughter ------------- university last June.",
+    CauA: "left",
+    CauB: "has left",
+    CauC:"leaves",
+    CauD:"was leaving",
+    DapAn:"A",
+    ThangDiem:0.75,
+    PhanLoai:2
+}
+{
+    MaMH:"M2",
+   PhanHoi: "He hates his boss so he ------------- his job",
+    CauA: "leaves",
+    CauB: "has left",
+    CauC:"is leaving",
+    CauD:"left",
+    DapAn:"C",
+    ThangDiem:1,
+    PhanLoai:3
+}
+{
+    MaMH:"M2",
+   PhanHoi: "While the waiter was picking up the broken plates, he ---------- his finger",
+    CauA: "cut",
+    CauB: "was cutting",
+    CauC:"had cut",
+    CauD:"cuts",
+    DapAn:"A",
+    ThangDiem:0.25,
+    PhanLoai:0
+}
+{
+    MaMH:"M2",
+   PhanHoi: "Pam was always afraid------------ cooking.",
+    CauA: "of",
+    CauB: "to",
+    CauC:"for",
+    CauD:"at",
+    DapAn:"A",
+    ThangDiem:0.5,
+    PhanLoai:1
+}
+{
+    MaMH:"M2",
+   PhanHoi: "When Joe was at school, he was very good--------- running.",
+    CauA: "to",
+    CauB: "for",
+    CauC:"in",
+    CauD:"at",
+    DapAn:"D",
+    ThangDiem:0.75,
+    PhanLoai:2
+}
+{
+    MaMH:"M2",
+   PhanHoi: "We’ve been thinking ------- moving house.",
+    CauA: "in",
+    CauB: "of",
+    CauC:"to",
+    CauD:"on",
+    DapAn:"B",
+    ThangDiem:1,
+    PhanLoai:3
+}
+{
+    MaMH:"M2",
+   PhanHoi: "On his third try, he succeeded------------ passing his driving test.",
+    CauA: "in",
+    CauB: "on",
+    CauC:"at",
+    CauD:"to",
+    DapAn:"A",
+    ThangDiem:0.25,
+    PhanLoai:0
+}
+{
+    MaMH:"M2",
+   PhanHoi: "I’m fed up -------- working, I need a holiday.",
+    CauA: "to",
+    CauB: "in",
+    CauC:"with",
+    CauD:"for",
+    DapAn:"C",
+    ThangDiem:0.5,
+    PhanLoai:1
+}
+{
+    MaMH:"M2",
+   PhanHoi: "I’m frightened----------- spiders, they terrify me.",
+    CauA: "in",
+    CauB: "to",
+    CauC:"of",
+    CauD:"for",
+    DapAn:"C",
+    ThangDiem:0.75,
+    PhanLoai:2
+}
+{
+    MaMH:"M2",
+   PhanHoi: "They went ----------- holiday yesterday.",
+    CauA: "in",
+    CauB: "on",
+    CauC:"at",
+    CauD:"during",
+    DapAn:"B",
+    ThangDiem:1,
+    PhanLoai:3
+}
+{
+    MaMH:"M2",
+   PhanHoi: "She’s always talking --------- the phone.",
+    CauA: "in",
+    CauB: "on",
+    CauC:"at",
+    CauD:"over",
+    DapAn:"B",
+    ThangDiem:0.25,
+    PhanLoai:0
+}
+{
+    MaMH:"M2",
+   PhanHoi: "John went red after sitting----------- the sun all day.",
+    CauA: "in",
+    CauB: "at",
+    CauC:"on",
+    CauD:"by",
+    DapAn:"A",
+    ThangDiem:0.5,
+    PhanLoai:1
+}
+{
+    MaMH:"M2",
+   PhanHoi: "He didn’t want cash, so I paid the bill----------- credit card.",
+    CauA: "by",
+    CauB: "with",
+    CauC:"in",
+    CauD:"on",
+    DapAn:"A",
+    ThangDiem:0.75,
+    PhanLoai:2
+}
+{
+    MaMH:"M2",
+   PhanHoi: "Jim doesn’t enjoy-------------- sport.",
+    CauA: "to do",
+    CauB: "doing",
+    CauC:"do",
+    CauD:"to doing",
+    DapAn:"B",
+    ThangDiem:1,
+    PhanLoai:3
+}
+{
+    MaMH:"M2",
+   PhanHoi: "We are trying ----------- money to buy a house",
+    CauA: "to save",
+    CauB: "saving",
+    CauC:"save",
+    CauD:"saves",
+    DapAn:"A",
+    ThangDiem:0.25,
+    PhanLoai:0
+}
+{
+    MaMH:"M2",
+   PhanHoi: "Would you like something-----------?",
+    CauA: "drink",
+    CauB: "drinking",
+    CauC:"to drink",
+    CauD:"drinks",
+    DapAn:"C",
+    ThangDiem:0.5,
+    PhanLoai:1
+}
+{
+    MaMH:"M2",
+   PhanHoi: "I’m not used to ---------- as early as this.",
+    CauA: "get up",
+    CauB: "getting up",
+    CauC:"to get up",
+    CauD:"gets up",
+    DapAn:"B",
+    ThangDiem:0.75,
+    PhanLoai:2
+}
+{
+    MaMH:"M2",
+   PhanHoi: "It’s impossible ----------- Chinese in a year.",
+    CauA: "learning",
+    CauB: "learn",
+    CauC:"to learn",
+    CauD:"learnt",
+    DapAn:"C",
+    ThangDiem:1,
+    PhanLoai:3
+}
+{
+    MaMH:"M3",
+   PhanHoi: "Khung hệ tọa độ địa lí của nước ta có điểm cực Bắc ở vĩ độ:",
+    CauA: "23°23'B.",
+    CauB: "23°24'B.",
+    CauC:"23°25'B.",
+    CauD:"23°26'B.",
+    DapAn:"A",
+    ThangDiem:0.25,
+    PhanLoai:0
+}
+{
+    MaMH:"M3",
+   PhanHoi: "Khung hệ tọa độ địa lí của nước ta có điểm cực Nam ở vĩ độ:",
+    CauA: "8°34'B.",
+    CauB: "8°36'B.",
+    CauC:"8°37'B.",
+    CauD:"8°38'B.",
+    DapAn:"A",
+    ThangDiem:0.5,
+    PhanLoai:1
+}
+{
+    MaMH:"M3",
+   PhanHoi: "Việt Nam nằm trong múi giờ số:",
+    CauA: "6",
+    CauB: "7",
+    CauC:"8",
+    CauD:"9",
+    DapAn:"B",
+    ThangDiem:0.75,
+    PhanLoai:2
+}
+{
+    MaMH:"M3",
+   PhanHoi: "Tổng diện tích phần đất của nước ta (theo Niên giám thống kê 2006) là (km²):",
+    CauA: "331 211.",
+    CauB: "331 212.",
+    CauC:"331 213.",
+    CauD:"331 214.",
+    DapAn:"B",
+    ThangDiem:1,
+    PhanLoai:3
+}
+{
+    MaMH:"M3",
+   PhanHoi: "Việc thông thương qua lại giữa nước ta với các nước láng giềng chỉ có thể tiến hành thuận lợi ở một số cửa khẩu vì:",
+    CauA: "Phần lớn biên giới nước ta nằm ở vùng núi.",
+    CauB: "Phần lớn biên giới chạy theo các đỉnh núi, các hẻm núi...",
+    CauC:"Cửa khẩu là nơi có địa hình thuận lợi cho qua lại.",
+    CauD:"Thuận tiện cho việc đảm bảo an ninh quốc gia.",
+    DapAn:"A",
+    ThangDiem:0.25,
+    PhanLoai:0
+}
+{
+    MaMH:"M3",
+   PhanHoi: "Cửa khẩu nào sau đây nằm trên đường biên giới Việt Nam – Lào?",
+    CauA: "Móng Cái.",
+    CauB: "Hữu Nghị.",
+    CauC:"Đồng Văn.",
+    CauD:"Lao Bảo.",
+    DapAn:"D",
+    ThangDiem:0.5,
+    PhanLoai:1
+}
+{
+    MaMH:"M3",
+   PhanHoi: "Cửa khẩu nào sau đây nằm trên đường biên giới Việt – Trung?",
+    CauA: "Cầu Treo.",
+    CauB: "Lào Cai.",
+    CauC:"Mộc Bài.",
+    CauD:"Vĩnh Xương.",
+    DapAn:"B",
+    ThangDiem:0.75,
+    PhanLoai:2
+}
+{
+    MaMH:"M3",
+   PhanHoi: "Đường bờ biển nước ta dài (km):",
+    CauA: "3260",
+    CauB: "3270",
+    CauC:"2360",
+    CauD:"3460",
+    DapAn:"A",
+    ThangDiem:1,
+    PhanLoai:3
+}
+{
+    MaMH:"M3",
+   PhanHoi: "Quần đảo của nước ta nằm ở ngoài khơi xa trên biển Đông là:",
+    CauA: "Hoàng Sa.",
+    CauB: "Thổ Chu.",
+    CauC:"Trường Sa.",
+    CauD:"Câu A + C đúng.",
+    DapAn:"D",
+    ThangDiem:0.25,
+    PhanLoai:0
+}
+{
+    MaMH:"M3",
+   PhanHoi: "Nội thủy là:",
+    CauA: "Nước tiếp giáp với đất liền, ở phía trong đường cơ sở.",
+    CauB: "Có chiều rộng 12 hải lí.",
+    CauC:"Tiếp liền với lãnh hải và hợp với lãnh hải thành vùng biển rộng 200 hải lí.",
+    CauD:"Nước ở phía ngoài đường cơ sở với chiều rộng 12 hải lí.",
+    DapAn:"A",
+    ThangDiem:0.5,
+    PhanLoai:1
+}
+{
+    MaMH:"M3",
+   PhanHoi: "Vùng biển, tại đó Nhà nước ta có chủ quyền hoàn toàn về kinh tế, nhưng vẫn để cho các nước khác được đặt ống dẫn dầu, dây cáp ngầm và tàu thuyền, máy bay nước ngoài được tự do về hàng hải và hàng không nhưng công ước quốc tế quy định, được gọi là:",
+    CauA: "Nội thủy.",
+    CauB: "Lãnh hải.",
+    CauC:"Vùng tiếp giáp lãnh hải.",
+    CauD:"Vùng đặc quyền kinh tế.",
+    DapAn:"D",
+    ThangDiem:0.75,
+    PhanLoai:2
+}
+{
+    MaMH:"M3",
+   PhanHoi: "Phần ngầm dưới biển và lòng đất dưới đáy biển thuộc phần lục địa kéo dài mở rộng ra ngoài lãnh hải cho đến bờ ngoài của rìa lục địa, có độ sâu khoảng 200m và hơn nữa, được gọi là:",
+    CauA: "Lãnh hải.",
+    CauB: "Thềm lục địa.",
+    CauC:"Vùng tiếp giáp lãnh hải.",
+    CauD:"Vùng đặc quyền kinh tế.",
+    DapAn:"B",
+    ThangDiem:1,
+    PhanLoai:3
+}
+{
+    MaMH:"M3",
+   PhanHoi: "Vùng biển chủ quyền của Việt Nam trên biển Đông rộng khoảng (triệu km²):",
+    CauA: "1,0.",
+    CauB: "2,0.",
+    CauC:"3,0.",
+    CauD:"4,0.",
+    DapAn:"A",
+    ThangDiem:0.25,
+    PhanLoai:0
+}
+{
+    MaMH:"M3",
+   PhanHoi: "Nước ta có vị trí nằm hoàn toàn trong vùng nhiệt đới ở bán cầu Bắc, trong khu vực ảnh hưởng của chế độ gió Mậu dịch và gió mùa châu Á, nên:",
+    CauA: "Có nhiều tài nguyên khoáng sản.",
+    CauB: "Có nhiều tài nguyên sinh vật quý giá.",
+    CauC:"Khí hậu có hai mùa rõ rệt.",
+    CauD:"Thảm thực vật bốn mùa xanh tốt.",
+    DapAn:"C",
+    ThangDiem:0.5,
+    PhanLoai:1
+}
+{
+    MaMH:"M3",
+   PhanHoi: "Nước ta có nhiều tài nguyên khoáng sản là do vị trí địa lí:",
+    CauA: "Tiếp giáp với biển Đông.",
+    CauB: "Trên vành đai sinh khoáng châu Á – Thái Bình Dương.",
+    CauC:"Trên đường di lưu và di cư của nhiều loài động, thực vật.",
+    CauD:"Ở khu vực gió mùa điển hình nhất thế giới.",
+    DapAn:"B",
+    ThangDiem:0.75,
+    PhanLoai:2
+}
+{
+    MaMH:"M3",
+   PhanHoi: "Ý nghĩa kinh tế của vị trí địa lí nước ta:",
+    CauA: "Tạo điều kiện thực hiện chính sách mở cửa, hội nhập với các nước trên thế giới, thu hút vốn đầu tư nước ngoài.",
+    CauB: "Tạo điều kiện thuận lợi cho nước ta chung sống hòa bình, hợp tác hữu nghị và cùng phát triển vời các nước.",
+    CauC:"Có vị trí địa lí đặc biệt qun trọng ở vùng Đông Nam Á, khu vực kinh tế rất năng động và nhạy cảm với những biến động chính trị thế giới.",
+    CauD:"Tất cả đều đúng.",
+    DapAn:"A",
+    ThangDiem:1,
+    PhanLoai:3
+}
+{
+    MaMH:"M3",
+   PhanHoi: "Do nằm ở trung tâm Đông Nam Á, ở nơi tiếp xúc giữa nhiều hệ thống tự nhiên, nên nước ta có:",
+    CauA: "Đủ các loại khoáng sản chính của khu vực Đông Nam Á.",
+    CauB: "Nhiều loại gỗ quý trong rừng.",
+    CauC:"Cả cây nhiệt đới và cây cận nhiệt đới.",
+    CauD:"Tất cả đều đúng.",
+    DapAn:"D",
+    ThangDiem:0.25,
+    PhanLoai:0
+}
+{
+    MaMH:"M3",
+   PhanHoi: "Vùng đất là:",
+    CauA: "Phần đất liền giáp biển.",
+    CauB: "Toàn bộ phần đất liền và các hải đảo.",
+    CauC:"Phần được giới hạn bởi các đường biên giới và đường bờ biển.",
+    CauD:"Các hải đảo và vùng đồng bằng ven biển.",
+    DapAn:"B",
+    ThangDiem:0.5,
+    PhanLoai:1
+}
+{
+    MaMH:"M3",
+   PhanHoi: "Do nước ta nằm hoàn toàn trong vùng nhiệt đới ở bán cầu Bắc, nên:",
+    CauA: "Khí hậu có hai mùa rõ rệt: mùa đông bớt nóng, khô và mùa hạ nóng, mưa nhiều.",
+    CauB: "Nền nhiệt độ cao, các cân bức xạ quanh năm dương.",
+    CauC:"Có nhiều tài nguyên sinh vật quý giá.",
+    CauD:"Có sự phân hóa tự nhiên rõ rệt.",
+    DapAn:"B",
+    ThangDiem:0.75,
+    PhanLoai:2
+}
+{
+    MaMH:"M3",
+   PhanHoi: "Nằm ở vị trí tiếp giáp giữa lục địa và đại dương trên vành đai sinh khoáng châu Á – Thái Bình Dương, nên Việt Nam có nhiều:",
+    CauA: "Tài nguyên sinh vật quý giá.",
+    CauB: "Tài nguyên khoáng sản.",
+    CauC:"Bão và lũ lụt.",
+    CauD:"Vùng tự nhiên khác nhau trên lãnh thổ.",
+    DapAn:"B",
+    ThangDiem:1,
+    PhanLoai:3
+}
+{
+    MaMH:"M3",
+   PhanHoi: "Nhờ tiếp giáp biển nên nước ta có:",
+    CauA: " Nền nhiệt độ cao, nhiều ánh nắng.",
+    CauB: "Khí hậu có hai mùa rõ rệt.",
+    CauC:"Thiên nhiên xanh tốt, giàu sức sống.",
+    CauD:"Nhiều tài nguyên khoáng sản và sinh vật.",
+    DapAn:"C",
+    ThangDiem:0.25,
+    PhanLoai:0
+}
+{
+    MaMH:"M3",
+   PhanHoi: "Một hải lí tương ứng với bao nhiêu m?",
+    CauA: "1851m.",
+    CauB: "1852m.",
+    CauC:"1853m.",
+    CauD:"1854m.",
+    DapAn:"B",
+    ThangDiem:0.5,
+    PhanLoai:1
+}
+{
+    MaMH:"M3",
+   PhanHoi: "Đường biên giới trên đất liền Việt Nam – Trung Quốc dài khoảng (km):",
+    CauA: "1400",
+    CauB: "2100",
+    CauC:"1100",
+    CauD:"2300",
+    DapAn:"A",
+    ThangDiem:0.75,
+    PhanLoai:2
+}
+{
+    MaMH:"M3",
+   PhanHoi: "Điểm cực Tây của nước ta thuộc tỉnh nào?",
+    CauA: "Lai Châu.",
+    CauB: "Điện Biên.",
+    CauC:"Lạng Sơn.",
+    CauD:"Hà Giang.",
+    DapAn:"B",
+    ThangDiem:1,
+    PhanLoai:3
+}
+{
+    MaMH:"M3",
+   PhanHoi: "Vị trí địa lí nước ta tạo điều kiện thuận lợi cho việc:",
+    CauA: "Phát triển nền nông nghiệp nhiệt đới.",
+    CauB: "Mở rộng quan hệ hợp tác với các nước trong khu vực Đông Nam Á và thế giới.",
+    CauC:"Phát triển các ngành kinh tế biển.",
+    CauD:"Tất cả các thuận lợi trên.",
+    DapAn:"D",
+    ThangDiem:0.25,
+    PhanLoai:0
+}
+{
+    MaMH:"M3",
+   PhanHoi: "Đối với vùng đặc quyền kinh tế, Việt Nam có nghĩa vụ và quyền lợi nào dưới đây ?",
+    CauA: "Có chủ quyền hoàn toàn về thăm dò, khai thác, bảo vệ, quản lí các tất cả các nguồn tài nguyên.",
+    CauB: "Cho phép các nước tự do hàng hải, hàng không, đặt ống dẫn dầu, cáp quang ngầm.",
+    CauC:"Cho phép các nước được phép thiết lập các công trình nhân tạo phục vụ cho thăm dò, khảo sát biển.",
+    CauD:"Tất cả các ý trên.",
+    DapAn:"A",
+    ThangDiem:0.5,
+    PhanLoai:1
+}
+{
+    MaMH:"M3",
+   PhanHoi: "Đối với vùng đặc quyền kinh tế, Việt Nam cho phép các nước :",
+    CauA: "Được thiết lập các công trình và các đảo nhân tạo.",
+    CauB: "Được tổ chức khảo sát, thăm dò các nguồn tài nguyên.",
+    CauC:"Được tự do hàng hải, hàng không, đặt ống dẫn dầu và cáp quang biển.",
+    CauD:"Tất cả các ý trên.",
+    DapAn:"C",
+    ThangDiem:0.75,
+    PhanLoai:2
+}
+{
+    MaMH:"M3",
+   PhanHoi: "Xét về góc độ kinh tế, vị trí địa lí của nước ta :",
+    CauA: "Thuận lợi cho việc trao đổi, hợp tác, giao lưu với các nước trong khu vực và thế giới.",
+    CauB: "Thuận lợi cho phát triển các ngành kinh tế, các vùng lãnh thổ ; tạo điều kiện thực hiện chính sách mở cửa, hội nhập với các nước và thu hút đầu tư của nước ngoài.",
+    CauC:"Thuận lợi trong việc hợp tác sử dụng tổng hợp các nguồn lợi của Biển Đông, thềm lục địa và sông Mê Công với các nước có liên quan.",
+    CauD:"Thuận lợi cho việc hợp tác kinh tế, văn hóa, khoa học - kĩ thuật với các nước trong khu vực châu Á Thái Bình Dương.",
+    DapAn:"B",
+    ThangDiem:1,
+    PhanLoai:3
+}
+{
+    MaMH:"M3",
+   PhanHoi: "Đặc điểm của thiên nhiên nhiệt đới - ẩm - gió mùa của nước ta là do :",
+    CauA: "Vị trí địa lí và hình dáng lãnh thổ quy định.",
+    CauB: "Ảnh hưởng của các luồng gió thổi theo mùa từ phương bắc xuống và từ phía nam lên.",
+    CauC:"Sự phân hóa phức tạp của địa hình vùng núi, trung du và đồng bằng ven biển.",
+    CauD:"Ảnh hưởng của Biển Đông cùng với các bức chắn địa hình.",
+    DapAn:"A",
+    ThangDiem:0.25,
+    PhanLoai:0
+}
+{
+    MaMH:"M3",
+   PhanHoi: "Ở nước ta, loại tài nguyên có triển vọng khai thác lớn nhưng chưa được chú ý đúng mức :",
+    CauA: "Tài nguyên đất.",
+    CauB: "Tài nguyên biển.",
+    CauC:"Tài nguyên rừng.",
+    CauD:"Tài nguyên khoáng sản.",
+    DapAn:"B",
+    ThangDiem:0.5,
+    PhanLoai:1
+}
+{
+    MaMH:"M3",
+   PhanHoi: "Ở nước ta, khai thác tổng hợp giá trị kinh tế của mạng lưới sông ngòi dày đặc cùng với lượng nước phong phú là thế mạnh của :",
+    CauA: "Ngành công nghiệp năng lượng ; ngành nông nghiệp và giao thông vận tải, du lịch.",
+    CauB: "Ngành khai thác, nuôi trồng và chế biển thủy sản nước ngọt.",
+    CauC:"Ngành giao thông vận tải và du lịch.",
+    CauD:"Ngành trồng cây lương thực - thực phẩm.",
+    DapAn:"A",
+    ThangDiem:0.75,
+    PhanLoai:2
+}
+{
+    MaMH:"M3",
+   PhanHoi: "Biển Đông là vùng biển lớn nằm ở phía :",
+    CauA: "Nam Trung Quốc và Đông Bắc Đài Loan.",
+    CauB: "Phía đông Phi-líp-pin và phía tây của Việt Nam.",
+    CauC:"Phía đông Việt Nam và tây Phi-líp-pin.",
+    CauD:"Phía bắc của Xin-ga-po và phía nam Ma-lai-xi-a.",
+    DapAn:"C",
+    ThangDiem:1,
+    PhanLoai:3
+}
+{
+    MaMH:"M3",
+   PhanHoi: "Vấn đề chủ quyền biên giới quốc gia trên đất liền, Việt Nam cần tiếp tục đàm phán với :",
+    CauA: "Trung Quốc và Lào.",
+    CauB: "Lào và Cam-pu-chia.",
+    CauC:"Cam-pu-chia và Trung Quốc.",
+    CauD:"Trung Quốc, Lào và Cam-pu-chia",
+    DapAn:"C",
+    ThangDiem:0.25,
+    PhanLoai:0
+}
+{
+    MaMH:"M3",
+   PhanHoi: "Thế mạnh của vị trí địa lí nước ta trong khu vực Đông Nam Á sẽ được phát huy cao độ nếu biết kết hợp xây dựng các loại hình giao thông vận tải :",
+    CauA: "Đường ô tô và đường sắt.",
+    CauB: "Đường biển và đường sắt.",
+    CauC:"Đường hàng không và đường biển.",
+    CauD:"Đường ô tô và đường biển.",
+    DapAn:"C",
+    ThangDiem:0.5,
+    PhanLoai:1
+}
+{
+    MaMH:"M3",
+   PhanHoi: "Quần đảo Kiên Hải thuộc tỉnh nào của nước ta?",
+    CauA: "Cà Mau",
+    CauB: "Kiên Giang",
+    CauC:"Bạc Liêu",
+    CauD:"Sóc Trăng",
+    DapAn:"B",
+    ThangDiem:0.75,
+    PhanLoai:2
+}
+{
+    MaMH:"M3",
+   PhanHoi: "Đường biên giới trên biển giới hạn từ:",
+    CauA: "Móng Cái đến Hà Tiên.",
+    CauB: "Lạng Sơn đến Đất Mũi",
+    CauC:"Móng Cái đến Cà Mau.",
+    CauD:"Móng Cái đến Bạc Liêu",
+    DapAn:"A",
+    ThangDiem:1,
+    PhanLoai:3
+}
+{
+    MaMH:"M3",
+   PhanHoi: "Nước ta có nguồn tài nguyên sinh vật phong phú nhờ :",
+    CauA: "Lãnh thổ kéo dài từ 8º34’B đến 23º23’B nên thiên nhiên có sự phân hoá đa dạng.",
+    CauB: "Nằm hoàn toàn trong miền nhiệt đới Bắc bán cầu thuộc khu vực châu Á gió mùa.",
+    CauC:"Nằm ở vị trí tiếp giáp giữa lục địa và hải dương trên vành đai sinh khoáng của thế giới.",
+    CauD:"Nằm ở vị trí tiếp giáp giữa lục địa và hải dương trên đường di lưu của các loài sinh vật.",
+    DapAn:"D",
+    ThangDiem:0.25,
+    PhanLoai:0
+}
+{
+    MaMH:"M3",
+   PhanHoi: "Đây là cảng biển mở lối ra biển thuận lợi cho vùng Đông Bắc Cam-pu-chia.",
+    CauA: "Hải Phòng.",
+    CauB: "Cửa Lò.",
+    CauC:"Đà Nẵng.",
+    CauD:"Nha Trang.",
+    DapAn:"C",
+    ThangDiem:0.5,
+    PhanLoai:1
+}
+{
+    MaMH:"M3",
+   PhanHoi: "Thiên nhiên nước ta bốn mùa xanh tươi khác hẳn với các nước có cùng độ vĩ ở Tây Á, châu Phi là nhờ :",
+    CauA: "Nước ta nằm hoàn toàn trong vùng nội chí tuyến.",
+    CauB: "Nước ta nằm ở trung tâm vùng Đông Nam Á.",
+    CauC:"Nước ta nằm ở vị trí tiếp giáp của nhiều hệ thống tự nhiên.",
+    CauD:"Nước ta nằm tiếp giáp Biển Đông với chiều dài bờ biển trên 3260 km.",
+    DapAn:"D",
+    ThangDiem:0.75,
+    PhanLoai:2
+}
+{
+    MaMH:"M3",
+   PhanHoi: "Đường cơ sở của nước ta được xác định là đường :",
+    CauA: "Nằm cách bờ biển 12 hải lí.",
+    CauB: "Nối các điểm có độ sâu 200 m.",
+    CauC:"Nối các mũi đất xa nhất với các đảo ven bờ.",
+    CauD:"Tính từ mức nước thủy triều cao nhất đến các đảo ven bờ.",
+    DapAn:"C",
+    ThangDiem:1,
+    PhanLoai:3
+}
+{
+    MaMH:"M4",
+   PhanHoi: "Khi nói về ánh sáng đơn sắc, phát biểu nào sau đây đúng?",
+    CauA: "Ánh sáng trắng là ánh sáng đơn sắc vì nó có màu trắng.",
+    CauB: "Tốc độ truyền của một ánh sáng đơn sắc trong nước và trong không khí là như nhau.",
+    CauC:"Trong thủy tinh, các ánh sáng đơn sắc khác nhau truyền với tốc độ như nhau.",
+    CauD:"Ánh sáng đơn sắc không bị tán sắc khi truyền qua lăng kính.",
+    DapAn:"D",
+    ThangDiem:0.25,
+    PhanLoai:0
+}
+{
+    MaMH:"M4",
+   PhanHoi: "Trong phương trình dao động điều hoà x = Acos(ωt + φ), đại lượng (ωt + φ) được gọi là",
+    CauA: "pha dao động.",
+    CauB: "tần số dao động.",
+    CauC:"biên độ dao động.",
+    CauD:"chu kì dao động.",
+    DapAn:"A",
+    ThangDiem:0.5,
+    PhanLoai:1
+}
+{
+    MaMH:"M4",
+   PhanHoi: "Trong dao động điều hoà của chất điểm , chất điểm đổi chiều chuyển động khi lực tác dụng",
+    CauA: "đổi chiều.",
+    CauB: "bằng không.",
+    CauC:"có độ lớn cực đại.",
+    CauD:"thay đổi độ lớn.",
+    DapAn:"C",
+    ThangDiem:0.75,
+    PhanLoai:2
+}
+{
+    MaMH:"M4",
+   PhanHoi: "Một vật dao động điều hoà theo phương trình x = 6cos(4πt)cm, biên độ dao động của vật là ",
+    CauA: "4 cm.",
+    CauB: "6 cm.",
+    CauC:"4 m.",
+    CauD:"6 m. ",
+    DapAn:"B",
+    ThangDiem:1,
+    PhanLoai:3
+}
+{
+    MaMH:"M4",
+   PhanHoi: "Một sóng cơ có tần số f bước sóng l lan truyền trong môi trường vật chất đàn hồi thì tốc độ sóng xác định theo công thức: ",
+    CauA: "v=l/f.",
+    CauB: "v= f/l.",
+    CauC:"v=lf.",
+    CauD:"v=2lf.",
+    DapAn:"C",
+    ThangDiem:0.25,
+    PhanLoai:0
+}
+{
+    MaMH:"M4",
+   PhanHoi: "Đại lượng nào sau đây được gọi là hệ số công suất của mạch điện xoay chiều?",
+    CauA: "sinφ.",
+    CauB: "cosφ.",
+    CauC:"tanφ.",
+    CauD:"cotanφ.",
+    DapAn:"B",
+    ThangDiem:0.5,
+    PhanLoai:1
+}
+{
+    MaMH:"M4",
+   PhanHoi: "Cuộn thứ cấp của máy biến thế có 1000vòng. Từ thông xoay chiều trong lõi biến thế có tần số 50Hz và giá trị cực đại 0,5mWb. Suất điện động hiệu dụng của cuộn thứ cấp là:",
+    CauA: "111V.",
+    CauB: "157V.",
+    CauC:"500V.",
+    CauD:"353,6V.",
+    DapAn:"A",
+    ThangDiem:0.75,
+    PhanLoai:2
+}
+{
+    MaMH:"M4",
+   PhanHoi: "Cho mạch dao động LC, có L = 2mH và C = 2pF, (lấy π2 = 10). Tần số dao động  f của mạch là",
+    CauA: "25 Hz.",
+    CauB: "10 Hz.",
+    CauC:"1,5 MHz. ",
+    CauD:"2,5 MHz.",
+    DapAn:"D",
+    ThangDiem:1,
+    PhanLoai:3
+}
+{
+    MaMH:"M4",
+   PhanHoi: "Cho mạch dao động LC, khi tăng điện dung của tụ điện lên 4 lần thì chu kì dao động của mạch",
+    CauA: "tăng lên 4 lần.",
+    CauB: "tăng lên 2 lần.",
+    CauC:"giảm đi 4 lần.",
+    CauD:"giảm đi 2 lần.",
+    DapAn:"B",
+    ThangDiem:0.25,
+    PhanLoai:0
+}
+{
+    MaMH:"M4",
+   PhanHoi: "Cho bốn ánh sáng đơn sắc: đỏ; lục; lam và tím. Chiết suất của thủy tinh có giá trị lớn nhất đối với ánh sáng",
+    CauA: "lam.",
+    CauB: "đỏ.",
+    CauC:"tím.",
+    CauD:"lục.",
+    DapAn:"C",
+    ThangDiem:0.5,
+    PhanLoai:1
+}
+{
+    MaMH:"M4",
+   PhanHoi: "Tia X có cùng bản chất với tia nào sau đây?",
+    CauA: "Tia β+. ",
+    CauB: "Tia tử ngoại.",
+    CauC:"Tia anpha.",
+    CauD:"Tia β–.",
+    DapAn:"B",
+    ThangDiem:0.75,
+    PhanLoai:2
+}
+{
+    MaMH:"M4",
+   PhanHoi: "Sóng biển có bước sóng 2,5m. Khoảng cách giữa hai điểm gần nhau nhất trên phương truyền sóng và dao động cùng pha là",
+    CauA: "0",
+    CauB: "2,5m ",
+    CauC:"0,625m",
+    CauD:"1,25m",
+    DapAn:"B",
+    ThangDiem:1,
+    PhanLoai:3
+}
+{
+    MaMH:"M4",
+   PhanHoi: "Một cuộn dây có lõi thép, độ tự cảm 318mH và điện trở thuần  . Người ta mắc cuộn dây vào mạng điện không đổi có điện áp 20V, thì cường độ dòng điện qua cuộn dây là",
+    CauA: "0,2A.",
+    CauB: "0,14A.",
+    CauC:"0,1A.",
+    CauD:"1,4A.",
+    DapAn:"C",
+    ThangDiem:0.25,
+    PhanLoai:0
+}
+{
+    MaMH:"M4",
+   PhanHoi: "Trong thí nghiệm giao thoa ánh sáng dùng hai khe Y-âng, biết khoảng cách giữa hai khe S1S2 = a = 0,35mm, khoảng cách D = 1,5m và bước sóng l = 0,7mm. Khoảng cách giữa hai vân sáng liên tiếp i là",
+    CauA: "2mm.",
+    CauB: "1,5mm.",
+    CauC:"3mm.",
+    CauD:"4mm.",
+    DapAn:"C",
+    ThangDiem:0.5,
+    PhanLoai:1
+}
+{
+    MaMH:"M4",
+   PhanHoi: "Trong chân không, bức xạ có bước sóng nào sau đây là bức xạ thuộc miền tử ngoại?",
+    CauA: "450 nm. ",
+    CauB: "620 nm.",
+    CauC:"310 nm.",
+    CauD:"1050 nm.",
+    DapAn:"C",
+    ThangDiem:0.75,
+    PhanLoai:2
+}
+{
+    MaMH:"M4",
+   PhanHoi: "Một điện trở R = 3,6 Ω được mắc vào hai cực của một nguồn điện một chiều có suất điện động E = 8 V và điện trở trong r = 0,4 Ω thành mạch điện kín. Bỏ qua điện trở của dây nối. Công suất của nguồn điện là",
+    CauA: "14,4 W. ",
+    CauB: "8 W.",
+    CauC:"1,6 W.",
+    CauD:"16 W.",
+    DapAn:"16 W.",
+    ThangDiem:1,
+    PhanLoai:3
+}
+{
+    MaMH:"M4",
+   PhanHoi: "Trong thí nghiệm về giao thoa sóng ở mặt chất lỏng, tại hai điểm S1 và S2 có hai nguồn dao động cùng pha theo phương thẳng đứng phát ra hai sóng kết hợp với tần số 20 Hz. Ở mặt chất lỏng, tại điểm M cách S1 và S2 lần lượt là 8 cm và 15 cm có cực tiểu giao thoa. Biết số cực đại giao thoa trên các đoạn thẳng MS1 và MS2 lần lượt là m và m + 7. Tốc độ truyền sóng ở mặt chất lỏng là",
+    CauA: "20 cm/s. ",
+    CauB: "40 cm/s.",
+    CauC:"40 cm/s.",
+    CauD:"45 cm/s.",
+    DapAn:"B",
+    ThangDiem:0.25,
+    PhanLoai:0
+}
+{
+    MaMH:"M4",
+   PhanHoi: "Sóng điện từ và sóng cơ học không chung tính chất nào? ",
+    CauA: "Phản xạ.",
+    CauB: "Truyền được trong chân không.",
+    CauC:"Mang năng lượng.  ",
+    CauD:"Khúc xạ. ",
+    DapAn:"B",
+    ThangDiem:0.5,
+    PhanLoai:1
+}
+{
+    MaMH:"M4",
+   PhanHoi: "Một tia sáng đi qua lăng kính ló ra chỉ một màu duy nhất không phải màu trắng thì đó là",
+    CauA: "Ánh sáng đơn sắc",
+    CauB: "Ánh sáng đa sắc",
+    CauC:"Ánh sáng bị tán sắc",
+    CauD:"Lăng kính không có khả năng tán",
+    DapAn:"A",
+    ThangDiem:0.75,
+    PhanLoai:2
+}
+{
+    MaMH:"M4",
+   PhanHoi: "Phát biểu nào sau đây sai khi nói về phôtôn ánh sáng?",
+    CauA: "phôtôn chỉ tồn tại trong trạng thái chuyển động.",
+    CauB: "Mỗi phôtôn có một năng lượng xác định.",
+    CauC:"Năng lượng của phôtôn ánh sáng tím lớn hơn năng lượng phôtôn ánh sáng đỏ.",
+    CauD:"Năng lượng của các phôtôn của các ánh sáng đơn sắc khác nhau đều bằng nhau.",
+    DapAn:"D",
+    ThangDiem:1,
+    PhanLoai:3
+}
+{
+    MaMH:"M4",
+   PhanHoi: "Thông tin nào đây là sai khi nói về các quỹ đạo dừng?",
+    CauA: "Quỹ đạo có bán kính r0 ứng với mức năng lượng thấp nhất.",
+    CauB: "Quỹ đạo M có bán kính 9r0.",
+    CauC:"Quỹ đạo P có bán kính 25r0.",
+    CauD:"Không có quỹ đạo nào có bán kính 8r0.",
+    DapAn:"C",
+    ThangDiem:0.25,
+    PhanLoai:0
+}
+{
+    MaMH:"M4",
+   PhanHoi: "Hai điện tích điểm q1= 2.10-9 C; q2= 4.10-9 C đặt cách nhau 3 cm trong không khí, lực tương tác giữa chúng có độ lớn",
+    CauA: "2,4.10-26 N.",
+    CauB: "8.10-5 N.",
+    CauC:"1,6.10-4 N.",
+    CauD:"2,4.10-6 N.",
+    DapAn:"B",
+    ThangDiem:0.5,
+    PhanLoai:1
+}
+{
+    MaMH:"M4",
+   PhanHoi: "Một con lắc đơn có chu kỳ dao động là 4s, thời gian để con lắc đi từ vị trí cân bằng đến vị trí có li độ cực đại là",
+    CauA: "0,5s.",
+    CauB: "1,0 s.",
+    CauC:"1,5s.",
+    CauD:"2,0s.",
+    DapAn:"B",
+    ThangDiem:0.75,
+    PhanLoai:2
+}
+{
+    MaMH:"M4",
+   PhanHoi: "Trên một sợi dây đàn hồi dài 1,2 m, hai đầu cố định, đang có sóng dừng. Biết sóng truyền trên dây có tần số 100 Hz và tốc độ 80 m/s. Số bụng sóng trên dây là:   ",
+    CauA: "3",
+    CauB: "5",
+    CauC:"4",
+    CauD:"2",
+    DapAn:"A",
+    ThangDiem:1,
+    PhanLoai:3
+}
+{
+    MaMH:"M4",
+   PhanHoi: "Một sóng điện từ lan truyền trong chân không có bước sóng là 300m thì tần số của sóng đó là bao nhiêu? Biết c = 3.108m/s.",
+    CauA: "106Hz",
+    CauB: "4,3.106Hz",
+    CauC:"6,5.106Hz",
+    CauD:"9.106Hz",
+    DapAn:"A",
+    ThangDiem:0.25,
+    PhanLoai:0
+}
+{
+    MaMH:"M4",
+   PhanHoi: "Giao thoa ánh sáng với 2 nguồn kết hợp cách nhau 4mm bằng ánh sáng đơn sắc có bước sóng l = 0,6µm. Vân sáng bậc 3 cách vân trung tâm là 0,9mm. Tính khoảng cách từ hai nguồn đến màn?",
+    CauA: "20cm.",
+    CauB: "2.103 mm",
+    CauC:"1,5m",
+    CauD:"2cm",
+    DapAn:"B",
+    ThangDiem:0.5,
+    PhanLoai:1
+}
+{
+    MaMH:"M4",
+   PhanHoi: "Công thoát êlectron của kim loại là 7,64.10-19J. Chiếu lần lượt vào bề mặt tấm kim loại này các bức xạ có bước sóng là l1 = 0,18 mm, l2 = 0,21 mm và l3 = 0,35 mm. Lấy h =6,625.10-34 J.s, c = 3.108 m/s. Bức xạ nào gây được hiện tượng quang điện đối với kim loại đó?",
+    CauA: "Hai bức xạ (l1 và l2).",
+    CauB: "Chỉ có bức xạ l2.",
+    CauC:"Cả ba bức xạ (l1, l2 và l3).",
+    CauD:"Chỉ có bức xạ l1.",
+    DapAn:"A",
+    ThangDiem:0.75,
+    PhanLoai:2
+}
+{
+    MaMH:"M4",
+   PhanHoi: "Một người cận thị có cực viễn cách mắt 100 cm. Người này đeo kính để nhìn rõ vật ở xa vô cực không điều tiết. Kính đeo sát mắt. Độ tụ D của kính là",
+    CauA: "-2 điốp",
+    CauB: "-10điốp",
+    CauC:" -1 điốp",
+    CauD:" -5 điốp",
+    DapAn:"C",
+    ThangDiem:1,
+    PhanLoai:3
+}
+{
+    MaMH:"M4",
+   PhanHoi: "Một vật tham gia đồng thời hai dao động điều hòa cùng tần số gócw=10 rad/s với biên độ dao động lần lượt là A1 và A2, vuông pha với nhau.  Biết A1 = 8 cm và vận tốc lớn nhất của vật là 1 m/s. A2 có giá trị",
+    CauA: "2 cm",
+    CauB: "6 cm",
+    CauC:"8 cm",
+    CauD:"10 cm",
+    DapAn:"B",
+    ThangDiem:0.25,
+    PhanLoai:0
+}
+{
+    MaMH:"M4",
+   PhanHoi: "Điện năng được truyền từ nơi phát đến một khu dân cư bằng đường dây một pha với hiệu suất truyền tải là 90%. Coi hao phí điện năng chỉ do tỏa nhiệt trên đường dây và không vượt quá 20%. Nếu công suất sử dụng điện của khu dân cư này tăng 20% và giữ nguyên điện áp ở nơi phát thì hiệu suất truyền tải điện năng trên chính đường dây đó là",
+    CauA: "87,7%.",
+    CauB: "89,2%.",
+    CauC:"92,8%.",
+    CauD:"85,8%.",
+    DapAn:"A",
+    ThangDiem:0.5,
+    PhanLoai:1
+}
+{
+    MaMH:"M4",
+   PhanHoi: "Trong thí nghiệm Young về giao thoa ánh sáng, khe hẹp S phát ra đồng thời ba bức xạ đơn sắc có bước sóng là l1 = 0,42mm, l2 = 0,56mm và l3 = 0,63mm. Trên màn, trong khoảng giữa hai vân sáng liên tiếp có màu giống màu vân trung tâm, nếu hai vân sáng của hai bức xạ trùng nhau ta chỉ tính là một vân sáng thì số vân sáng quan sát được là",
+    CauA: "21",
+    CauB: "23",
+    CauC:"26",
+    CauD:"27",
+    DapAn:"A",
+    ThangDiem:0.75,
+    PhanLoai:2
+}
+{
+    MaMH:"M4",
+   PhanHoi: "Khi một vật dao động điều hoà, đại lượng không thay đổi là",
+    CauA: "Gia tốc.",
+    CauB: "Thế năng.",
+    CauC:"Vận tốc.",
+    CauD:"Tần số.",
+    DapAn:"D",
+    ThangDiem:1,
+    PhanLoai:3
+}
+{
+    MaMH:"M4",
+   PhanHoi: "Khi vật dao động điều hoà thì",
+    CauA: "vật đi qua vị trí cân bằng vận tốc bằng 0, gia tốc bằng 0",
+    CauB: "vật đi qua vị trí biên độ vận tốc bằng 0, gia tốc bằng 0 ",
+    CauC:"vật đi qua vị trí cân bằng vận tốc bằng 0, gia tốc bằng cực đại",
+    CauD:"vật đi qua vị trí cân bằng vận tốc bằng cực đại, gia tốc bằng 0.",
+    DapAn:"D",
+    ThangDiem:0.25,
+    PhanLoai:0
+}
+{
+    MaMH:"M4",
+   PhanHoi: "Phát biểu nào sau đây là đúng khi nói về dao động tắt dần?",
+    CauA: "Dao động tắt dần có biên độ giảm dần theo thời gian.",
+    CauB: "Cơ năng của vật dao động tắt dần không đổi theo thời gian.",
+    CauC:"Lực cản môi trường tác dụng lên vật luôn sinh công dương.",
+    CauD:"Dao động tắt dần là dao động chỉ chịu tác dụng của nội lực.",
+    DapAn:"A",
+    ThangDiem:0.5,
+    PhanLoai:1
+}
+{
+    MaMH:"M4",
+   PhanHoi: "Phát biểu nào sau đây là sai khi nói về dao động cơ học? ",
+    CauA: "Hiện tượng cộng hưởng xảy ra khi tần số của ngoại lực bằng tần số dao động riêng của hệ. ",
+    CauB: "Biên độ của dao động cộng hưởng không phụ thuộc vào lực cản của môi trường. ",
+    CauC:"Tần số dao động cưỡng bức bằng tần số của ngoại lực điều hoà tác dụng lên hệ ấy.",
+    CauD:"Tần số dao động cưỡng bức bằng tần số của ngoại lực điều hoà tác dụng lên hệ ấy.",
+    DapAn:"B",
+    ThangDiem:0.75,
+    PhanLoai:2
+}
+{
+    MaMH:"M4",
+   PhanHoi: "Tốc độ truyền sóng cơ học phụ thuộc vào ",
+    CauA: "tần số sóng.",
+    CauB: "bản chất của môi trường truyền sóng.",
+    CauC:"biên độ của sóng.",
+    CauD:"bước sóng.",
+    DapAn:"B",
+    ThangDiem:1,
+    PhanLoai:3
+}
+{
+    MaMH:"M4",
+   PhanHoi: "Khi có sóng dừng trên một sợi dây đàn hồi, khoảng cách từ một bụng đến nút gần nó nhất bằng",
+    CauA: "một số nguyên lần bước sóng. ",
+    CauB: "một nửa bước sóng.",
+    CauC:"một bước sóng.",
+    CauD:"một phần tư bước sóng.",
+    DapAn:"D",
+    ThangDiem:0.25,
+    PhanLoai:0
+}
+{
+    MaMH:"M4",
+   PhanHoi: "Sóng cơ học lan truyền trong môi trường đàn hồi với tốc độ v không đổi, khi tăng tần số sóng lên 2 lần thì bước sóng",
+    CauA: "tăng 4 lần.",
+    CauB: "tăng 2 lần.",
+    CauC:"không đổi.",
+    CauD:"giảm 2 lần.",
+    DapAn:"D",
+    ThangDiem:0.5,
+    PhanLoai:1
+}
+{
+    MaMH:"M4",
+   PhanHoi: "Điều nào sau đây đúng  khi nói về bước sóng?",
+    CauA: "Bước sóng là quãng đường mà sóng truyền được trong một số nguyên lần chu kì.",
+    CauB: "Bước sóng là khoảng cách giữa hai điểm dao động cùng pha nhau trên phương truyền sóng.",
+    CauC:"Bước sóng là khoảng cách giữa hai điểm gần nhau nhất trên phương truyền sóng và dao động cùng pha.",
+    CauD:"Bước sóng là khoảng cách giữa hai điểm gần nhau nhất trên phương truyền sóng và dao động ngược pha.",
+    DapAn:"C",
+    ThangDiem:0.75,
+    PhanLoai:2
+}
+{
+    MaMH:"M4",
+   PhanHoi: "Trên mặt nước có hai nguồn kết hợp AB cách nhau một đoạn 12cm đang dao động vuông góc với mặt nước tạo ra sóng với bước sóng 1,6cm. Gọi C là một điểm trên mặt nước cách đều hai nguồn và cách trung điểm O của đoạn AB một khoảng 8cm. Trên đoạn CO, số điểm dao động ngược pha với nguồn là",
+    CauA: "2",
+    CauB: "3",
+    CauC:"4",
+    CauD:"5",
+    DapAn:"A",
+    ThangDiem:1,
+    PhanLoai:3
+}
+
