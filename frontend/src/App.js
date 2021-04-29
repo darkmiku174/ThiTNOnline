@@ -11,6 +11,7 @@ import ExamResultScreen from "./screens/ExamResultScreen";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import AdminExamList from "./screens/AdminExamList";
 import AdminSubjectList from "./screens/AdminSubjectList";
+import DragAndDrop from "./screens/DragAndDrop";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/giangvien/" component={TeacherScreen} exact />
         <Route path="/exams/result" component={ExamResultScreen} exact />
         <Route path="/admin/exams/list" component={AdminSubjectList} />
+        <Route path="/giangvien/draganddrop" component={DragAndDrop} exact />
       </section>
     </Router>
   );

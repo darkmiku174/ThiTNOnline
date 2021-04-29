@@ -4,7 +4,15 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
 
-mongoose.connect(process.env.MONGO_URL);
+const connectDB = async () => {
+  mongoose.connect(process.env.MONGO_URL, {
+    useUnifiedTopology: true,
+    useNewUrlParser: true,
+    useCreateIndex: true,
+  });
+};
+
+connectDB();
 
 var apiQuestionRoute = require("./api/routes/question.route");
 
@@ -20,4 +28,3 @@ app.use("/api/questions", apiQuestionRoute);
 app.listen(port, function () {
   console.log("Server listening on port " + port);
 });
-

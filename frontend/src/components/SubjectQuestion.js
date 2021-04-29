@@ -1,8 +1,9 @@
 import React from "react";
 import { Container, Form, Table, Button } from "react-bootstrap";
+import { Link, Route } from "react-router-dom";
 import dsMonHoc from "../subjectSample";
 
-const SubjectQuestion = ({ onClick }) => {
+const SubjectQuestion = () => {
   return (
     <Container>
       <div
@@ -35,11 +36,8 @@ const SubjectQuestion = ({ onClick }) => {
         <tbody>
           {dsMonHoc.map((q) => (
             <tr>
-              <td
-                onClick={onClick}
-                style={{ color: "blue", cursor: "pointer" }}
-              >
-                {q.id}
+              <td>
+                <Link to={"#dscauhoi/M" + q.id}>{q.id}</Link>
               </td>
               <td>{q.tenMonHoc}</td>
               <td>{q.questionNumber}</td>

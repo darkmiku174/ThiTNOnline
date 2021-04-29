@@ -1,10 +1,24 @@
 import { Container, Table, Form, Button } from "react-bootstrap";
 import dsCauHoi from "../questionsSample";
 import AddQuestion from "../components/AddQuestion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { listQuestion } from "../actions/QuestionActions";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
-const Questions = () => {
+const Questions = ({ idMH }) => {
   const [show, setShow] = useState(false);
+
+  const dispatch = useDispatch();
+  const questionList = useSelector((state) => state.questionList);
+  const { loading, error, questions } = questionList;
+
+  useEffect(() => {
+    if (questions.length === 0) {
+      dispatch(listQuestion());
+    }
+  }, [dispatch]);
+
   return (
     <Container>
       <div
@@ -26,7 +40,7 @@ const Questions = () => {
           </Button>
         </Form>
         <Button onClick={() => setShow(true)}>Add question</Button>
-        <AddQuestion show={show} onHide={() => setShow(false)} />
+        <AddQuestion show={show} onHide={() => setShow(false)} maMH={idMH} />
       </div>
       <Table striped bordered hover responsive className="table-sm">
         <thead>
@@ -37,13 +51,17 @@ const Questions = () => {
           </tr>
         </thead>
         <tbody>
-          {dsCauHoi.map((q) => (
-            <tr>
-              <td>{q.id}</td>
-              <td>{q.question}</td>
-              <td>Very hard</td>
-            </tr>
-          ))}
+          {questions.map((q, index) =>
+            q.MaMH === idMH ? (
+              <tr key={index}>
+                <td>{q._id}</td>
+                <td>{q.PhanHoi}</td>
+                <td>Very hard</td>
+              </tr>
+            ) : (
+              ""
+            )
+          )}
         </tbody>
       </Table>
     </Container>

@@ -1,12 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
+import { Link, withRouter } from "react-router-dom";
 import TeacherAccount from "../components/TeacherAccount";
 import Questions from "../components/Questions";
 import SubjectQuestion from "../components/SubjectQuestion";
 import Dethi from "../components/Dethi";
 
-const TeacherScreen = () => {
+const TeacherScreen = ({ location, match }) => {
   const [options, setOptions] = useState("account");
+  const [idMh, setIdMh] = useState();
+  useEffect(() => {
+    console.log(location.hash.split("/")[0]);
+  });
 
   return (
     <Container className="normal-container" fluid>
@@ -24,27 +29,27 @@ const TeacherScreen = () => {
             }}
             className="child-row side-bar"
           >
-            <div
+            <Link
+              to="#account"
               style={{ color: "white", padding: "1.2rem", cursor: "pointer" }}
-              onClick={() => setOptions("account")}
             >
               Quản lý tài khoản
-            </div>
+            </Link>
             <div className="break"></div>
 
-            <div
+            <Link
+              to="#cauhoi"
               style={{ color: "white", padding: "1.2rem", cursor: "pointer" }}
-              onClick={() => setOptions("cauhoi")}
             >
               Quản lý câu hỏi
-            </div>
+            </Link>
             <div className="break"></div>
-            <div
+            <Link
+              to="#dethi"
               style={{ color: "white", padding: "1.2rem", cursor: "pointer" }}
-              onClick={() => setOptions("dethi")}
             >
               Quản lý đề thi
-            </div>
+            </Link>
           </Row>
         </Col>
         <Col
@@ -62,16 +67,14 @@ const TeacherScreen = () => {
             }}
             className="child-row"
           >
-            {options === "account" ? (
-              <TeacherAccount />
-            ) : options === "cauhoi" ? (
-              <SubjectQuestion onClick={() => setOptions("question-details")} />
-            ) : options === "question-details" ? (
-              <Questions />
-            ) : options === "dethi" ? (
+            {location.hash === "#cauhoi" ? (
+              <SubjectQuestion />
+            ) : location.hash.split("/")[0] === "#dscauhoi" ? (
+              <Questions idMH={location.hash.split("/")[1]} />
+            ) : location.hash === "#dethi" ? (
               <Dethi />
             ) : (
-              ""
+                <TeacherAccount />
             )}
           </Row>
         </Col>
@@ -80,4 +83,4 @@ const TeacherScreen = () => {
   );
 };
 
-export default TeacherScreen;
+export default withRouter(TeacherScreen);
