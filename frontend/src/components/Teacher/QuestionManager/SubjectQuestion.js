@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Form, Table, Button } from "react-bootstrap";
 import { Link, Route } from "react-router-dom";
-import dsMonHoc from "../subjectSample";
+import dsMonHoc from "../../../subjectSample";
 
 const SubjectQuestion = () => {
   return (
@@ -16,10 +16,10 @@ const SubjectQuestion = () => {
       >
         <Form inline>
           <Form.Control
-            type="text"
-            name="q"
-            placeholder="Search subject..."
-          ></Form.Control>
+    type="text"
+    name="q"
+    placeholder="Search subject..."
+    />
           <Button type="submit" variant="outline-success" className="ml-2 p-2">
             Search
           </Button>

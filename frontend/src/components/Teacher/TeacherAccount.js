@@ -1,7 +1,7 @@
 import React from "react";
-import { Container, Col, Row, Button, Form } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import DateTimePicker from "../components/DateTimePicker";
+import {Container, Col, Row, Button, Form} from "react-bootstrap";
+import {Link} from "react-router-dom";
+import DateTimePicker from "../GlobalComponents/DateTimePicker";
 
 const TeacherAccount = () => {
   return (
@@ -15,8 +15,8 @@ const TeacherAccount = () => {
             alignItems: "center",
           }}
         >
-          <img src="/images/user.png" style={{ width: "90%" }} />
-          <Button style={{ marginTop: "0.7rem" }}>Đổi ảnh</Button>
+          <img src="/images/user.png" style={{width: "90%"}} />
+          <Button style={{marginTop: "0.7rem"}}>Đổi ảnh</Button>
         </Col>
         <Col className="w-75">
           <h2>Thông tin giảng viên</h2>
@@ -69,12 +69,12 @@ const TeacherAccount = () => {
             <Form.Group className="account-form-group">
               <Form.Label>Mật khẩu:</Form.Label>
               <Form.Control type="password" readOnly defaultValue="1234" />
-              <Link to="resetpassword" style={{ width: "20%" }}>
+              <Link to="resetpassword" style={{width: "20%"}}>
                 Đổi mật khẩu
               </Link>
             </Form.Group>
           </Form>
-          <Button style={{ marginTop: "0.7rem" }}>Cập nhật</Button>
+          <Button style={{marginTop: "0.7rem"}}>Cập nhật</Button>
         </Col>
       </Row>
     </Container>

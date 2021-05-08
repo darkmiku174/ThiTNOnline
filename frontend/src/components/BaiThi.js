@@ -1,12 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { Card, ProgressBar } from "react-bootstrap";
+import {Link} from "react-router-dom";
+import {Card, ProgressBar} from "react-bootstrap";
 
-const BaiThi = ({ baithi }) => {
+const BaiThi = ({baithi}) => {
   return (
-    <Card className="card-exam" style={{ margin: "1.2rem 0" }}>
+    <Card className="card-exam" style={{margin: "1.2rem 0"}}>
       <Card.Body>
-        <Link to={`/exams/details/${baithi.id}`}>
+        <Link to={`/exams/details/608e5ca2a9093debdf7585b3`}>
           <Card.Title>{baithi.name}</Card.Title>
         </Link>
         <div className="infor">

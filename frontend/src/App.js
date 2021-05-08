@@ -1,5 +1,5 @@
 import "./App.css";
-import Header from "./components/Header";
+import Header from "./components/GlobalComponents/Header";
 import ExamListScreen from "./screens/ExamListScreen";
 import ExamDetailScreen from "./screens/ExamDetailScreen";
 import LoginScreen from "./screens/LoginScreen";
@@ -8,7 +8,7 @@ import ProfileScreen from "./screens/ProfileScreen";
 import TestScreen from "./screens/TestScreen";
 import TeacherScreen from "./screens/TeacherScreen";
 import ExamResultScreen from "./screens/ExamResultScreen";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import {BrowserRouter as Router, Route} from "react-router-dom";
 import AdminExamList from "./screens/AdminExamList";
 import AdminSubjectList from "./screens/AdminSubjectList";
 import DragAndDrop from "./screens/DragAndDrop";
@@ -19,7 +19,7 @@ function App() {
       <Header />
       <section
         className="main-content"
-        style={{ width: "90%", margin: "0 auto" }}
+        style={{width: "90%", margin: "0 auto"}}
       >
         <Route path="/test" component={TestScreen} exact />
         <Route path="/profile" component={ProfileScreen} exact />

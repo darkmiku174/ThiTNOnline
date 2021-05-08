@@ -1,8 +1,8 @@
 import React from "react";
-import { Form, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import {Form, Button} from "react-bootstrap";
+import {Link} from "react-router-dom";
 
-const LoginScreen = ({ history }) => {
+const LoginScreen = ({history}) => {
   const submitHandler = (e) => {
     e.preventDefault();
     history.push("/exams");
