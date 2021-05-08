@@ -11,6 +11,7 @@ router.get("/:Id", async function (req, res) {
   var question = await Question.findById(req.params.Id);
   res.json(question);
 });
+
 router.post("/", controller.create);
 
 router.delete("/:Id", async function (req, res) {
