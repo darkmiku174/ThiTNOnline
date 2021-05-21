@@ -6,7 +6,7 @@ const BaiThi = ({baithi}) => {
   return (
     <Card className="card-exam" style={{margin: "1.2rem 0"}}>
       <Card.Body>
-        <Link to={`/exams/details/608e5ca2a9093debdf7585b3`}>
+        <Link to={`/exams/details/60a105b83d2d3d5f9cdec4f1`}>
           <Card.Title>{baithi.name}</Card.Title>
         </Link>
         <div className="infor">
