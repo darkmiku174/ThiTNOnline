@@ -9,8 +9,9 @@ import TestScreen from "./screens/TestScreen";
 import TeacherScreen from "./screens/TeacherScreen";
 import AdminScreen from "./screens/AdminScreen";
 import ExamResultScreen from "./screens/ExamResultScreen";
-import TeachersDetail from "./components/Admin/TeachersDetail"
-import SubjectTimetable from "./components/Admin/SubjectTimetable"
+import TeachersDetail from "./components/Admin/TeachersDetail";
+import ClassDetail from "./components/Admin/ClassDetail";
+import SubjectTimetable from "./components/Admin/SubjectTimetable";
 import {BrowserRouter as Router, Route} from "react-router-dom";
 
 import DragAndDrop from "./screens/DragAndDrop";
@@ -34,6 +35,8 @@ function App() {
         <Route path="/admin" component={AdminScreen} exact />
         <Route path="/chitietgiangvien" component={TeachersDetail} exact />
         <Route path="/thoikhoabieu" component={SubjectTimetable} exact />
+        <Route path="/chitietlophoc" component={ClassDetail} exact />
+
         <Route path="/giangvien/draganddrop" component={DragAndDrop} exact />
       </section>
     </Router>

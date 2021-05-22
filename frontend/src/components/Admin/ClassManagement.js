@@ -22,21 +22,21 @@ const ClassManagement = () => {
 		        <td>1</td>
 		        <td>Lớp A</td>
 		        <td  style={{textAlign:"right"}}>
-		      		<a href="/chitietgiangvien">Xem chi tiết</a>
+		      		<a href="/chitietlophoc">Xem chi tiết</a>
 		        </td>
 		      </tr>
 		      <tr>
 		        <td>2</td>
 		        <td>Lớp B</td>
 		        <td  style={{textAlign:"right"}}>
-		        	<a href="/chitietgiangvien" >Xem chi tiết</a>
+		        	<a href="/chitietlophoc" >Xem chi tiết</a>
 		        </td>
 		      </tr>
 		      <tr>
 		        <td>3</td>
 		        <td>Lớp C</td>
 		        <td  style={{textAlign:"right"}}>
-		        	<a href="/chitietgiangvien" >Xem chi tiết</a>
+		        	<a href="/chitietlophoc" >Xem chi tiết</a>
 		        </td>
 		      </tr>
 		    </tbody>
