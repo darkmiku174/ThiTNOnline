@@ -38,7 +38,7 @@ const Header = (props) => {
           <Nav className="ml-auto">
             <Nav.Link href="/profile" className="expand">
               <Navbar.Text>
-                <i className="fas fa-user"></i> Profile{" "}
+                <i className="fas fa-user"/> Profile{" "}
               </Navbar.Text>
             </Nav.Link>
           </Nav>

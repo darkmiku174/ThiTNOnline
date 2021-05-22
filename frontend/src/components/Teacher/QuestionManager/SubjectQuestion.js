@@ -1,8 +1,9 @@
 import React from "react";
 import { Container, Form, Table, Button } from "react-bootstrap";
-import dsMonHoc from "../subjectSample";
+import { Link, Route } from "react-router-dom";
+import dsMonHoc from "../../../subjectSample";
 
-const SubjectQuestion = ({ onClick }) => {
+const SubjectQuestion = () => {
   return (
     <Container>
       <div
@@ -15,10 +16,10 @@ const SubjectQuestion = ({ onClick }) => {
       >
         <Form inline>
           <Form.Control
-            type="text"
-            name="q"
-            placeholder="Search subject..."
-          ></Form.Control>
+    type="text"
+    name="q"
+    placeholder="Search subject..."
+    />
           <Button type="submit" variant="outline-success" className="ml-2 p-2">
             Search
           </Button>
@@ -35,11 +36,8 @@ const SubjectQuestion = ({ onClick }) => {
         <tbody>
           {dsMonHoc.map((q) => (
             <tr>
-              <td
-                onClick={onClick}
-                style={{ color: "blue", cursor: "pointer" }}
-              >
-                {q.id}
+              <td>
+                <Link to={"#dscauhoi/M" + q.id}>{q.id}</Link>
               </td>
               <td>{q.tenMonHoc}</td>
               <td>{q.questionNumber}</td>
