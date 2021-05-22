@@ -26,7 +26,7 @@ function App() {
         <Route path="/resetpassword" component={ResetPasswordScreen} exact />
         <Route path="/" component={LoginScreen} exact />
         <Route path="/exams" component={ExamListScreen} exact />
-        <Route path="/exams/details/:id" component={ExamDetailScreen} exact />
+        <Route path="/exams/:id" component={ExamDetailScreen} exact />
         <Route path="/giangvien/" component={TeacherScreen} exact />
         <Route path="/exams/result" component={ExamResultScreen} exact />
         <Route path="/admin/exams/list" component={AdminSubjectList} />

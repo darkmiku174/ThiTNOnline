@@ -12,6 +12,7 @@ import {
 } from "../constants/QuestionConstants";
 
 export const questionListReducer = (state = {questions: []}, action) => {
+  // This will return value base on action type which mean the state is changed
   switch (action.type) {
     case QUESTION_LIST_REQUEST:
       return {loading: true, questions: []};

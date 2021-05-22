@@ -1,24 +1,28 @@
-import React from "react";
+import React,{useState} from "react";
 import { Container, div, Col, Button, Table } from "react-bootstrap";
-import dsDeThi from "../dethiSample";
+import dsDeThi from "../../../dethiSample";
+import AddExamModal from "./AddExamModal";
 
 const Dethi = () => {
+  const [show, setShow] = useState(false);
   return (
     <div className="dsDeThi">
       <div className="filter mb-4">
         <div className="function">
           <div>
-            Thời gian <i class="fas fa-chevron-down"></i>
+            Thời gian <i className="fas fa-chevron-down"/>
           </div>
           <div>
-            Lớp <i class="fas fa-chevron-down"></i>
+            Lớp <i className="fas fa-chevron-down"/>
           </div>
           <div>
-            Kỳ thi <i class="fas fa-chevron-down"></i>
+            Kỳ thi <i className="fas fa-chevron-down"/>
           </div>
         </div>
         <div style={{ display: "flex", justifyContent: "flex-end" }}>
-          <Button>Add Exam</Button>
+          {/*Click this button => show change => rerender component => modal show*/}
+          {/*Go to AddExamModal to understand what is happening behind the sences*/}
+          <Button onClick={e => setShow(true)}>Add Exam</Button>
         </div>
       </div>
       <Table striped bordered hover responsive className="table-sm">
@@ -43,6 +47,7 @@ const Dethi = () => {
           ))}
         </tbody>
       </Table>
+      <AddExamModal show={show} handleClose={e => setShow(false)}/>
     </div>
   );
 };

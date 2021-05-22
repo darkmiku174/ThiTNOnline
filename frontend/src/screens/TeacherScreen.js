@@ -4,7 +4,7 @@ import {Link, withRouter} from "react-router-dom";
 import TeacherAccount from "../components/Teacher/TeacherAccount";
 import Questions from "../components/Teacher/QuestionManager/Questions";
 import SubjectQuestion from "../components/Teacher/QuestionManager/SubjectQuestion";
-import Dethi from "../components/Dethi";
+import Dethi from "../components/Teacher/TestsManager/Dethi";
 
 const TeacherScreen = ({location, match}) => {
   const [options, setOptions] = useState("account");
