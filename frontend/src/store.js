@@ -6,11 +6,12 @@ import {
   questionReducer,
   questionCreateReducer,
 } from "./reducers/QuestionReducers";
+import {subjectListReducer} from "./reducers/SubjectListReducer";
 
 const reducer = combineReducers({
   questionList: questionListReducer,
   questionCreate: questionCreateReducer,
-  question: questionListReducer,
+  subjectList:subjectListReducer
 });
 
 const initialState = {};

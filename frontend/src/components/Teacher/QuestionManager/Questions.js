@@ -18,6 +18,12 @@ const Questions = ({idMH}) => {
   const {loading, error, questions} = questionList;
   const questionCreate = useSelector((state) => state.questionCreate);
   const {questionCreated} = questionCreate;
+  console.log(questions.length)
+  if(questions != null && loading === false){
+    const newQuestions =[]
+    if(questions[0].MaMH == idMH)
+      console.log(questions[0])
+  }
 
   const closeDialog = () => {
     setShowDialog(false)
@@ -75,10 +81,10 @@ const Questions = ({idMH}) => {
       >
         <Form inline>
           <Form.Control
-    type="text"
-    name="q"
-    placeholder="Search questions..."
-    />
+            type="text"
+            name="q"
+            placeholder="Search questions..."
+          />
           <Button type="submit" variant="outline-success" className="ml-2 p-2">
             Search
           </Button>

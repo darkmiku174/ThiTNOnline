@@ -1,20 +1,19 @@
-var mongoose = require("mongoose");
+var mongoose = require('mongoose');
 
-var questionSchema = new mongoose.Schema({
-  MaMH: {type: String, required: true},
-  PhanHoi: {type: String, required: true},
-  CauA: {type: String, required: true},
-  CauB: {type: String, required: true},
-  CauB: {type: String, required: true},
-  CauC: {type: String, required: true},
-  CauD: {type: String, required: true},
-  DapAn: {type: String, required: true},
-  ThangDiem: {type: Number, required: true},
-  PhanLoai: {type: Number, required: true},
-  StartIndex: {type: Number, required: true},
-  EndIndex: {type: Number, required: true}
+var questionSchema  = new mongoose.Schema({
+    MaCH: String,
+    MaMH: String,
+	PhanHoi: String,
+	CauA: String,
+	CauB: String,
+    CauB: String,
+    CauC: String,
+    CauD: String,
+    DapAn: Array,
+    Diem: Number,
+    PhanLoai: Number
 });
 
-var Question = mongoose.model("Questions", questionSchema, "questions");
+var Question = mongoose.model('Questions', questionSchema, 'questions');
 
 module.exports = Question;

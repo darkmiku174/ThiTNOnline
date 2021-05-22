@@ -9,8 +9,9 @@ import Dethi from "../components/Dethi";
 const TeacherScreen = ({location, match}) => {
   const [options, setOptions] = useState("account");
   const [idMh, setIdMh] = useState();
+  console.log(location.hash)
   useEffect(() => {
-    console.log(location.hash.split("/")[0]);
+    console.log(location.hash.split("/")[1]);
   });
 
   return (
