@@ -1,5 +1,6 @@
 var express = require('express');
 var controller = require('../controllers/subjectDetail.controller');
+var ExamDetail = require('../../models/examDetail.model');
 
 var router = express.Router();
 

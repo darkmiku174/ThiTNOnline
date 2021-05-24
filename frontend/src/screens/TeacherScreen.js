@@ -4,7 +4,7 @@ import {Link, withRouter} from "react-router-dom";
 import TeacherAccount from "../components/Teacher/TeacherAccount";
 import Questions from "../components/Teacher/QuestionManager/Questions";
 import SubjectQuestion from "../components/Teacher/QuestionManager/SubjectQuestion";
-import Dethi from "../components/Teacher/TestsManager/Dethi";
+import ExamsManager from "../components/Teacher/ExamManager/ExamsManager";
 
 const TeacherScreen = ({location, match}) => {
   const [options, setOptions] = useState("account");
@@ -16,7 +16,7 @@ const TeacherScreen = ({location, match}) => {
 
   return (
     <Container className="normal-container" fluid>
-      <Row className="parent-row">
+      <Row className="parent-row shadow">
         <Col className="w-25 child-col">
           <Row
             style={{
@@ -73,7 +73,7 @@ const TeacherScreen = ({location, match}) => {
             ) : location.hash.split("/")[0] === "#dscauhoi" ? (
               <Questions idMH={location.hash.split("/")[1]} />
             ) : location.hash === "#dethi" ? (
-              <Dethi />
+              <ExamsManager />
             ) : (
               <TeacherAccount />
             )}

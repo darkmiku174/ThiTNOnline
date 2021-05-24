@@ -1,0 +1,30 @@
+.exam-manager{
+  .exam-manager-header{
+    margin-bottom: 2.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: initial;
+    .exam-manager-filter{
+      display: flex;
+    }
+  }
+  .exam-manager-body{
+    .exam-list{
+      .table{
+        max-width: 100%;
+      }
+      .table th:first-child{
+        width: 5%;
+      }
+    }
+    .add-exam-form{
+      align-items: initial;
+      margin-bottom: 1.2rem;
+      border: 1px solid $borderColor;
+      padding: 1.2rem;
+      border-radius: 0.3rem;
+    }
+    .add-exam-question-list{
+    }
+  }
+}

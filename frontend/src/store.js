@@ -7,11 +7,14 @@ import {
   questionCreateReducer,
 } from "./reducers/QuestionReducers";
 import {subjectListReducer} from "./reducers/SubjectListReducer";
+import {examListReducer,examReducer} from "./reducers/ExamReducer";
 
 const reducer = combineReducers({
   questionList: questionListReducer,
   questionCreate: questionCreateReducer,
-  subjectList:subjectListReducer
+  subjectList:subjectListReducer,
+  examList:examListReducer,
+  exam:examReducer
 });
 
 const initialState = {};

@@ -1909,7 +1909,7 @@ pre code {
 .form-control {
   display: block;
   width: 100%;
-  height: calc(1.5em + 2rem);
+  height: calc(1.5em + 1rem);
   padding: 1rem 0;
   font-size: 0.8125rem;
   font-weight: 400;
@@ -3721,8 +3721,8 @@ input[type="submit"].btn-block {
 .custom-select {
   display: inline-block;
   width: 100%;
-  height: calc(1.5em + 2rem);
-  padding: 1rem 1rem 1rem 0;
+  height: calc(1.5em + 1rem);
+  /*padding: 1rem 1rem 1rem 0;*/
   font-size: 0.8125rem;
   font-weight: 400;
   line-height: 1.5;
