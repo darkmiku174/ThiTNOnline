@@ -1,5 +1,5 @@
 import express from 'express'
-import {getExams, createExam} from '../controllers/examControllers.js'
+import {getExams, createExam, getExam} from '../controllers/examController.js'
 
 const router = express.Router()
 
@@ -9,6 +9,6 @@ const router = express.Router()
 router.get('/', getExams)
 router.post("/", createExam)
 
-//router.get("/:id",...)
+router.get('/:Id', getExam)
 
 export default router

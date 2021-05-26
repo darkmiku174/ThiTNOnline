@@ -15,7 +15,6 @@ const subjectDetailSchema = new mongoose.Schema({
   }]
 })
 
-var SubjectDetail = mongoose.model("SubjectDetail", subjectDetailSchema, "subjectDetails")
-// const SubjectDetail = mongoose.model("SubjectDetail",subjectDetailSchema)
+var SubjectDetail = mongoose.model("SubjectDetail", subjectDetailSchema)
 
 export default SubjectDetail

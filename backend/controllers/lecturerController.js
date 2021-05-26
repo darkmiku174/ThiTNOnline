@@ -6,4 +6,8 @@ const getLecturerList = asyncHandler(async (req, res) => {
   res.json(lecturers)
 })
 
-export {getLecturerList}
+const getLecturer = asyncHandler(async (req, res) => {
+  const lecturer = await Lecturer.findById(req.params.Id)
+  res.json(lecturer)
+})
+export {getLecturerList, getLecturer}

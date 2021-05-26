@@ -32,4 +32,18 @@ const createExam = asyncHandler(async (req, res) => {
   res.json(exam)
 })
 
-export {getExams, createExam}
+const getExam = asyncHandler(async (req, res) => {
+  const exam = await Exam.findById(req.params.Id)
+    .populate(
+      {
+        path: "CTMH", select: "_id GiangVien",
+        populate:
+        {
+          path: "GiangVien",
+          select: "People"
+        }
+      })
+  res.json(exam)
+})
+
+export {getExams, createExam, getExam}
