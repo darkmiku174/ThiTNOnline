@@ -1,0 +1,13 @@
+.dsDeThi {
+  .filter {
+    @include flex(space-between, center, center);
+
+    .function {
+      @include flex(flex-start, center, row);
+      div {
+        padding-right: 1.7rem;
+        cursor: pointer;
+      }
+    }
+  }
+}

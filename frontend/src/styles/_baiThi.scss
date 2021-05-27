@@ -1,0 +1,37 @@
+// /* Student HomeScreen*/
+// .stHome {
+//   @include flex(space-between, flex-end, row);
+//   flex-wrap: wrap-reverse;
+// }
+
+// /* Exam list */
+// .card-exam {
+//   width: 95%;
+//   margin: 1.2rem auto;
+// }
+
+// /* Student infor */
+.infor {
+  margin-top: 2rem;
+  @include flex(space-between, initial, row);
+}
+
+.progress {
+  margin-top: 1rem !important;
+}
+
+// .student-exam-infor {
+//   width: 90%;
+//   margin: 1.2rem auto;
+// }
+
+// @media (min-width: 600px) {
+//   .infor {
+//     p {
+//       padding: 0 1rem !important;
+//     }
+//   }
+// }
+.exam-list {
+  flex-direction: column;
+}

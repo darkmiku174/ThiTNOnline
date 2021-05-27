@@ -12,7 +12,7 @@ const getExams = asyncHandler(async (req, res) => {
   const exams = await Exam.find({})
     .populate(
       {
-        path: "CTMH", select: "_id GiangVien",
+        path: "CTMH", select: "GiangVien",
         // Đây là populate của Chi tiết môn học
         // Muốn populate cái nào thì phải định nghĩa model, controller với route cho 
         // nó trước rồi dùng route đó trong file server.js
@@ -46,4 +46,20 @@ const getExam = asyncHandler(async (req, res) => {
   res.json(exam)
 })
 
-export {getExams, createExam, getExam}
+const getExamByLecturer = asyncHandler(async (req, res) => {
+  const exams = await Exam.find({}).populate(
+    { path:"CTMH",
+    populate:{
+    path:"MonHoc"
+  }
+  })
+  const examsByLecturer = []
+  exams.forEach(function (e) {
+    if (e.CTMH.GiangVien == req.query.id) {
+      examsByLecturer.push(e)
+    }
+  })
+  res.json(examsByLecturer)
+})
+
+export {getExams, createExam, getExam, getExamByLecturer}

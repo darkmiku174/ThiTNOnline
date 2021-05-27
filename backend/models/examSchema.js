@@ -10,8 +10,9 @@ var examSchema = new mongoose.Schema({
     ref: "SubjectDetail"
   },
   DSCH: [{
+    _id: false,
     type: mongoose.Schema.Types.ObjectId,
-    ref: "Question"
+    ref: "Question",
   }]
 })
 

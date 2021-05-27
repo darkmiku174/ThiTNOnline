@@ -1,6 +1,6 @@
 import asyncHandler from "express-async-handler";
-import Subject from '../models/subjectSchema.js'
 import SubjectDetail from '../models/subjectDetailSchema.js'
+import Subject from '../models/subjectSchema.js'
 
 const getSubjectList = asyncHandler(async (req, res) => {
   const subjects = await Subject.find({})
@@ -13,8 +13,23 @@ const getSubject = asyncHandler(async (req, res) => {
 })
 
 const getSubjectDetails = asyncHandler(async (req, res) => {
-  const subjectDetails = await SubjectDetail.find({})
-  res.json(subjectDetails)
+  const subjectDetails = await SubjectDetail.find(
+    {
+      GiangVien: req.query.giangvien
+    })
+    .populate("MonHoc")
+  console.log(subjectDetails)
+  const subjectDetailsActive = []
+  subjectDetails.forEach(function (s) {
+    if (s.KhoaHoc.getFullYear() !== new Date().getFullYear()) {
+      return;
+    }
+    if (s.KhoaHoc.getMonth() > 5 - new Date().getMonth()) {
+      return;
+    }
+    subjectDetailsActive.push(s)
+  })
+  res.json(subjectDetailsActive)
 })
 
 // const getSubjectDetail = asyncHandler(async (req, res) => {

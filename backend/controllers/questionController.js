@@ -10,4 +10,15 @@ const getQuestion = asyncHandler(async (req, res) => {
   const question = await Question.findById(req.params.Id)
   res.json(question)
 })
-export {getQuestionList, getQuestion}
+
+const getQuestionBySubjectRequest = asyncHandler(async (req, res) => {
+  const questions = await Question.find({MonHoc: req.query.id})
+  res.json(questions)
+})
+
+const createQuestion = asyncHandler(async (req, res) => {
+  const question = await Question.create(req.body)
+  res.json(question)
+})
+
+export {getQuestionList, getQuestion, getQuestionBySubjectRequest, createQuestion}

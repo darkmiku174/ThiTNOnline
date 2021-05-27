@@ -12,7 +12,10 @@ const subjectDetailSchema = new mongoose.Schema({
   DSSV: [{
     type: mongoose.Schema.Types.ObjectId,
     ref: "Student"
-  }]
+  }],
+  KhoaHoc: {
+    type: Date
+  }
 })
 
 var SubjectDetail = mongoose.model("SubjectDetail", subjectDetailSchema)
