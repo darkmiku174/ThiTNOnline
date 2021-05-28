@@ -31,6 +31,7 @@ const Timer = () => {
       console.log("timeout");
       if (currentTime >= submitTime && currentTime <= submitTime + 1) {
         dispatch(postSubmittionAction());
+        history.pushState("/exams");
         return null;
       }
       setTime(convertTimeToString(submitTime - currentTime));
