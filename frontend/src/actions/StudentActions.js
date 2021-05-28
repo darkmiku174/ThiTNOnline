@@ -3,16 +3,17 @@ import {
   STUDENT_LOGIN_FAIL,
   STUDENT_LOGIN_REQUEST,
   STUDENT_LOGIN_SUCCESS,
+  STUDENT_LOGOUT,
 } from "../constants/StudentConstants";
 
 export const studentLoginAction = (input) => async (dispatch) => {
   try {
-    dispatch({ type: STUDENT_LOGIN_REQUEST });
-    const { data } = await axios.post(
+    dispatch({type: STUDENT_LOGIN_REQUEST});
+    const {data} = await axios.post(
       `api/students/login?cmnd=${input.cmnd}&password=${input.password}`
     );
     localStorage.setItem("studentInfo", JSON.stringify(data));
-    dispatch({ type: STUDENT_LOGIN_SUCCESS });
+    dispatch({type: STUDENT_LOGIN_SUCCESS});
   } catch (error) {
     dispatch({
       type: STUDENT_LOGIN_FAIL,
@@ -23,3 +24,10 @@ export const studentLoginAction = (input) => async (dispatch) => {
     });
   }
 };
+
+export const studentLogoutAction = () => async (dispatch) => {
+  localStorage.removeItem("studentInfo")
+  localStorage.removeItem("exam")
+  localStorage.removeItem("submittion")
+  dispatch({type: STUDENT_LOGOUT})
+}

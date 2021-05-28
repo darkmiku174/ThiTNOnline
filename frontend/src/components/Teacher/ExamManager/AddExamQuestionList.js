@@ -1,16 +1,17 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Button, Form, Table } from "react-bootstrap";
-import { createExamAction } from "../../../actions/ExamActions";
+import React, {useEffect, useState} from "react";
+import {useDispatch, useSelector} from "react-redux";
+import {Button, Form, Table} from "react-bootstrap";
+import {createExamAction} from "../../../actions/ExamActions";
 
-const AddExamQuestionList = () => {
+const AddExamQuestionList = ({handleClose}) => {
+
   const dispatch = useDispatch();
   const [currentPage, setCurrentPage] = useState(0);
   const [pages, setPages] = useState([]);
-  const { loading, error, questions } = useSelector(
+  const {loading, error, questions, CTMH} = useSelector(
     (state) => state.questionListBySubject
   );
-  const { tempExam } = useSelector((state) => state.tempExam);
+  const {tempExam} = useSelector((state) => state.tempExam);
 
   const highlightCurrentPage = (e, index) => {
     setCurrentPage(index);
@@ -18,22 +19,22 @@ const AddExamQuestionList = () => {
 
   const createExam = (e) => {
     dispatch(createExamAction());
+    handleClose()
+    dispatch({type: "ADD_TEMP_EXAM", payload: {DSCH: []}})
   };
 
   const addQuestionToTempExam = (e, id) => {
-    console.log(e.target.checked);
     if (e.target.checked) {
       dispatch({
         type: "ADD_TEMP_EXAM",
-        payload: { DSCH: [...tempExam.DSCH, id] },
+        payload: {DSCH: [...tempExam.DSCH, id], CTMH: CTMH},
       });
     } else {
-      console.log(tempExam.DSCH);
       const index = tempExam.DSCH.indexOf(id);
       tempExam.DSCH.splice(index, 1);
       dispatch({
         type: "ADD_TEMP_EXAM",
-        payload: { DSCH: [...tempExam.DSCH] },
+        payload: {DSCH: [...tempExam.DSCH], CTMH: CTMH},
       });
     }
   };
@@ -51,9 +52,6 @@ const AddExamQuestionList = () => {
     }
   }, [questions]);
 
-  {
-    /*if questions is undefined or null so we don't need to do anything else, just return to stop wasted rendering*/
-  }
   if (questions == null || pages.length === 0) {
     return null;
   }
@@ -69,12 +67,14 @@ const AddExamQuestionList = () => {
             <th>Phân loại</th>
           </thead>
           <tbody>
-            {pages[currentPage].map((q) => (
-              <tr>
+            {pages[currentPage].map((q, index) => (
+              <tr key={`tr-${currentPage}${index}`}>
                 <td>
                   <Form.Check
+                    id={q._id}
                     inline
                     onChange={(e) => addQuestionToTempExam(e, q._id)}
+                    checked={tempExam.DSCH.includes(q._id) ? true : false}
                   />
                 </td>
                 <td>{q._id}</td>
@@ -83,10 +83,10 @@ const AddExamQuestionList = () => {
                   {q.PhanLoai === 0
                     ? "Dễ"
                     : q.PhanLoai === 1
-                    ? "Trung bình"
-                    : q.PhanLoai === 2
-                    ? "Khó"
-                    : ""}
+                      ? "Trung bình"
+                      : q.PhanLoai === 2
+                        ? "Khó"
+                        : ""}
                 </td>
               </tr>
             ))}
@@ -97,9 +97,8 @@ const AddExamQuestionList = () => {
             {pages.map((q, index) => (
               <button
                 onClick={(e) => highlightCurrentPage(e, index)}
-                className={`add-exam-table-pagination btn btn-sm mr-2 ${
-                  currentPage === index ? "btn-primary" : ""
-                }`}
+                className={`add-exam-table-pagination btn btn-sm mr-2 ${currentPage === index ? "btn-primary" : ""
+                  }`}
               >
                 {index + 1}
               </button>

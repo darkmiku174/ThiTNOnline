@@ -1,19 +1,21 @@
-import React, { useState, useEffect } from "react";
-import { Button, Modal } from "react-bootstrap";
-import AddExamForm from "./AddExamForm";
+import React, {useState, useEffect} from "react";
+import {Button, Modal} from "react-bootstrap";
 import AddExamQuestionList from "./AddExamQuestionList";
 import AddExamSubjectList from "./AddExamSubjectList";
-import { useDispatch } from "react-redux";
-import { subjectDetailList } from "../../../actions/SubjectActions";
+import {useDispatch} from "react-redux";
+import {subjectDetailListAction} from "../../../actions/SubjectActions";
 
-const AddExam = (exam) => {
+const AddExam = () => {
   const dispatch = useDispatch();
   const [show, setShow] = useState(false);
+
   const handleClose = () => {
     setShow(false);
+    dispatch({type: "ADD_TEMP_EXAM", payload: {DSCH: []}})
   };
+
   useEffect(() => {
-    dispatch(subjectDetailList());
+    dispatch(subjectDetailListAction());
   }, [dispatch]);
 
   return (
@@ -30,7 +32,7 @@ const AddExam = (exam) => {
           }}
         >
           <AddExamSubjectList />
-          <AddExamQuestionList />
+          <AddExamQuestionList handleClose={handleClose} />
         </div>
       </Modal>
     </div>

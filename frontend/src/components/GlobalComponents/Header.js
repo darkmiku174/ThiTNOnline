@@ -1,50 +1,39 @@
 import React, {useState, useEffect} from "react";
 import {
   Navbar,
-  Nav,
-  Image,
-  NavDropdown,
-  Form,
-  FormControl,
-  Button,
-  Container,
+  Nav
 } from "react-bootstrap";
 import {LinkContainer} from "react-router-bootstrap";
 import {Link, withRouter} from "react-router-dom";
 import Breadscrumbs from "./Breadscrumbs";
-
-const getWindowWidth = () => {
-  const {innerWidth: w} = window;
-  return w;
-};
+import DropdownMenu from './DropdownMenu'
 
 const Header = (props) => {
   const {
     history,
     location: {pathname},
   } = props;
+  const pushToHome = (home) => {
+    history.push(home)
+  }
 
   return (
     <header>
       <Navbar
         bg="primary"
         expand="lg"
-        style={{width: "90%", margin: "auto", boxShadow: "none"}}
+        style={{
+          width: "90%",
+          margin: "auto",
+          boxShadow: "none",
+          display: "flex", justifyContent: "space-between"
+        }}
       >
         <Navbar.Brand href="/">React-Bootstrap </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ml-auto">
-            <Nav.Link href="/profile" className="expand">
-              <Navbar.Text>
-                <i className="fas fa-user" /> Profile{" "}
-              </Navbar.Text>
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
+        <DropdownMenu pushToHome={pushToHome} />
       </Navbar>
       {console.log(pathname)}
-      {pathname != "/giangvien/login" ? <Breadscrumbs /> : ""}
+      {pathname == "/giangvien/login" ? "" : pathname == "/" ? "" : <Breadscrumbs />}
     </header>
   );
 };

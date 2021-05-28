@@ -28,7 +28,6 @@ const Timer = ({history}) => {
   const [time, setTime] = useState(submitTime - currentTime);
   useEffect(() => {
     setTimeout(() => {
-      console.log("timeout");
       if (currentTime >= submitTime && currentTime <= submitTime + 1) {
         dispatch(postSubmittionAction());
         history.push("/exams");

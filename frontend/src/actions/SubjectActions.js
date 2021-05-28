@@ -10,9 +10,9 @@ import axios from "axios";
 
 export const subjectListAction = () => async (dispatch) => {
   try {
-    dispatch({ type: SUBJECT_LIST_REQUEST });
-    const { data } = await axios.get(`/api/subjects`);
-    dispatch({ type: SUBJECT_LIST_SUCCESS, payload: data });
+    dispatch({type: SUBJECT_LIST_REQUEST});
+    const {data} = await axios.get(`/api/subjects`);
+    dispatch({type: SUBJECT_LIST_SUCCESS, payload: data});
   } catch (error) {
     dispatch({
       type: SUBJECT_LIST_FAIL,
@@ -24,16 +24,14 @@ export const subjectListAction = () => async (dispatch) => {
   }
 };
 
-export const subjectDetailList = () => async (dispatch) => {
+export const subjectDetailListAction = () => async (dispatch) => {
   try {
-    dispatch({ type: SUBJECT_DETAIL_LIST_REQUEST });
+    dispatch({type: SUBJECT_DETAIL_LIST_REQUEST});
     const lecturer = JSON.parse(localStorage.getItem("lecturerInfo"));
-    console.log(lecturer);
-    const { data } = await axios.get(
+    const {data} = await axios.get(
       `/api/subjects/details?giangvien=${lecturer._id}`
     );
-    console.log(data);
-    dispatch({ type: SUBJECT_DETAIL_LIST_SUCCESS, payload: data });
+    dispatch({type: SUBJECT_DETAIL_LIST_SUCCESS, payload: data});
   } catch (error) {
     dispatch({
       type: SUBJECT_DETAIL_LIST_FAIL,

@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
-import { Form, Table } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import ExamDetail from "./ExamDetail";
+import React, {useEffect, useState} from "react";
+import {useSelector} from "react-redux";
+import {Form, Table} from "react-bootstrap";
 
-const ExamList = ({ goToExam }) => {
+const ExamList = ({goToExam}) => {
   const examList = useSelector((state) => state.examList);
-  const { loading, error, exams } = examList;
+  const {loading, error, exams} = examList;
   console.log(exams);
 
   const [currentPage, setCurrentPage] = useState(0);
@@ -43,7 +41,7 @@ const ExamList = ({ goToExam }) => {
               <tr>
                 <td
                   className={"text-primary"}
-                  style={{ cursor: "pointer" }}
+                  style={{cursor: "pointer"}}
                   onClick={(e) => goToExam(ex)}
                 >
                   {ex._id}
@@ -55,13 +53,11 @@ const ExamList = ({ goToExam }) => {
             ))}
           </tbody>
         </Table>
-
         {pages.map((q, index) => (
           <button
             onClick={(e) => setCurrentPage(index)}
-            className={`add-exam-table-pagination btn btn-sm mr-2 ${
-              currentPage === index ? "btn-primary" : ""
-            }`}
+            className={`add-exam-table-pagination btn btn-sm mr-2 ${currentPage === index ? "btn-primary" : ""
+              }`}
           >
             {index + 1}
           </button>

@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { Button } from "react-bootstrap";
-import { examListAction } from "../../../actions/ExamActions";
-import { listQuestion } from "../../../actions/QuestionActions";
-import { useDispatch } from "react-redux";
+import React, {useEffect, useState} from "react";
+import {examListAction} from "../../../actions/ExamActions";
+import {useDispatch} from "react-redux";
 import ExamList from "./ExamList";
 import AddExam from "./AddExam";
 

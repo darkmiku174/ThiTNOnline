@@ -1,15 +1,15 @@
-import { Container, Table, Form, Button } from "react-bootstrap";
+import {Container, Table, Form, Button} from "react-bootstrap";
 import AddQuestion from "./AddQuestion";
 import Announcement from "../../GlobalComponents/Announcement";
-import { useState, useEffect } from "react";
+import {useState, useEffect} from "react";
 import {
   listQuestion,
   getQuestionListBySubjectAction,
 } from "../../../actions/QuestionActions";
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
+import {useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
 
-const Questions = ({ idMH }) => {
+const Questions = ({idMH}) => {
   const [show, setShow] = useState(false);
   const [showDialog, setShowDialog] = useState(false);
   const [scroll, setScroll] = useState(false);
@@ -17,11 +17,11 @@ const Questions = ({ idMH }) => {
   const [opacity, setOpacity] = useState(1);
 
   const dispatch = useDispatch();
-  const { loading, error, questions } = useSelector(
+  const {loading, error, questions} = useSelector(
     (state) => state.questionListBySubject
   );
   const questionCreate = useSelector((state) => state.questionCreate);
-  const { questionCreated } = questionCreate;
+  const {questionCreated} = questionCreate;
 
   const closeDialog = () => {
     setShowDialog(false);
@@ -72,8 +72,8 @@ const Questions = ({ idMH }) => {
           header="question created"
           body={questionCreated.PhanHoi}
           btns={[
-            { onClick: closeDialog, text: "Close" },
-            { onClick: scrollToQuestion, text: "Go" },
+            {onClick: closeDialog, text: "Close"},
+            {onClick: scrollToQuestion, text: "Go"},
           ]}
         />
       ) : (
@@ -109,18 +109,18 @@ const Questions = ({ idMH }) => {
           <tr>
             <th>ID</th>
             <th>Câu hỏi</th>
-            <th style={{ width: "20%" }}>Level</th>
+            <th style={{width: "20%"}}>Level</th>
           </tr>
         </thead>
         <tbody>
           {questions != null
             ? questions.map((q, index) => (
-                <tr key={index} id={q._id}>
-                  <td>{q._id}</td>
-                  <td>{q.PhanHoi}</td>
-                  <td>Very hard</td>
-                </tr>
-              ))
+              <tr key={index} id={q._id}>
+                <td>{q._id}</td>
+                <td>{q.PhanHoi}</td>
+                <td>Very hard</td>
+              </tr>
+            ))
             : ""}
         </tbody>
       </Table>

@@ -13,7 +13,7 @@ const getQuestion = asyncHandler(async (req, res) => {
 
 const getQuestionBySubjectRequest = asyncHandler(async (req, res) => {
   const questions = await Question.find({MonHoc: req.query.id})
-  res.json(questions)
+  res.json({questions: questions, CTMH: req.query.id})
 })
 
 const createQuestion = asyncHandler(async (req, res) => {

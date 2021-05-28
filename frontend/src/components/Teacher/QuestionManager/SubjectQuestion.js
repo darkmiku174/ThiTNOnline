@@ -2,21 +2,21 @@ import React, {useEffect} from "react";
 import {Container, Form, Table, Button} from "react-bootstrap";
 import {Link, Route} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
-import {subjectListAction} from "../../../actions/SubjectActions"
+import {subjectDetailListAction} from "../../../actions/SubjectActions"
 
 const SubjectQuestion = () => {
   const dispatch = useDispatch()
-  const subjectList = useSelector(state => state.subjectList)
-  const {loading, error, subjects} = subjectList;
-  console.log(subjects)
-  useEffect(() => (
-    dispatch(subjectListAction())
-  ), [dispatch]);
+  const {loading, error, subjectDetailList} = useSelector(
+    (state) => state.subjectDetailList
+  );
+  useEffect(() => {
+    dispatch(subjectDetailListAction())
+  }, [dispatch]);
 
   return (
     <>
       {
-        error == null && subjects != null ?
+        error == null && subjectDetailList != null ?
           <Container>
             <div
               style={{
@@ -42,17 +42,15 @@ const SubjectQuestion = () => {
                 <tr>
                   <th>ID</th>
                   <th>Môn học</th>
-                  <th style={{width: "20%"}}>Number of question</th>
                 </tr>
               </thead>
               <tbody>
-                {subjects.map((s) => (
+                {subjectDetailList.map((s) => (
                   <tr>
                     <td>
-                      <Link to={"#dscauhoi/" + s._id}>{s._id}</Link>
+                      <Link to={"#dscauhoi/" + s.MonHoc._id}>{s.MonHoc._id}</Link>
                     </td>
-                    <td>{s.TenMH}</td>
-                    <td>{s.length}</td>
+                    <td>{s.MonHoc.TenMH}</td>
                   </tr>
                 ))}
               </tbody>

@@ -1,6 +1,6 @@
-import { createStore, combineReducers, applyMiddleware } from "redux";
+import {createStore, combineReducers, applyMiddleware} from "redux";
 import thunk from "redux-thunk";
-import { composeWithDevTools } from "redux-devtools-extension";
+import {composeWithDevTools} from "redux-devtools-extension";
 import {
   questionListReducer,
   questionReducer,
@@ -18,8 +18,8 @@ import {
   createExamReducer,
   getExamListBYStudentReducer,
 } from "./reducers/ExamReducer";
-import { lecturerLoginReducer } from "./reducers/LecturerReducers";
-import { studentLoginReducer } from "./reducers/StudentReducer";
+import {lecturerLoginReducer} from "./reducers/LecturerReducers";
+import {studentLoginReducer} from "./reducers/StudentReducer";
 import {
   postSubmittionReducer,
   changeQuestionIndex,
@@ -45,9 +45,13 @@ const reducer = combineReducers({
 const tempExamInitial = {
   DSCH: [],
 };
+const studentInfoFromStorage = localStorage.getItem("studentInfo") ? JSON.parse(localStorage.getItem("studentInfo")) : null
+const lecturerInfoFromStorage = localStorage.getItem("lecturerInfo") ? JSON.parse(localStorage.getItem("lecturerInfo")) : null
 
 const initialState = {
-  tempExam: { tempExam: tempExamInitial },
+  tempExam: {tempExam: tempExamInitial},
+  studentLogin: {studentInfo: studentInfoFromStorage},
+  lecturerLogin: {lecturerInfo: lecturerInfoFromStorage}
 };
 
 const middleware = [thunk];

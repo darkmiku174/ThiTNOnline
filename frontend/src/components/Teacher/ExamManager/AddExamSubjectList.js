@@ -1,17 +1,15 @@
-import React, { useEffect } from "react";
-import { Form } from "react-bootstrap";
-import { useDispatch, useSelector } from "react-redux";
-import { getQuestionListBySubjectAction } from "../../../actions/QuestionActions";
+import React, {useEffect} from "react";
+import {Form} from "react-bootstrap";
+import {useDispatch, useSelector} from "react-redux";
+import {getQuestionListBySubjectAction} from "../../../actions/QuestionActions";
 
 const AddExamSubjectList = () => {
   const dispatch = useDispatch();
-  const { loading, error, subjectDetailList } = useSelector(
+  const {loading, error, subjectDetailList} = useSelector(
     (state) => state.subjectDetailList
   );
-  console.log(subjectDetailList);
 
   const getQuestionList = (value) => {
-    console.log(value);
     dispatch(getQuestionListBySubjectAction(value));
   };
 

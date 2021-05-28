@@ -1,6 +1,6 @@
 import React from 'react'
 
-const PictureAnswer = () => {
+const ImageAnswer = (answer) => {
   return (
     <div className="picture-answer">
 
@@ -8,5 +8,5 @@ const PictureAnswer = () => {
   )
 }
 
-export default PictureAnswer
+export default ImageAnswer
 

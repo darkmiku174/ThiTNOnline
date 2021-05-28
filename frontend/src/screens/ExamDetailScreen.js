@@ -8,7 +8,6 @@ import {postSubmittionAction} from "../actions/SubmittionActions";
 import Timer from "../components/Timer";
 
 const ExamDetailScreen = ({match, history}) => {
-  console.log("render");
   const dispatch = useDispatch();
 
   const hocsinh = dsHocSinh.find((hocsinh) => hocsinh.id === "1");

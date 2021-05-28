@@ -1,0 +1,43 @@
+.drop-down{
+  font-size: 0.9rem;
+  font-weight: 500;
+  position: relative;
+  .drop-down-head{
+    cursor: pointer;
+    background-color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 1.2rem;
+    display: flex;
+    align-items: center;
+    .profile-img{
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 0.3rem;
+      img{
+        width: 100%;
+      }
+    }
+  }
+  .drop-down-body{
+    width: 150px;
+    position: absolute;
+    top: 120%;
+    right: 0;
+    border-radius: 0.3rem;
+    ul{
+      margin-bottom: 0 !important;
+      border-radius: 0.3rem;
+      li{
+        border-radius: 0.3rem;
+        cursor: pointer;
+        padding: 0.3rem 0.6rem;
+        transition: filter 230ms;
+      }
+      li:hover{
+        filter: brightness(1.05);
+      }
+    }
+  }
+}

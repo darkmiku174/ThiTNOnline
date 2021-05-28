@@ -13,11 +13,12 @@ const getLecturer = asyncHandler(async (req, res) => {
 });
 
 const authLecturer = asyncHandler(async (req, res) => {
-  const people = await People.findOne({ CMND: req.query.cmnd });
+  const people = await People.findOne({CMND: req.query.cmnd});
+  console.log(people)
   const lecturer = await Lecturer.findOne({
     People: people._id,
     Password: req.query.password,
   });
-  res.json({ ...people._doc, ...lecturer._doc });
+  res.json({...people._doc, ...lecturer._doc});
 });
-export { getLecturerList, getLecturer, authLecturer };
+export {getLecturerList, getLecturer, authLecturer};

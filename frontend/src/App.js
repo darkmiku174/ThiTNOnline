@@ -14,7 +14,7 @@ import AdminSubjectList from "./screens/AdminSubjectList";
 import DragAndDrop from "./screens/DragAndDrop";
 import Components from "./screens/Components";
 import LecturerScreen from "./screens/LecturerScreen";
-import PictureAnswer from './components/PictureAnswer'
+import ImageAnswer from './components/ImageAnswer'
 
 function App() {
   return (
@@ -33,7 +33,7 @@ function App() {
         <Route path="/giangvien/" component={TeacherScreen} exact />
         <Route path="/exams/result" component={ExamResultScreen} exact />
         <Route path="/admin/exams/list" component={AdminSubjectList} />
-        <Route path="/components/pictureanswer" component={PictureAnswer} />
+        <Route path="/components/pictureanswer" component={ImageAnswer} />
         <Route path="/giangvien/login" component={LecturerScreen} exact />
       </section>
     </Router>

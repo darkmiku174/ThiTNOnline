@@ -14,11 +14,11 @@ const getStudent = asyncHandler(async (req, res) => {
 
 const authStudent = asyncHandler(async (req, res) => {
   const people = await People.findOne({CMND: req.query.cmnd})
-  console.log(people)
   const student = await Student.findOne({
     People: people._id,
     Password: req.query.password
   })
+  console.log(student)
   res.json({...people._doc, ...student._doc})
 })
 export {getStudentList, getStudent, authStudent}

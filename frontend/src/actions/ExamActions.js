@@ -16,10 +16,10 @@ import axios from "axios";
 
 export const examListAction = () => async (dispatch) => {
   try {
-    dispatch({ type: EXAM_LIST_REQUEST });
+    dispatch({type: EXAM_LIST_REQUEST});
     const lecturer = JSON.parse(localStorage.getItem("lecturerInfo"));
-    const { data } = await axios.get(`/api/exams/lecturer?id=${lecturer._id}`);
-    dispatch({ type: EXAM_LIST_SUCCESS, payload: data });
+    const {data} = await axios.get(`/api/exams/lecturer?id=${lecturer._id}`);
+    dispatch({type: EXAM_LIST_SUCCESS, payload: data});
   } catch (error) {
     dispatch({
       type: EXAM_LIST_FAIL,
@@ -33,9 +33,9 @@ export const examListAction = () => async (dispatch) => {
 
 export const examAction = (id) => async (dispatch) => {
   try {
-    dispatch({ type: GET_EXAM_REQUEST });
-    const { data } = await axios.get(`/api/exams/${id}`);
-    dispatch({ type: GET_EXAM_SUCCESS, payload: data });
+    dispatch({type: GET_EXAM_REQUEST});
+    const {data} = await axios.get(`/api/exams/${id}`);
+    dispatch({type: GET_EXAM_SUCCESS, payload: data});
   } catch (error) {
     dispatch({
       type: GET_EXAM_FAIL,
@@ -49,13 +49,22 @@ export const examAction = (id) => async (dispatch) => {
 
 export const createExamAction = () => async (dispatch, getState) => {
   try {
-    dispatch({ type: CREATE_EXAM_REQUEST });
+    dispatch({type: CREATE_EXAM_REQUEST});
     let {
-      tempExam: { tempExam },
+      tempExam: {tempExam},
+      subjectDetailList: subjectDetailList
     } = getState();
-    tempExam = { ...tempExam, CTMH: "60ad780d4ac0c5073e32781b" };
-    const { data } = await axios.post("/api/exams", { ...tempExam });
-    dispatch({ type: CREATE_EXAM_SUCCESS, payload: data });
+    subjectDetailList.subjectDetailList.forEach(function (sd) {
+      console.log(sd.MonHoc._id)
+      console.log(tempExam.CTMH)
+      if (sd.MonHoc._id == tempExam.CTMH) {
+        tempExam.CTMH = sd._id
+      }
+    })
+    tempExam = {...tempExam};
+    const {data} = await axios.post("/api/exams", {...tempExam});
+    dispatch(examListAction())
+    dispatch({type: CREATE_EXAM_SUCCESS, payload: data});
   } catch (error) {
     dispatch({
       type: CREATE_EXAM_FAIL,
@@ -69,9 +78,9 @@ export const createExamAction = () => async (dispatch, getState) => {
 
 export const getExamListByStudentAction = () => async (dispatch) => {
   try {
-    dispatch({ type: GET_EXAM_LIST_BY_STUDENT_REQUEST });
+    dispatch({type: GET_EXAM_LIST_BY_STUDENT_REQUEST});
     const student = JSON.parse(localStorage.getItem("studentInfo"));
-    const { data } = await axios.get(`/api/exams/student?id=${student._id}`);
+    const {data} = await axios.get(`/api/exams/student?id=${student._id}`);
     const result = await axios.get(`api/submittions/student?id=${student._id}`);
     const submittion = result.data;
     submittion.forEach(function (sb) {
@@ -82,10 +91,9 @@ export const getExamListByStudentAction = () => async (dispatch) => {
         }
       });
     });
-    console.log(data);
 
     localStorage.setItem("exam", JSON.stringify(data));
-    dispatch({ type: GET_EXAM_LIST_BY_STUDENT_SUCCESS, payload: data });
+    dispatch({type: GET_EXAM_LIST_BY_STUDENT_SUCCESS, payload: data});
   } catch (error) {
     dispatch({
       type: GET_EXAM_LIST_BY_STUDENT_FAIL,

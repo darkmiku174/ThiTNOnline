@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {Button, InputGroup, Form, FormControl} from "react-bootstrap";
+import NormalAnswer from "./NormalAnswer"
 
 const Answer = ({exam}) => {
   const dispatch = useDispatch();
@@ -11,7 +12,9 @@ const Answer = ({exam}) => {
   const phanHoi = "";
 
   const addAnswer = (d) => {
-    setDapAn(d);
+    const correctElment = document.getElementsByClassName("correct-answer")
+    const elment = document.getElementById(`normal-answer-${questionIndex}-${d}`)
+    elment.classList.add("correct-answer")
     let submittion = JSON.parse(localStorage.getItem("submittion"));
     let founded = 0;
     if (submittion.DapAnSV.length === 0) {
@@ -38,45 +41,16 @@ const Answer = ({exam}) => {
       <Form.Group>
         <h2 className="question">{question.PhanHoi}</h2>
         {dsDapAn.map((d) => (
-          <Form.Group
-            id={d}
-            controlId="add-answer-container"
-            className={
-              d === dapAn
-                ? "correct-answer add-answer-container mx-0 my-4"
-                : "" + "add-answer-container mx-0 my-4"
-            }
-            key={d}
-          >
-            <div style={{height: "100%", padding: "0.6rem"}}>
-              <Form.Label className="answer-label d-flex">
-                {d === dapAn ? "Key" : ""}
-                <span>{d}</span>
-              </Form.Label>
-            </div>
-            <Form.Control
-              type="text"
-              placeholder="Your answer here"
-              className="draggable"
-              key={d}
-              value={
-                d === "A"
-                  ? question.CauA
-                  : d === "B"
-                    ? question.CauB
-                    : d === "C"
-                      ? question.CauC
-                      : d === "D"
-                        ? question.CauD
-                        : ""
-              }
-              readOnly={phanHoi === "" ? true : false}
-              onClick={(e) => addAnswer(d)}
-            />
-          </Form.Group>
+          <NormalAnswer id={"normal-answer-" + questionIndex + "-" + d} d={d} answer={d === "A"
+            ? question.CauA
+            : d === "B"
+              ? question.CauB
+              : d === "C"
+                ? question.CauC
+                : d === "D"
+                  ? question.CauD : ""} addAnswer={addAnswer} />
         ))}
       </Form.Group>
-
       <div className="options">
         <div>
           <Button

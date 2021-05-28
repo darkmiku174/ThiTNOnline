@@ -30,6 +30,7 @@ const getExams = asyncHandler(async (req, res) => {
 })
 
 const createExam = asyncHandler(async (req, res) => {
+  console.log(req.body)
   const exam = await Exam.create(req.body)
   res.json(exam)
 })
@@ -53,14 +54,18 @@ const getExamByLecturer = asyncHandler(async (req, res) => {
     {
       path: "CTMH",
       populate: {
-        path: "MonHoc"
+        path: "MonHoc",
       }
     })
   const examsByLecturer = []
+  console.log(exams)
   exams.forEach(function (e) {
-    if (e.CTMH.GiangVien == req.query.id) {
-      examsByLecturer.push(e)
+    if (e.CTMH != null) {
+      if (e.CTMH.GiangVien == req.query.id) {
+        examsByLecturer.push(e)
+      }
     }
+
   })
   res.json(examsByLecturer)
 })
@@ -86,7 +91,7 @@ const getExamByStudent = asyncHandler(async (req, res) => {
     const minutes = parseInt(ex.ThoiGian.substring(index + 1))
     const time = hour * 60 + minutes
     console.log(currentTime - time)
-    if (currentTime - time <= ex.ThoiLuong  && currentTime - time >=0) {
+    if (currentTime - time <= ex.ThoiLuong && currentTime - time >= 0) {
       if (ex.CTMH != null) {
         examOnTime.push(ex)
       }
