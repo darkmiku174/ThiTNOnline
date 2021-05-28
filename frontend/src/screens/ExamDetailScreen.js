@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import React, {useState, useEffect} from "react";
+import {Container, Row, Col, Button} from "react-bootstrap";
 import Answer from "../components/Answer";
 import QuestionList from "../components/QuestionList";
 import dsHocSinh from "../studentSample";
-import { useDispatch, useSelector } from "react-redux";
-import { postSubmittionAction } from "../actions/SubmittionActions";
+import {useDispatch, useSelector} from "react-redux";
+import {postSubmittionAction} from "../actions/SubmittionActions";
 import Timer from "../components/Timer";
 
-const ExamDetailScreen = ({ match, history }) => {
+const ExamDetailScreen = ({match, history}) => {
   console.log("render");
   const dispatch = useDispatch();
 
@@ -47,7 +47,7 @@ const ExamDetailScreen = ({ match, history }) => {
       const sinhvien = JSON.parse(localStorage.getItem("studentInfo"))._id;
       localStorage.setItem(
         "submittion",
-        JSON.stringify({ De: idDe, SinhVien: sinhvien, DapAnSV: [] })
+        JSON.stringify({De: idDe, SinhVien: sinhvien, DapAnSV: []})
       );
     }
   }, []);
@@ -73,7 +73,7 @@ const ExamDetailScreen = ({ match, history }) => {
               <Row className="child-row">
                 <Timer />
               </Row>
-              <Row style={{ marginTop: "1rem" }} className="child-row">
+              <Row style={{marginTop: "1rem"}} className="child-row">
                 <div className="question-list">
                   <QuestionList />
                 </div>
@@ -81,7 +81,7 @@ const ExamDetailScreen = ({ match, history }) => {
               <Button
                 className="btn btn-block"
                 onClick={submitAnswersHandler}
-                style={{ marginTop: "2rem" }}
+                style={{marginTop: "2rem"}}
               >
                 Kết thúc bài thi
               </Button>
