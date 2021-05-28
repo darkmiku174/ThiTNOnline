@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-const questionSchema = new mongoose.Schema({
+const questionSchema = mongoose.Schema({
   MonHoc: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Subject"
@@ -16,6 +16,6 @@ const questionSchema = new mongoose.Schema({
   PhanLoai: Number
 });
 
-var Question = mongoose.model('Questions', questionSchema);
+var Question = mongoose.model('Question', questionSchema);
 
 export default Question

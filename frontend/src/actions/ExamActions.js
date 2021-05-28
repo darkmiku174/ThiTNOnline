@@ -8,6 +8,9 @@ import {
   CREATE_EXAM_REQUEST,
   CREATE_EXAM_SUCCESS,
   CREATE_EXAM_FAIL,
+  GET_EXAM_LIST_BY_STUDENT_REQUEST,
+  GET_EXAM_LIST_BY_STUDENT_SUCCESS,
+  GET_EXAM_LIST_BY_STUDENT_FAIL,
 } from "../constants/ExamConstants";
 import axios from "axios";
 
@@ -56,6 +59,36 @@ export const createExamAction = () => async (dispatch, getState) => {
   } catch (error) {
     dispatch({
       type: CREATE_EXAM_FAIL,
+      payload:
+        error.response && error.response.data.message
+          ? error.response.data.message
+          : error.message,
+    });
+  }
+};
+
+export const getExamListByStudentAction = () => async (dispatch) => {
+  try {
+    dispatch({ type: GET_EXAM_LIST_BY_STUDENT_REQUEST });
+    const student = JSON.parse(localStorage.getItem("studentInfo"));
+    const { data } = await axios.get(`/api/exams/student?id=${student._id}`);
+    const result = await axios.get(`api/submittions/student?id=${student._id}`);
+    const submittion = result.data;
+    submittion.forEach(function (sb) {
+      data.forEach(function (ex) {
+        if (sb.De == ex._id) {
+          const index = data.indexOf(ex);
+          data.splice(index, 1);
+        }
+      });
+    });
+    console.log(data);
+
+    localStorage.setItem("exam", JSON.stringify(data));
+    dispatch({ type: GET_EXAM_LIST_BY_STUDENT_SUCCESS, payload: data });
+  } catch (error) {
+    dispatch({
+      type: GET_EXAM_LIST_BY_STUDENT_FAIL,
       payload:
         error.response && error.response.data.message
           ? error.response.data.message

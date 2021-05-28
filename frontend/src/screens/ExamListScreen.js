@@ -1,18 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import BaiThi from "../components/BaiThi";
 import dsBaiThi from "../examSample.js";
 import dsHocSinh from "../studentSample.js";
 import { Container, Row, Col, Card } from "react-bootstrap";
+import { getExamListByStudentAction } from "../actions/ExamActions";
 
 const ExamListScreen = () => {
+  const dispatch = useDispatch();
   const hocsinh = dsHocSinh.find((hocsinh) => hocsinh.id === "1");
+  const { loading, error, exams } = useSelector(
+    (state) => state.examListByStudent
+  );
+  useEffect(() => {
+    dispatch(getExamListByStudentAction());
+  }, [dispatch]);
+
+  if (exams == null || exams.length < 0) {
+    return null;
+  }
   return (
     <Container className="normal-container" fluid>
       <Row className="parent-row">
         <Col className="left child-col">
           <Row className="exam-list child-row">
-            {dsBaiThi.map((baithi) => (
-              <BaiThi baithi={baithi} />
+            {exams.map((ex) => (
+              <BaiThi ex={ex} />
             ))}
           </Row>
         </Col>

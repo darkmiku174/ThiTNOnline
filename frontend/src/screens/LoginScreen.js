@@ -1,26 +1,49 @@
-import React from "react";
-import {Form, Button} from "react-bootstrap";
-import {Link} from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Form, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { studentLoginAction } from "../actions/StudentActions";
 
-const LoginScreen = ({history}) => {
+const LoginScreen = ({ history }) => {
+  const isLogin = JSON.parse(localStorage.getItem("studentInfo"));
+  if (isLogin) {
+    history.push("/exams");
+  }
+  const dispatch = useDispatch();
+  const [cmnd, setCMND] = useState();
+  const [password, setPassword] = useState();
+
+  const { loading, error, student } = useSelector(
+    (state) => state.studentLogin
+  );
   const submitHandler = (e) => {
     e.preventDefault();
-    history.push("/exams");
+    dispatch(studentLoginAction({ cmnd, password }));
   };
+  useEffect(() => {
+    console.log(student);
+    if (student != null) {
+      history.push("/exams");
+    }
+  });
   return (
     <div className="login-container">
       <Form className="login-form" onSubmit={submitHandler}>
         <Form.Group controlId="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" />
-          <Form.Text className="text-muted">
-            We'll never share your email with anyone else.
-          </Form.Text>
+          <Form.Label>Chứng minh nhân dân</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Nhập cmnd"
+            onChange={(e) => setCMND(e.target.value)}
+          />
         </Form.Group>
-
         <Form.Group controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" />
+          <Form.Control
+            type="password"
+            placeholder="Password"
+            onChange={(e) => setPassword(e.target.value)}
+          />
         </Form.Group>
         <Form.Group controlId="formBasicCheckbox" className="login-ultities">
           <Form.Check type="checkbox" label="Remember me" />

@@ -3,7 +3,7 @@ import mongoose from 'mongoose'
 var examSchema = new mongoose.Schema({
   // _id sẽ được tự thêm vào nên không cần bỏ vô schema nữa
   ThoiGian: String,
-  NgayThi: Date,
+  NgayThi: String,
   ThoiLuong: Number,
   CTMH: {
     type: mongoose.Schema.Types.ObjectId,

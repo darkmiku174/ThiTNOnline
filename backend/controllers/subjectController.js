@@ -18,7 +18,6 @@ const getSubjectDetails = asyncHandler(async (req, res) => {
       GiangVien: req.query.giangvien
     })
     .populate("MonHoc")
-  console.log(subjectDetails)
   const subjectDetailsActive = []
   subjectDetails.forEach(function (s) {
     if (s.KhoaHoc.getFullYear() !== new Date().getFullYear()) {

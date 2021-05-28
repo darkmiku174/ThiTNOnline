@@ -1,9 +1,8 @@
 import express from 'express'
-import {getStudentList, getStudent} from '../controllers/studentController.js'
+import {getStudentList, getStudent, authStudent} from '../controllers/studentController.js'
 
 const router = express.Router()
 
+router.post("/login", authStudent)
 router.get("/", getStudentList)
-
-router.get('/:Id', getStudent)
 export default router

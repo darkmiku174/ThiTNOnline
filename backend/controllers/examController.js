@@ -1,5 +1,7 @@
 import asyncHandler from "express-async-handler";
 import Exam from '../models/examSchema.js'
+import SubjectDetail from '../models/subjectDetailSchema.js'
+import Submittion from '../models/submittionSchema.js'
 
 // @descs   Fetch all  exam
 // @route   GET /api/exams
@@ -48,11 +50,12 @@ const getExam = asyncHandler(async (req, res) => {
 
 const getExamByLecturer = asyncHandler(async (req, res) => {
   const exams = await Exam.find({}).populate(
-    { path:"CTMH",
-    populate:{
-    path:"MonHoc"
-  }
-  })
+    {
+      path: "CTMH",
+      populate: {
+        path: "MonHoc"
+      }
+    })
   const examsByLecturer = []
   exams.forEach(function (e) {
     if (e.CTMH.GiangVien == req.query.id) {
@@ -62,4 +65,32 @@ const getExamByLecturer = asyncHandler(async (req, res) => {
   res.json(examsByLecturer)
 })
 
-export {getExams, createExam, getExam, getExamByLecturer}
+const getExamByStudent = asyncHandler(async (req, res) => {
+  const exams = await Exam.find(
+    {
+      NgayThi: new Date().toLocaleDateString(),
+    }).populate(
+      {
+        path: "CTMH",
+        match: {DSSV: req.query.id},
+        populate: {path: "MonHoc"}
+      }).populate({path: "DSCH", select: "-DapAn -Diem -PhanLoai"})
+  const examOnTime = []
+  const currentHour = parseInt(new Date().getHours())
+  const currentMinutes = parseInt(new Date().getMinutes())
+  const currentTime = currentHour * 60 + currentMinutes
+  exams.forEach(function (ex) {
+      const index = ex.ThoiGian.indexOf(":")
+      const hour = parseInt(ex.ThoiGian.substring(0, index))
+      const minutes = parseInt(ex.ThoiGian.substring(index + 1))
+      const time = hour * 60 + minutes
+      if (currentTime - time <= ex.ThoiLuong) {
+        if (ex.CTMH != null) {
+          examOnTime.push(ex)
+        }
+      }
+  })
+  res.json(examOnTime)
+})
+
+export {getExams, createExam, getExam, getExamByLecturer, getExamByStudent}

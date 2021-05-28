@@ -1,5 +1,5 @@
 import express from 'express'
-import {getExams, createExam, getExam, getExamByLecturer} from '../controllers/examController.js'
+import {getExams, createExam, getExam, getExamByLecturer, getExamByStudent} from '../controllers/examController.js'
 
 const router = express.Router()
 
@@ -7,6 +7,7 @@ const router = express.Router()
 // tẩt cả các controller phải nằm trong file controlLErs
 // Tránh việc phải chạy qua lại giữa các file
 router.get("/lecturer", getExamByLecturer)
+router.get("/student", getExamByStudent)
 router.get('/', getExams)
 router.post("/", createExam)
 router.get('/:Id', getExam)

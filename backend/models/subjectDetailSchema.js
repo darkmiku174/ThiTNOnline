@@ -14,7 +14,7 @@ const subjectDetailSchema = new mongoose.Schema({
     ref: "Student"
   }],
   KhoaHoc: {
-    type: Date
+    type: String
   }
 })
 

@@ -9,6 +9,6 @@ const studentSchema = new mongoose.Schema({
   Activate:Number
 })
 
-const Student = mongoose.model("Student",studentSchema)
+const Student = mongoose.model("Student",studentSchema,"students")
 
 export default Student
