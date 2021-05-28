@@ -83,9 +83,10 @@ body {
   flex-direction: $direction;
 }
 
-@mixin grid($repeat, $min, $max) {
+@mixin grid($repeat, $min, $max,$gap) {
   display: grid;
   grid-template-columns: repeat($repeat, minmax($min, $max));
+  grid-gap: $gap;
 }
 
 .normal-container {

@@ -8,12 +8,13 @@ import ProfileScreen from "./screens/ProfileScreen";
 import TestScreen from "./screens/TestScreen";
 import TeacherScreen from "./screens/TeacherScreen";
 import ExamResultScreen from "./screens/ExamResultScreen";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import {BrowserRouter as Router, Route} from "react-router-dom";
 import AdminExamList from "./screens/AdminExamList";
 import AdminSubjectList from "./screens/AdminSubjectList";
 import DragAndDrop from "./screens/DragAndDrop";
 import Components from "./screens/Components";
 import LecturerScreen from "./screens/LecturerScreen";
+import PictureAnswer from './components/PictureAnswer'
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
       <Header />
       <section
         className="main-content"
-        style={{ width: "90%", margin: "0 auto" }}
+        style={{width: "90%", margin: "0 auto"}}
       >
         <Route path="/test" component={TestScreen} exact />
         <Route path="/profile" component={ProfileScreen} exact />
@@ -32,7 +33,7 @@ function App() {
         <Route path="/giangvien/" component={TeacherScreen} exact />
         <Route path="/exams/result" component={ExamResultScreen} exact />
         <Route path="/admin/exams/list" component={AdminSubjectList} />
-        <Route path="/components/customtable" component={Components} />
+        <Route path="/components/pictureanswer" component={PictureAnswer} />
         <Route path="/giangvien/login" component={LecturerScreen} exact />
       </section>
     </Router>

@@ -1,6 +1,6 @@
 import React from "react";
-import { Button } from "react-bootstrap";
-import { useDispatch } from "react-redux";
+import {Button} from "react-bootstrap";
+import {useDispatch} from "react-redux";
 
 const QuestionList = () => {
   const dispatch = useDispatch();
@@ -10,8 +10,9 @@ const QuestionList = () => {
       {exam[0].DSCH.map((question, index) => (
         <Button
           variant={"light"}
+          size="sm"
           onClick={(e) =>
-            dispatch({ type: "CHANGE_QUESTION_INDEX", payload: index })
+            dispatch({type: "CHANGE_QUESTION_INDEX", payload: index})
           }
         >
           {index + 1}

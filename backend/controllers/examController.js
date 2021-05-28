@@ -75,20 +75,22 @@ const getExamByStudent = asyncHandler(async (req, res) => {
         match: {DSSV: req.query.id},
         populate: {path: "MonHoc"}
       }).populate({path: "DSCH", select: "-DapAn -Diem -PhanLoai"})
+  console.log(exams)
   const examOnTime = []
   const currentHour = parseInt(new Date().getHours())
   const currentMinutes = parseInt(new Date().getMinutes())
   const currentTime = currentHour * 60 + currentMinutes
   exams.forEach(function (ex) {
-      const index = ex.ThoiGian.indexOf(":")
-      const hour = parseInt(ex.ThoiGian.substring(0, index))
-      const minutes = parseInt(ex.ThoiGian.substring(index + 1))
-      const time = hour * 60 + minutes
-      if (currentTime - time <= ex.ThoiLuong) {
-        if (ex.CTMH != null) {
-          examOnTime.push(ex)
-        }
+    const index = ex.ThoiGian.indexOf(":")
+    const hour = parseInt(ex.ThoiGian.substring(0, index))
+    const minutes = parseInt(ex.ThoiGian.substring(index + 1))
+    const time = hour * 60 + minutes
+    console.log(currentTime - time)
+    if (currentTime - time <= ex.ThoiLuong  && currentTime - time >=0) {
+      if (ex.CTMH != null) {
+        examOnTime.push(ex)
       }
+    }
   })
   res.json(examOnTime)
 })

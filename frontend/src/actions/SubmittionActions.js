@@ -7,7 +7,7 @@ import {
 
 export const postSubmittionAction = () => async (dispatch) => {
   try {
-    dispatch({ type: POST_SUBMITTION_REQUEST });
+    dispatch({type: POST_SUBMITTION_REQUEST});
     const submittion = JSON.parse(localStorage.getItem("submittion"));
     const exam = JSON.parse(localStorage.getItem("exam"));
     const index = exam[0].ThoiGian.indexOf(":");
@@ -17,9 +17,10 @@ export const postSubmittionAction = () => async (dispatch) => {
     const currentTime =
       parseInt(new Date().getHours()) * 60 + parseInt(new Date().getMinutes());
     if (currentTime < submitTime + 1) {
-      const { data } = await axios.post("/api/submittions", submittion);
+      const {data} = await axios.post("/api/submittions", submittion);
       localStorage.removeItem("submittion");
-      dispatch({ type: POST_SUBMITTION_SUCESS, payload: { data } });
+      localStorage.removeItem("exam")
+      dispatch({type: POST_SUBMITTION_SUCESS, payload: {data}});
     }
   } catch (error) {
     dispatch({

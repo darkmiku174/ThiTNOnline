@@ -9,10 +9,7 @@
 
 .question-list {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(10, 1fr);
+  grid-gap:0.3rem;
   width: 100%;
-  .btn {
-    width: 50px;
-    margin: 0.7rem auto;
-  }
 }

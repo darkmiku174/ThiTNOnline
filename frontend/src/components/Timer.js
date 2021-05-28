@@ -1,8 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {useDispatch} from "react-redux";
 import {postSubmittionAction} from "../actions/SubmittionActions";
-
-
+import {withRouter} from 'react-router-dom'
 
 const Timer = ({history}) => {
   const exam = JSON.parse(localStorage.getItem("exam"));
@@ -12,13 +11,13 @@ const Timer = ({history}) => {
   const submitTime =
     hour * 3600 + minutes * 60 + parseInt(exam[0].ThoiLuong) * 60;
   const convertTimeToString = (time) => {
-    const hour = time / 3600 >= 1 ? time / 3600 : "00";
+    const hour = Math.floor(time / 3600) >= 1 ? Math.floor(time / 3600) : "00";
     const minutes =
       Math.floor(time / 60) >= 10
-        ? Math.floor(time / 60)
-        : `0${Math.floor(time / 60)}`;
+        ? Math.floor(time / 60) - hour * 60
+        : `0${Math.floor(time / 60) - hour * 60}`;
     const second =
-      time - minutes * 60 >= 10 ? time - minutes * 60 : `0${time - minutes * 60}`;
+      time - (minutes * 60 + hour * 3600) >= 10 ? time - (minutes * 60 + hour * 3600) : `0${time - (minutes * 60 + hour * 3600)}`;
     return hour + ":" + minutes + ":" + second;
   };
   const dispatch = useDispatch();
@@ -32,7 +31,7 @@ const Timer = ({history}) => {
       console.log("timeout");
       if (currentTime >= submitTime && currentTime <= submitTime + 1) {
         dispatch(postSubmittionAction());
-        history.pushState("/exams");
+        history.push("/exams");
         return null;
       }
       setTime(convertTimeToString(submitTime - currentTime));
@@ -49,4 +48,4 @@ const Timer = ({history}) => {
   );
 };
 
-export default Timer;
+export default withRouter(Timer);
