@@ -30,9 +30,8 @@ const Header = (props) => {
         }}
       >
         <Navbar.Brand href="/">React-Bootstrap </Navbar.Brand>
-        <DropdownMenu pushToHome={pushToHome} />
+        <DropdownMenu pushToHome={pushToHome} pathname={pathname}/>
       </Navbar>
-      {console.log(pathname)}
       {pathname == "/giangvien/login" ? "" : pathname == "/" ? "" : <Breadscrumbs />}
     </header>
   );

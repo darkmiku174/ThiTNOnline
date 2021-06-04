@@ -256,8 +256,6 @@ const AddQuestion = ({ show, onHide, maMH }) => {
             dapAn === "" ||
             diem === Number(0) ||
             Object.keys(question).length !== 0
-              ? true
-              : false
           }
         >
           Add

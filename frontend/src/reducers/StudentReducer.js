@@ -11,7 +11,7 @@ export const studentLoginReducer = (state = {}, action) => {
     case STUDENT_LOGIN_REQUEST:
       return {loading: true};
     case STUDENT_LOGIN_SUCCESS:
-      return {loading: false, student: action.payload};
+      return {loading: false, studentInfo: action.payload};
     case STUDENT_LOGIN_FAIL:
       return {loading: false, error: action.payload};
     case STUDENT_LOGOUT:

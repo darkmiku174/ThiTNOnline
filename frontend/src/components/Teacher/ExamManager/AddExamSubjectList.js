@@ -24,7 +24,7 @@ const AddExamSubjectList = () => {
   }
   return (
     <>
-      <div className="add-exam-subject-list">
+      <div className="add-exam-subject-list mb-4 w-50" style={{marginRight:"1.2rem"}}>
         <Form.Control
           as={"select"}
           custom={true}

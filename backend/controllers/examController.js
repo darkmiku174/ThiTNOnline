@@ -71,8 +71,12 @@ const getExamByLecturer = asyncHandler(async (req, res) => {
 })
 
 const getExamByStudent = asyncHandler(async (req, res) => {
+  console.log(req.user)
+  // This required alot of googling :))
+  const submittions = await Submittion.find({SinhVien: req.query.id})
   const exams = await Exam.find(
     {
+      _id: {$nin: submittions.map(s => s.De)},
       NgayThi: new Date().toLocaleDateString(),
     }).populate(
       {
@@ -80,8 +84,7 @@ const getExamByStudent = asyncHandler(async (req, res) => {
         match: {DSSV: req.query.id},
         populate: {path: "MonHoc"}
       }).populate({path: "DSCH", select: "-DapAn -Diem -PhanLoai"})
-  console.log(exams)
-  const examOnTime = []
+  /* const examOnTime = []
   const currentHour = parseInt(new Date().getHours())
   const currentMinutes = parseInt(new Date().getMinutes())
   const currentTime = currentHour * 60 + currentMinutes
@@ -96,8 +99,8 @@ const getExamByStudent = asyncHandler(async (req, res) => {
         examOnTime.push(ex)
       }
     }
-  })
-  res.json(examOnTime)
+  }) */
+  res.json(exams)
 })
 
 export {getExams, createExam, getExam, getExamByLecturer, getExamByStudent}

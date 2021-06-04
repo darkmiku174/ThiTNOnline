@@ -3,6 +3,6 @@ import {getStudentList, getStudent, authStudent} from '../controllers/studentCon
 
 const router = express.Router()
 
-router.post("/login", authStudent)
+router.route("/login").post(authStudent)
 router.get("/", getStudentList)
 export default router

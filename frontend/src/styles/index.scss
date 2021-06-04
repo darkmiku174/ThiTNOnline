@@ -158,6 +158,37 @@ body {
             user-select: none;
 }
 
+.expand-image-btn{
+  background: none;
+  border:none;
+  position:absolute;
+  right: 0.3rem;
+  top:0.3rem;
+  opacity: 0.5;
+  padding: 0.3rem;
+  transition: 150ms background ease-in-out;
+}
+
+.expand-image-btn:hover{
+  //opacity: 1;
+  background: $borderColor;
+}
+
+.add-answer-container.image-container{
+  height: 250px;
+  width: 350px;
+  position: relative;
+  
+  div{
+    @include flex(initial,center,row);
+  }
+
+  input{
+    padding: 0;
+    height: 100%;
+  }
+}
+
 @import "head";
 @import "login";
 @import "baiThi";

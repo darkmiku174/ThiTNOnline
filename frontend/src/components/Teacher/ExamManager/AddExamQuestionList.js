@@ -74,7 +74,7 @@ const AddExamQuestionList = ({handleClose}) => {
                     id={q._id}
                     inline
                     onChange={(e) => addQuestionToTempExam(e, q._id)}
-                    checked={tempExam.DSCH.includes(q._id) ? true : false}
+                    checked={tempExam.DSCH.includes(q._id)}
                   />
                 </td>
                 <td>{q._id}</td>

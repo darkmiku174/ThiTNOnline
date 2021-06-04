@@ -5,14 +5,16 @@ import onClickOutside from 'react-onclickoutside'
 import {studentLogoutAction} from '../../actions/StudentActions'
 import {lecturerLogoutAction} from '../../actions/LecturerActions'
 
-function DropdownMenu({pushToHome}) {
+function DropdownMenu({pushToHome,pathname}) {
   const dispatch = useDispatch()
   const studentLogin = useSelector(state => state.studentLogin)
   const {studentInfo} = studentLogin ? studentLogin : {studentInfo: null}
   const lecturerLogin = useSelector(state => state.lecturerLogin)
   const {lecturerInfo} = lecturerLogin ? lecturerLogin : {lecturerInfo: null}
-  const user = studentInfo ? studentInfo : lecturerInfo ? lecturerInfo : null
-  console.log(studentInfo)
+
+    const user = pathname.includes("giangvien") ? lecturerInfo
+        : studentInfo && !pathname.includes("giangvien") ? studentInfo : null
+  // const user = studentInfo ? studentInfo : lecturerInfo ? lecturerInfo : null
 
   const [open, setOpen] = useState(false)
 
@@ -47,10 +49,12 @@ function DropdownMenu({pushToHome}) {
         <div className="drop-down-body bg-primary shadow">
           <ul>
             <li className="bg-primary text-white" >
-              <i className="fas fa-user" style={{marginRight: "0.6rem"}}></i>Profile
+              <i className="fas fa-user"
+                 style={{marginRight: "0.6rem"}}/>Profile
           </li>
             <li className="bg-primary text-white" onClick={e => userLogout()}>
-              <i class="fas fa-sign-out-alt" style={{marginRight: "0.6rem"}}></i>Logout
+              <i className="fas fa-sign-out-alt"
+                 style={{marginRight: "0.6rem"}}/>Logout
           </li>
           </ul>
         </div>

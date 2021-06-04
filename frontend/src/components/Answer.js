@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {Button, InputGroup, Form, FormControl} from "react-bootstrap";
 import NormalAnswer from "./NormalAnswer"
+import ImageQuestion from "./ImageQuestion";
 
 const Answer = ({exam}) => {
   const dispatch = useDispatch();
@@ -12,7 +13,10 @@ const Answer = ({exam}) => {
   const phanHoi = "";
 
   const addAnswer = (d) => {
-    const correctElment = document.getElementsByClassName("correct-answer")
+    const correctElment = Array.from(document.getElementsByClassName("correct-answer"))
+    if (correctElment.length > 0) {
+      correctElment.map(c => c.classList.remove("correct-answer"))
+    }
     const elment = document.getElementById(`normal-answer-${questionIndex}-${d}`)
     elment.classList.add("correct-answer")
     let submittion = JSON.parse(localStorage.getItem("submittion"));
@@ -33,13 +37,23 @@ const Answer = ({exam}) => {
   };
 
   useEffect(() => {
-    setDapAn("");
+    const correctElment = Array.from(document.getElementsByClassName("correct-answer"))
+    if (correctElment.length > 0) {
+      correctElment.map(c => c.classList.remove("correct-answer"))
+    }
+
   }, [question]);
 
   return (
     <>
       <Form.Group>
-        <h2 className="question">{question.PhanHoi}</h2>
+        {
+          question.PhanHoi.match(/[\/.](gif|jpg|jpeg|tiff|png)$/i)
+            ?
+              <ImageQuestion question={question.PhanHoi}/>
+              :
+              <h2 className="question">{question.PhanHoi}</h2>
+        }
         {dsDapAn.map((d) => (
           <NormalAnswer id={"normal-answer-" + questionIndex + "-" + d} d={d} answer={d === "A"
             ? question.CauA
@@ -92,3 +106,4 @@ const Answer = ({exam}) => {
   );
 };
 export default Answer;
+

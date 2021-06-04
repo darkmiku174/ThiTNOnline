@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Form, Button } from "react-bootstrap";
+import {Form, Button, Alert} from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { studentLoginAction } from "../actions/StudentActions";
@@ -27,7 +27,12 @@ const LoginScreen = ({ history }) => {
     }
   });
   return (
+      <>
+        {error ? <Alert variant={"danger"} className={"mt-4"}>
+    Sai cmnd hoặc mật khẩu
+  </Alert>:""}
     <div className="login-container">
+
       <Form className="login-form" onSubmit={submitHandler}>
         <Form.Group controlId="formBasicEmail">
           <Form.Label>Chứng minh nhân dân</Form.Label>
@@ -56,6 +61,7 @@ const LoginScreen = ({ history }) => {
         </Button>
       </Form>
     </div>
+      </>
   );
 };
 

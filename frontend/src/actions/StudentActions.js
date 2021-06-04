@@ -9,11 +9,12 @@ import {
 export const studentLoginAction = (input) => async (dispatch) => {
   try {
     dispatch({type: STUDENT_LOGIN_REQUEST});
+    console.log(input)
     const {data} = await axios.post(
       `api/students/login?cmnd=${input.cmnd}&password=${input.password}`
     );
     localStorage.setItem("studentInfo", JSON.stringify(data));
-    dispatch({type: STUDENT_LOGIN_SUCCESS});
+    dispatch({type: STUDENT_LOGIN_SUCCESS, payload:data});
   } catch (error) {
     dispatch({
       type: STUDENT_LOGIN_FAIL,

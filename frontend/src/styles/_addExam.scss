@@ -27,11 +27,10 @@
   }
 }
 .add-exam-subject-list {
-  select {
-    width: 30%;
-  }
+  //select {
+  //  width: 30%;
+  //}
   padding: 1.2rem 1.2rem !important;
   border: 1px solid $borderColor;
-  margin-bottom: 1.2rem;
   border-radius: 0.3rem;
 }

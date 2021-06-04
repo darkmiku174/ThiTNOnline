@@ -4,6 +4,7 @@ import AddExamQuestionList from "./AddExamQuestionList";
 import AddExamSubjectList from "./AddExamSubjectList";
 import {useDispatch} from "react-redux";
 import {subjectDetailListAction} from "../../../actions/SubjectActions";
+import TotalQuestion from "./TotalQuestion";
 
 const AddExam = () => {
   const dispatch = useDispatch();
@@ -31,7 +32,10 @@ const AddExam = () => {
             padding: "1.2rem",
           }}
         >
-          <AddExamSubjectList />
+            <div className={"d-flex justify-content-between"}>
+                <AddExamSubjectList />
+                <TotalQuestion/>
+            </div>
           <AddExamQuestionList handleClose={handleClose} />
         </div>
       </Modal>

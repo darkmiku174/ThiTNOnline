@@ -76,21 +76,30 @@ export const createExamAction = () => async (dispatch, getState) => {
   }
 };
 
-export const getExamListByStudentAction = () => async (dispatch) => {
+export const getExamListByStudentAction = () => async (dispatch,getState) => {
   try {
     dispatch({type: GET_EXAM_LIST_BY_STUDENT_REQUEST});
+    const {
+      studentLogin: {studentInfo}
+    } = getState()
+    const config = {
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${studentInfo.token}`,
+      },
+    }
     const student = JSON.parse(localStorage.getItem("studentInfo"));
-    const {data} = await axios.get(`/api/exams/student?id=${student._id}`);
-    const result = await axios.get(`api/submittions/student?id=${student._id}`);
-    const submittion = result.data;
-    submittion.forEach(function (sb) {
-      data.forEach(function (ex) {
-        if (sb.De == ex._id) {
-          const index = data.indexOf(ex);
-          data.splice(index, 1);
-        }
-      });
-    });
+    const {data} = await axios.get(`/api/exams/student?id=${student._id}`,config);
+    // const result = await axios.get(`api/submittions/student?id=${student._id}`);
+    // const submittion = result.data;
+    // submittion.forEach(function (sb) {
+    //   data.forEach(function (ex) {
+    //     if (sb.De == ex._id) {
+    //       const index = data.indexOf(ex);
+    //       data.splice(index, 1);
+    //     }
+    //   });
+    // });
 
     localStorage.setItem("exam", JSON.stringify(data));
     dispatch({type: GET_EXAM_LIST_BY_STUDENT_SUCCESS, payload: data});

@@ -65,7 +65,10 @@ const QuestionTypes = ({phanHoi, dsDapAn, type, onChangeHandler,
           <Form.Control
             type="text"
             placeholder="Thêm câu hỏi"
-            onMouseUp={(e) => setLocalSelection({selectionStart: e.target.selectionStart, selectionEnd: e.target.selectionEnd})}
+            onMouseUp={(e) =>
+                setLocalSelection(
+                    {selectionStart: e.target.selectionStart,
+                      selectionEnd: e.target.selectionEnd})}
             className="question-box"
             onChange={e => onChangeHandler("", e.target.value)}
             value={phanHoi}
@@ -105,7 +108,7 @@ const QuestionTypes = ({phanHoi, dsDapAn, type, onChangeHandler,
                 ? onChangeHandler(d, e.target.value) : ""}
               value={d === "A" ? cauA : d === "B" ? cauB : d === "C" ? cauC : d === "D" ? cauD : ""}
               readOnly={Object.keys(selectionRange).length
-                === 0 || d === dapAn ? true : false}
+              === 0 || d === dapAn}
             />
           </Form.Group>
         ))

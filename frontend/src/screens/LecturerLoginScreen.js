@@ -4,7 +4,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {Link} from "react-router-dom";
 import {lecturerLoginAction} from "../actions/LecturerActions";
 
-const LoginScreen = ({history}) => {
+const LecturerLoginScreen = ({history}) => {
   const isLogin = JSON.parse(localStorage.getItem("lecturerInfo"));
   if (isLogin) {
     history.push("/giangvien");
@@ -61,4 +61,4 @@ const LoginScreen = ({history}) => {
   );
 };
 
-export default LoginScreen;
+export default LecturerLoginScreen;

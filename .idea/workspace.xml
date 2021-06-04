@@ -1,20 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5937148a-beae-41b5-aa53-5aeb9870fd8f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/:wq" beforeDir="false" />
+    <list default="true" id="d6382c8a-d8b4-4be7-8a96-76625ce3f259" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Teacher/ExamManager/TotalQuestion.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Teacher/QuestionManager/AddQuestionModal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Teacher/QuestionManager/FillInBlankQuestion.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Teacher/QuestionManager/QuesitonTypev2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/ZoomImage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controllers/examController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/examController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controllers/studentController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/studentController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/models/studentSchema.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/studentSchema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/examRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/examRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/studentRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/studentRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/actions/ExamActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/actions/ExamActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/actions/StudentActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/actions/StudentActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Answer.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Answer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/BaiThi.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/BaiThi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/GlobalComponents/DropdownMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/GlobalComponents/DropdownMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/GlobalComponents/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/GlobalComponents/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ImageAnswer.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ImageAnswer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ImageQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/ImageQuestion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/NormalAnswer.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/NormalAnswer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Teacher/ExamManager/AddExam.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Teacher/ExamManager/AddExam.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Teacher/ExamManager/AddExamQuestionList.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Teacher/ExamManager/AddExamQuestionList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Teacher/ExamManager/AddExamSubjectList.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Teacher/ExamManager/AddExamSubjectList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Teacher/QuestionManager/AddQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Teacher/QuestionManager/AddQuestion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Teacher/QuestionManager/QuestionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Teacher/QuestionManager/QuestionTypes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/reducers/StudentReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/reducers/StudentReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/screens/ExamListScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/ExamListScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/screens/LecturerScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/LecturerLoginScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/screens/LoginScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/LoginScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/styles/_addExam.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles/_addExam.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/styles/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1tAIFEHcLJUegdAEZ52i7UUmvSO" />
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="1tT0RCKcVyGQT9BSUafU6ulKA78" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -23,24 +69,60 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/node_modules/pretty-format" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/frontend/node_modules/pretty-format" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.dev" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5937148a-beae-41b5-aa53-5aeb9870fd8f" name="Default Changelist" comment="" />
-      <created>1622205361744</created>
+      <changelist id="d6382c8a-d8b4-4be7-8a96-76625ce3f259" name="Default Changelist" comment="" />
+      <created>1622777763514</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1622205361744</updated>
-      <workItem from="1622205363479" duration="33000" />
-      <workItem from="1622205405078" duration="24000" />
-      <workItem from="1622205434568" duration="2000" />
+      <updated>1622777763514</updated>
+      <workItem from="1622777768480" duration="3147000" />
+      <workItem from="1622781149349" duration="1032000" />
+      <workItem from="1622783793179" duration="15960000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

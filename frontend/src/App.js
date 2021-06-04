@@ -13,8 +13,9 @@ import AdminExamList from "./screens/AdminExamList";
 import AdminSubjectList from "./screens/AdminSubjectList";
 import DragAndDrop from "./screens/DragAndDrop";
 import Components from "./screens/Components";
-import LecturerScreen from "./screens/LecturerScreen";
 import ImageAnswer from './components/ImageAnswer'
+import LecturerLoginScreen from "./screens/LecturerLoginScreen";
+import FillInBlankQuestion from "./components/Teacher/QuestionManager/FillInBlankQuestion";
 
 function App() {
   return (
@@ -32,9 +33,10 @@ function App() {
         <Route path="/exams/:id" component={ExamDetailScreen} exact />
         <Route path="/giangvien/" component={TeacherScreen} exact />
         <Route path="/exams/result" component={ExamResultScreen} exact />
-        <Route path="/admin/exams/list" component={AdminSubjectList} />
+        <Route path="/admin/exams/list" component={AdminSubjectList} exact/>
         <Route path="/components/pictureanswer" component={ImageAnswer} />
-        <Route path="/giangvien/login" component={LecturerScreen} exact />
+          <Route path="/giangvien/login" component={LecturerLoginScreen} exact/>
+          <Route path={"/components/fillinblank"} component={FillInBlankQuestion} exact/>
       </section>
     </Router>
   );
