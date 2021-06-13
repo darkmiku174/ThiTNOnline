@@ -3,7 +3,6 @@ import asyncHandler from 'express-async-handler'
 import People from '../models/peopleSchema.js'
 
 const protect = asyncHandler(async (req, res, next) => {
-  // console.log(req.headers)
   let token
   if (req.headers.authorization && req.headers.authorization.startsWith("Bearer")) {
     try {

@@ -2,53 +2,50 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6382c8a-d8b4-4be7-8a96-76625ce3f259" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/FillInBlankAnswer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/FillInBlankQuestion.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Teacher/QuestionManager/BasicQuestion.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/Teacher/QuestionManager/QuestionOptions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Teacher/QuestionManager/QuestionDetails.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/controllers/examController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/examController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/controllers/lecturerController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/lecturerController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/controllers/questionController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/questionController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/controllers/studentController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/studentController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/controllers/submittionController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/submittionController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/middlewares/authMiddlewares.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/middlewares/authMiddlewares.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/models/lecturerSchema.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/lecturerSchema.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/models/questionSchema.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/questionSchema.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/models/studentSchema.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/studentSchema.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes/lecturerRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/lecturerRoutes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes/submittionRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/submittionRoutes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/actions/ExamActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/actions/ExamActions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/actions/LecturerActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/actions/LecturerActions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/actions/StudentActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/actions/StudentActions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/actions/SubmittionActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/actions/SubmittionActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Answer.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Answer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/GlobalComponents/Announcement.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/GlobalComponents/Announcement.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/BaiThi.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/BaiThi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/GlobalComponents/Breadscrumbs.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/GlobalComponents/Breadscrumbs.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/GlobalComponents/DateTimePicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/GlobalComponents/DateTimePicker.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/GlobalComponents/DropdownMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/GlobalComponents/DropdownMenu.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/GlobalComponents/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/GlobalComponents/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/QuestionList.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/QuestionList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/SearchBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/SearchBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/SideNav.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/SideNav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/SubjectTimetable.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/SubjectTimetable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Teacher/ExamManager/AddExamForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Teacher/ExamManager/ExamCallendar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Teacher/ExamManager/AddExamQuestionList.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Teacher/ExamManager/AddExamQuestionList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Teacher/ExamManager/ExamDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Teacher/ExamManager/ExamDetail.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Teacher/ExamManager/ExamList.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Teacher/ExamManager/ExamList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Teacher/ExamManager/ExamsManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Teacher/ExamManager/ExamsManager.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Teacher/QuestionManager/AddQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Teacher/QuestionManager/AddQuestion.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Teacher/QuestionManager/AddQuestionModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Teacher/QuestionManager/AddQuestionModal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Teacher/QuestionManager/FillInBlankQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Teacher/QuestionManager/FillInBlankQuestion.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Teacher/QuestionManager/QuesitonTypev2.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Teacher/QuestionManager/QuesitonTypev2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Teacher/QuestionManager/Questions.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Teacher/QuestionManager/Questions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Teacher/QuestionManager/SubjectQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Teacher/QuestionManager/SubjectQuestion.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Teacher/TeacherAccount.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Teacher/TeacherAccount.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Timer.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Timer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/constants/LecturerConstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/constants/LecturerConstants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/constants/submittionConstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/constants/submittionConstants.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/reducers/ExamReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/reducers/ExamReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/reducers/LecturerReducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/reducers/LecturerReducers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/reducers/SubmittionReducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/reducers/SubmittionReducers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/reducers/StudentReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/reducers/StudentReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/screens/AdminExamList.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/AdminExamList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/screens/AdminSubjectList.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/AdminSubjectList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/screens/AdminSubjectTimetableScreen.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/screens/DragAndDrop.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/DragAndDrop.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/screens/ExamDetailScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/ExamDetailScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/screens/ExamListScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/ExamListScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/screens/ExamResultScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/ExamResultScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/screens/LecturerLoginScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/LecturerLoginScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/screens/LoginScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/LoginScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/screens/ProfileScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/ProfileScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/screens/TeacherScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/screens/TeacherScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,6 +118,9 @@
       <workItem from="1623531950940" duration="6553000" />
       <workItem from="1623563669441" duration="8920000" />
       <workItem from="1623586556499" duration="12006000" />
+      <workItem from="1623612829700" duration="3088000" />
+      <workItem from="1623616041219" duration="59000" />
+      <workItem from="1623616104503" duration="6362000" />
     </task>
     <servers />
   </component>

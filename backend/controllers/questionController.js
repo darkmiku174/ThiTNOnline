@@ -18,7 +18,6 @@ const getQuestionBySubjectRequest = asyncHandler(async (req, res) => {
 
 const createQuestion = asyncHandler(async (req, res) => {
   const question = await Question.create(req.body)
-  console.log(question)
   res.json(question)
 })
 

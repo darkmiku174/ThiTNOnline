@@ -30,7 +30,6 @@ const getExams = asyncHandler(async (req, res) => {
 })
 
 const createExam = asyncHandler(async (req, res) => {
-  console.log(req.body)
   const exam = await Exam.create(req.body)
   res.json(exam)
 })

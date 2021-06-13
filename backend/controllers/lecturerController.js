@@ -38,7 +38,6 @@ const updateLecturerProfile = asyncHandler(async (req, res) => {
     req.user.HoTen = req.body.HoTen
     req.user.NgaySinh = req.body.NgaySinh
     req.user.GioiTinh = req.body.GioiTinh
-    console.log(req.user)
     await req.user.save()
     res.status(200).json({message: "Updated profile"})
   } else {
