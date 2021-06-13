@@ -1,4 +1,6 @@
 import {
+  GET_STUDENT_SUBMITTIONS_FAIL,
+  GET_STUDENT_SUBMITTIONS_REQUEST, GET_STUDENT_SUBMITTIONS_SUCCESS,
   POST_SUBMITTION_FAIL,
   POST_SUBMITTION_REQUEST,
   POST_SUBMITTION_SUCESS,
@@ -23,3 +25,16 @@ export const changeQuestionIndex = (state = { questionIndex: 0 }, action) => {
   }
   return state;
 };
+
+export const getStudentSubmittionReducer=(state={},action)=>{
+  switch (action.type){
+    case GET_STUDENT_SUBMITTIONS_REQUEST:
+      return {loading:true}
+    case GET_STUDENT_SUBMITTIONS_SUCCESS:
+      return {loading:false,submittions:action.payload}
+    case GET_STUDENT_SUBMITTIONS_FAIL:
+      return {loading:false,error:action.payload}
+    default:
+      return state
+  }
+}

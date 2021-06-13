@@ -2,6 +2,7 @@ import React from 'react'
 import {Modal, Button} from 'react-bootstrap'
 
 const Announcement = ({header, body, btns}) => {
+
   return (
     <Modal.Dialog
           id="announcement-box"

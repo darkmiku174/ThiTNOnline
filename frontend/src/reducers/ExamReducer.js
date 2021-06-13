@@ -12,6 +12,7 @@ import {
   GET_EXAM_REQUEST,
   GET_EXAM_SUCCESS,
 } from "../constants/ExamConstants";
+import {STUDENT_LOGOUT} from "../constants/StudentConstants";
 
 export const examListReducer = (state = { exams: [] }, action) => {
   switch (action.type) {
@@ -21,6 +22,8 @@ export const examListReducer = (state = { exams: [] }, action) => {
       return { loading: false, exams: action.payload };
     case EXAM_LIST_FAIL:
       return { loading: false, error: action.payload };
+    case STUDENT_LOGOUT:
+      return {}
     default:
       return state;
   }
@@ -34,6 +37,8 @@ export const examReducer = (state = { exam: {} }, action) => {
       return { loading: false, exam: action.payload };
     case GET_EXAM_FAIL:
       return { loading: false, error: action.payload };
+    case STUDENT_LOGOUT:
+      return {}
     default:
       return state;
   }
@@ -43,6 +48,8 @@ export const tempExamReducer = (state = {}, action) => {
   switch (action.type) {
     case "ADD_TEMP_EXAM":
       return { tempExam: { ...state.tempExam, ...action.payload } };
+    case STUDENT_LOGOUT:
+      return {}
     default:
       return state ? state : "";
   }
@@ -69,6 +76,8 @@ export const getExamListBYStudentReducer = (state = { exams: [] }, action) => {
       return { loading: false, exams: action.payload };
     case GET_EXAM_LIST_BY_STUDENT_FAIL:
       return { loading: false, error: action.payload };
+    case STUDENT_LOGOUT:
+      return {}
     default:
       return state;
   }

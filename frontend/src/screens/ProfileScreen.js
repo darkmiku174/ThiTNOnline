@@ -1,9 +1,18 @@
-import React from "react";
+import React, {useEffect} from "react";
 import students from "../studentSample";
-import { Container, Col, Row, Form, Button } from "react-bootstrap";
+import {Container, Col, Row, Form, Button, Card} from "react-bootstrap";
+import {useDispatch, useSelector} from "react-redux";
+import {getStudentSubmittionAction} from "../actions/SubmittionActions";
 
 const ProfileScreen = () => {
-  const student = students.find((s) => (s.id = "1"));
+  const dispatch=useDispatch()
+  const {loading,error,studentInfo} = useSelector(state=>state.studentLogin)
+    const {loading:submittionLoading,error:submittionError,submittions} = useSelector(state => state.studentSubmittions)
+    console.log(submittions)
+    useEffect(() => {
+        dispatch(getStudentSubmittionAction())
+    }, []);
+
   return (
     <Container className="normal-container" fluid>
       <Row className="parent-row">
@@ -20,19 +29,18 @@ const ProfileScreen = () => {
             }}
             className="child-row"
           >
-            <div style={{ width: "150px" }}>
-              <img src={student.image} style={{ width: "100%" }} />
+            <div style={{ width: "150px"}}>
+              <img src={studentInfo.AnhDaiDien} style={{ width: "100%", borderRadius:"50%" }} />
             </div>
             <Button variant="light" style={{ marginTop: "1.2rem" }}>
               Đổi ảnh
             </Button>
             <div className="infor" style={{ marginTop: "2.7rem" }}>
-              <p>MSSV: {student.sbd}</p>
-              <p>Họ & Tên: {student.name}</p>
-              <p>Giới tính: {student.sex}</p>
-              <p>Tình trạng học: {student.studyStatus}</p>
-              <p>Niên khóa: {student.schoolYear}</p>
-              <p>Email trường: {student.email}</p>
+              <p>MSSV: {studentInfo._id}</p>
+                <p>CMND:{studentInfo.CMND}</p>
+              <p>Họ & Tên: {studentInfo.HoTen}</p>
+              <p>Giới tính: {studentInfo.GioiTinh}</p>
+              <p>Ngày sinh: {new Date(studentInfo.NgaySinh).toLocaleDateString()}</p>
             </div>
           </Row>
         </Col>
@@ -53,27 +61,18 @@ const ProfileScreen = () => {
             className="child-row"
           >
             <div>
-              <h2>Thông tin khóa học</h2>
-              <div className="break"></div>
-              <p>Khóa học: Đại học chính quy khóa 2018</p>
-              <p>Chức vụ:</p>
-              <p>Đối tượng:</p>
-              <p>Đoàn</p>
-              <p>Ngày vào đoàn:</p>
-              <p>Đảng:</p>
-              <p>Ngày vào Đảng:</p>
-              <p>Loại hình đào tạo: Đại Học Chính Quy (QC43)</p>
-              <p>Lớp sinh viên: PM1808</p>
-            </div>
-            <div>
-              <h2>Thông tin liên lạc</h2>
-              <div className="break"></div>
-              <p>Tôn giáo:</p>
-              <p>Dân tộc:</p>
-              <p>Quốc gia:</p>
-              <p>Tỉnh thành:</p>
-              <p>Quận huyện:</p>
-              <p>Di động:</p>
+                <div className={"mb-2"} style={{fontSize:"1.2rem",fontWeight:"500"}}>Các bài thi đã hoàn thành</div>
+                {submittions && submittions.map(s =>
+                    <Card>
+                        <Card.Body>
+                            <Card.Title>{s.De.CTMH.MonHoc.TenMH}</Card.Title>
+                            <div>
+                                <Card.Text>Tổng số câu hỏi: {s.De.DSCH.length}</Card.Text>
+                                <Card.Text>Số câu hoàn thành: {s.DapAnSV.length}</Card.Text>
+                            </div>
+                        </Card.Body>
+                    </Card>
+                )}
             </div>
           </Row>
         </Col>

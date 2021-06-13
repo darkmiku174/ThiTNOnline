@@ -11,7 +11,7 @@ const questionSchema = mongoose.Schema({
   CauB: String,
   CauC: String,
   CauD: String,
-  DapAn: Array,
+  DapAn: String,
   Diem: Number,
   PhanLoai: Number
 });

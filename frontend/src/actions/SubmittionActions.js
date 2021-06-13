@@ -1,9 +1,12 @@
 import axios from "axios";
 import {
+  GET_STUDENT_SUBMITTIONS_FAIL,
+  GET_STUDENT_SUBMITTIONS_REQUEST, GET_STUDENT_SUBMITTIONS_SUCCESS,
   POST_SUBMITTION_FAIL,
   POST_SUBMITTION_REQUEST,
   POST_SUBMITTION_SUCESS,
 } from "../constants/submittionConstants";
+import {studentLogoutAction} from "./StudentActions";
 
 export const postSubmittionAction = () => async (dispatch) => {
   try {
@@ -32,3 +35,31 @@ export const postSubmittionAction = () => async (dispatch) => {
     });
   }
 };
+
+export const getStudentSubmittionAction=()=>async(dispatch,getState)=>{
+  try{
+    dispatch({type:GET_STUDENT_SUBMITTIONS_REQUEST})
+    const {
+      studentLogin:{studentInfo}
+    } = getState()
+    const config ={
+      headers:{
+        Authorization: `Bearer ${studentInfo.token}`,
+      }
+    }
+    const {data} = await axios.get("/api/submittions/student",config)
+    dispatch({type:GET_STUDENT_SUBMITTIONS_SUCCESS,payload:data})
+  }catch(error){
+    const message =
+        error.response && error.response.data.message
+            ? error.response.data.message
+            : error.message
+    if (message === 'Not authorized, token failed') {
+      dispatch(studentLogoutAction())
+    }
+    dispatch({
+      type: GET_STUDENT_SUBMITTIONS_FAIL,
+      payload: message,
+    })
+  }
+}

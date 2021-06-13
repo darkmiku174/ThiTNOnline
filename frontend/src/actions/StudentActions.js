@@ -5,11 +5,12 @@ import {
   STUDENT_LOGIN_SUCCESS,
   STUDENT_LOGOUT,
 } from "../constants/StudentConstants";
+import {lecturerLogoutAction} from "./LecturerActions";
 
 export const studentLoginAction = (input) => async (dispatch) => {
   try {
+    dispatch(lecturerLogoutAction())
     dispatch({type: STUDENT_LOGIN_REQUEST});
-    console.log(input)
     const {data} = await axios.post(
       `api/students/login?cmnd=${input.cmnd}&password=${input.password}`
     );

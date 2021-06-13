@@ -4,7 +4,7 @@ import {useDispatch} from "react-redux";
 
 const QuestionList = () => {
   const dispatch = useDispatch();
-  const exam = JSON.parse(localStorage.getItem("exam"));
+  const exam = JSON.parse(localStorage.getItem("temp"));
   return (
     <>
       {exam[0].DSCH.map((question, index) => (

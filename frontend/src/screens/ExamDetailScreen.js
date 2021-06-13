@@ -12,7 +12,7 @@ const ExamDetailScreen = ({match, history}) => {
 
   const hocsinh = dsHocSinh.find((hocsinh) => hocsinh.id === "1");
 
-  const exam = JSON.parse(localStorage.getItem("exam"));
+  const exam = JSON.parse(localStorage.getItem("temp"));
   const submittion = JSON.parse(localStorage.getItem("submittion"));
 
   const submitAnswersHandler = () => {
@@ -42,7 +42,7 @@ const ExamDetailScreen = ({match, history}) => {
   };
   useEffect(() => {
     if (!localStorage.getItem("submittion")) {
-      const idDe = JSON.parse(localStorage.getItem("exam"))[0]._id;
+      const idDe = JSON.parse(localStorage.getItem("temp"))[0]._id;
       const sinhvien = JSON.parse(localStorage.getItem("studentInfo"))._id;
       localStorage.setItem(
         "submittion",
@@ -81,6 +81,7 @@ const ExamDetailScreen = ({match, history}) => {
                 className="btn btn-block"
                 onClick={submitAnswersHandler}
                 style={{marginTop: "2rem"}}
+                disabled={submittion && submittion.DapAnSV.length < exam[0].DSCH.length/2}
               >
                 Kết thúc bài thi
               </Button>

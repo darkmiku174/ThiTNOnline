@@ -16,6 +16,9 @@ const Header = (props) => {
   const pushToHome = (home) => {
     history.push(home)
   }
+    const redirectToProfile=(profile)=>{
+        history.push(profile)
+    }
 
   return (
     <header>
@@ -30,7 +33,7 @@ const Header = (props) => {
         }}
       >
         <Navbar.Brand href="/">React-Bootstrap </Navbar.Brand>
-        <DropdownMenu pushToHome={pushToHome} pathname={pathname}/>
+        <DropdownMenu pushToHome={pushToHome} pathname={pathname} redirectToProfile={redirectToProfile}/>
       </Navbar>
       {pathname == "/giangvien/login" ? "" : pathname == "/" ? "" : <Breadscrumbs />}
     </header>

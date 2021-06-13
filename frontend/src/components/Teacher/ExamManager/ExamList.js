@@ -1,14 +1,29 @@
 import React, {useEffect, useState} from "react";
-import {useSelector} from "react-redux";
-import {Form, Table} from "react-bootstrap";
+import {useDispatch, useSelector} from "react-redux";
+import {Form, Modal, Table} from "react-bootstrap";
+import AddExamSubjectList from "./AddExamSubjectList";
+import AddExamQuestionList from "./AddExamQuestionList";
+import {set} from "mongoose";
+import ExamDetail from "./ExamDetail";
+import {examAction} from "../../../actions/ExamActions";
 
 const ExamList = ({goToExam}) => {
+  const dispatch=useDispatch()
   const examList = useSelector((state) => state.examList);
   const {loading, error, exams} = examList;
-  console.log(exams);
 
   const [currentPage, setCurrentPage] = useState(0);
   const [pages, setPages] = useState([]);
+  const [show, setShow] = useState(false);
+  const [examDetails, setExamDetails] = useState({});
+
+  const handleClose=() =>{
+    setShow(false)
+  }
+  const showExmaDetail=(ex)=>{
+    setShow(true)
+    setExamDetails(ex)
+  }
   let temp = [];
 
   useEffect(() => {
@@ -27,6 +42,10 @@ const ExamList = ({goToExam}) => {
 
   return (
     <>
+      <Modal show={show}>
+        <Modal.Header onHide={handleClose} closeButton/>
+        <ExamDetail examDetails={examDetails} handleClose={() =>setShow(false)}/>
+      </Modal>
       <div className={"exam-list"}>
         <Table striped={true} bordered={true}>
           <thead>
@@ -42,7 +61,7 @@ const ExamList = ({goToExam}) => {
                 <td
                   className={"text-primary"}
                   style={{cursor: "pointer"}}
-                  onClick={(e) => goToExam(ex)}
+                  onClick={() => showExmaDetail(ex)}
                 >
                   {ex._id}
                 </td>

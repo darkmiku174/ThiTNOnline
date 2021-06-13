@@ -3,10 +3,12 @@ import {useDispatch, useSelector} from "react-redux";
 import {Button, InputGroup, Form, FormControl} from "react-bootstrap";
 import NormalAnswer from "./NormalAnswer"
 import ImageQuestion from "./ImageQuestion";
+import FillInBlankQuestion from "./FillInBlankQuestion";
 
 const Answer = ({exam}) => {
   const dispatch = useDispatch();
   const {questionIndex} = useSelector((state) => state.questionIndex);
+  const submittion = JSON.parse(localStorage.getItem("submittion"));
   const question = exam[0].DSCH[questionIndex];
   const dsDapAn = ["A", "B", "C", "D"];
   const [dapAn, setDapAn] = useState("");
@@ -37,11 +39,20 @@ const Answer = ({exam}) => {
   };
 
   useEffect(() => {
+    const current = exam[0].DSCH[questionIndex]
+      let isDone = null
+       submittion.DapAnSV.forEach(function(i){
+        if(i.CauHoi === current._id){
+          isDone=i.DapAn
+        }
+      })
     const correctElment = Array.from(document.getElementsByClassName("correct-answer"))
     if (correctElment.length > 0) {
       correctElment.map(c => c.classList.remove("correct-answer"))
     }
-
+    if(isDone != null){
+      document.getElementById(`normal-answer-${questionIndex}-${isDone}`).classList.add("correct-answer")
+    }
   }, [question]);
 
   return (
@@ -52,6 +63,10 @@ const Answer = ({exam}) => {
             ?
               <ImageQuestion question={question.PhanHoi}/>
               :
+              question.PhanHoi.includes("@@")
+              ?
+                  <FillInBlankQuestion question={question}/>
+                  :
               <h2 className="question">{question.PhanHoi}</h2>
         }
         {dsDapAn.map((d) => (

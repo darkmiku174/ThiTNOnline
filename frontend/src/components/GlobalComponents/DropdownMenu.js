@@ -5,7 +5,7 @@ import onClickOutside from 'react-onclickoutside'
 import {studentLogoutAction} from '../../actions/StudentActions'
 import {lecturerLogoutAction} from '../../actions/LecturerActions'
 
-function DropdownMenu({pushToHome,pathname}) {
+function DropdownMenu({pushToHome,pathname,redirectToProfile}) {
   const dispatch = useDispatch()
   const studentLogin = useSelector(state => state.studentLogin)
   const {studentInfo} = studentLogin ? studentLogin : {studentInfo: null}
@@ -33,6 +33,7 @@ function DropdownMenu({pushToHome,pathname}) {
     }
   }
 
+
   if (user == null) {
     return null;
   }
@@ -48,7 +49,8 @@ function DropdownMenu({pushToHome,pathname}) {
       {open ?
         <div className="drop-down-body bg-primary shadow">
           <ul>
-            <li className="bg-primary text-white" >
+            <li className="bg-primary text-white"
+                onClick={() =>redirectToProfile(studentInfo ? "/profile" : "/giangvien/profile")}>
               <i className="fas fa-user"
                  style={{marginRight: "0.6rem"}}/>Profile
           </li>

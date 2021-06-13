@@ -33,10 +33,10 @@ function App() {
         <Route path="/exams/:id" component={ExamDetailScreen} exact />
         <Route path="/giangvien/" component={TeacherScreen} exact />
         <Route path="/exams/result" component={ExamResultScreen} exact />
-        <Route path="/admin/exams/list" component={AdminSubjectList} exact/>
+        <Route path="/admin/exams/list" component={AdminSubjectList} exact />
         <Route path="/components/pictureanswer" component={ImageAnswer} />
-          <Route path="/giangvien/login" component={LecturerLoginScreen} exact/>
-          <Route path={"/components/fillinblank"} component={FillInBlankQuestion} exact/>
+        <Route path="/giangvien/login" component={LecturerLoginScreen} exact />
+        <Route path={"/components/fillinblank"} component={FillInBlankQuestion} exact />
       </section>
     </Router>
   );

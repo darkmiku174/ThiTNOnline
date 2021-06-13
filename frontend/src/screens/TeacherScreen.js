@@ -1,17 +1,23 @@
 import React, {useEffect, useState} from "react";
-import {Container, Row, Col, Button} from "react-bootstrap";
+import {Container, Row, Col, Modal} from "react-bootstrap";
 import {Link, withRouter} from "react-router-dom";
 import TeacherAccount from "../components/Teacher/TeacherAccount";
 import Questions from "../components/Teacher/QuestionManager/Questions";
 import SubjectQuestion from "../components/Teacher/QuestionManager/SubjectQuestion";
 import ExamsManager from "../components/Teacher/ExamManager/ExamsManager";
+import {useSelector} from "react-redux";
 
-const TeacherScreen = ({location, match}) => {
-  useEffect(() => {
-    console.log(location.hash.split("/")[1]);
-  });
+const TeacherScreen = ({location, match, history}) => {
+
+  const {lecturerInfo} = useSelector(state => state.lecturerLogin)
+
+  if (lecturerInfo == null || !lecturerInfo) {
+      history.push("/giangvien/login")
+  }
 
   return (
+      <>
+          {lecturerInfo != null || lecturerInfo ?
     <Container className="normal-container" fluid>
       <Row className="parent-row shadow">
         <Col className="w-25 child-col">
@@ -78,6 +84,8 @@ const TeacherScreen = ({location, match}) => {
         </Col>
       </Row>
     </Container>
+      :""    }
+      </>
   );
 };
 

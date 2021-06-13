@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, {useEffect, useState} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import BaiThi from "../components/BaiThi";
 import {Container, Row, Col, Card, Alert} from "react-bootstrap";
@@ -9,37 +9,57 @@ const ExamListScreen = () => {
   const { loading, error, exams } = useSelector(
     (state) => state.examListByStudent
   );
+  const [temp,setTemp] = useState([])
+    if(temp.length>0){
+        localStorage.setItem("temp",JSON.stringify(temp))
+    }else{
+        localStorage.removeItem("submittion")
+    }
 
-  const {studentInfo} = useSelector(state => state.studentLogin)
+    const {studentInfo} = useSelector(state => state.studentLogin)
 
-  useEffect(() => {
-      if(studentInfo){
+    let o=[]
+    useEffect(() => {
+      if(studentInfo && loading == null){
         dispatch(getExamListByStudentAction());
       }
-  }, [dispatch]);
 
-  if (exams == null || exams.length < 0) {
-    return null;
-  }
+      if(exams){
+        exams.forEach(function(ex){
+            const hour = ex.ThoiGian.split(":")[0]
+            const minutes = ex.ThoiGian.split(":")[1]
+            const currentHour = new Date().getHours()
+            const currentMinutes = new Date().getMinutes()
+            const currentTime = currentHour*60+currentMinutes
+            const time = parseInt( hour )*60+parseInt( minutes )
+            if(currentTime - time <= ex.ThoiLuong && currentTime -time >=0){
+                o.unshift({ ...ex,active:1 })
+            }else{
+                o.push({ ...ex,active:0 })
+            }
+        })
+          setTemp(o)
+      }
+  }, [dispatch,exams]);
+
   return (
     <Container className="normal-container" fluid>
       {!studentInfo ?
           <Alert variant={"danger"} className={"mt-4"}>
             Vui lòng đăng nhập để làm bài kiểm tra
           </Alert>
-          :
+         :
       <Row className="parent-row">
         <Col className="left child-col">
           <Row className="exam-list child-row">
-            {exams.map((ex) => {
-              const hour = ex.ThoiGian.split(":")[0]
-              const minutes = ex.ThoiGian.split(":")[1]
-              const currentHour = new Date().getHours()
-              const currentMinutes = new Date().getMinutes()
-              const currentTime = currentHour*60+currentMinutes
-              const time = parseInt( hour )*60+parseInt( minutes )
-              console.log(currentTime -time)
-              if(currentTime - time <= ex.ThoiLuong && currentTime -time >=0){
+            {
+              !exams || exams.length === 0 ?
+                  <Alert variant={"warning"}>
+                    Hôm nay không có bài thi
+                  </Alert>
+                  :
+              temp.map((ex) => {
+              if(ex.active===1){
                 return <BaiThi ex={ex} />
               }
               return <BaiThi ex={ex} disabled/>

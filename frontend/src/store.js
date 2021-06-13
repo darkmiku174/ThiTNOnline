@@ -18,11 +18,11 @@ import {
   createExamReducer,
   getExamListBYStudentReducer,
 } from "./reducers/ExamReducer";
-import {lecturerLoginReducer} from "./reducers/LecturerReducers";
+import {lecturerLoginReducer, updateLecturerInfoReducer} from "./reducers/LecturerReducers";
 import {studentLoginReducer} from "./reducers/StudentReducer";
 import {
   postSubmittionReducer,
-  changeQuestionIndex,
+  changeQuestionIndex, getStudentSubmittionReducer,
 } from "./reducers/SubmittionReducers";
 
 const reducer = combineReducers({
@@ -40,6 +40,8 @@ const reducer = combineReducers({
   examListByStudent: getExamListBYStudentReducer,
   postSubmittion: postSubmittionReducer,
   questionIndex: changeQuestionIndex,
+    studentSubmittions:getStudentSubmittionReducer,
+  updateLecturerInfo:updateLecturerInfoReducer
 });
 
 const tempExamInitial = {

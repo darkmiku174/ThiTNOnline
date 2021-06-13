@@ -20,8 +20,7 @@ const authStudent = asyncHandler(async (req, res) => {
     res.json({message: "User not found"})
   }
   const student = await Student.findOne({
-    People: people._id,
-    Password: req.query.password
+    People: people._id
   })
   if (student && (student.matchPassword(req.query.password))) {
     delete student._doc.Password

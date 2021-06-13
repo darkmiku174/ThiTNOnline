@@ -8,17 +8,17 @@ const arr = (month, year) => {
     .filter((v) => v.getMonth() === month - 1);
 };
 
-const DateTimePicker = () => {
+const DateTimePicker = ({getISODate,initialDay,initialMonth,initialYear}) => {
   const monthList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-  const [month, setMonth] = useState(new Date().getMonth());
+  const [month, setMonth] = useState(initialMonth? initialMonth : new Date().getMonth());
   const yearList = [];
-  const [year, setYear] = useState(new Date().getFullYear());
+  const [year, setYear] = useState(initialYear ? initialYear : new Date().getFullYear());
   for (var i = 1950; i <= new Date().getFullYear(); i++) {
     yearList.push(i);
   }
 
   const [days, setDays] = useState(arr(month, year));
-  const [selectedDate, setSelectedDate] = useState(new Date().getDate());
+  const [selectedDate, setSelectedDate] = useState(initialDay ? initialDay : new Date().getDate());
 
   return (
     <div className="datetimepicker">

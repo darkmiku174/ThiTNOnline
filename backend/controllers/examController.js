@@ -24,7 +24,7 @@ const getExams = asyncHandler(async (req, res) => {
           select: "People"
           //populate(...)
         }
-      })
+      }).populate("DSCH")
   // .populate(...) Nếu muốn tiếp tục populate của exams thì viết tiếp ở đây
   res.json(exams)
 })
@@ -45,7 +45,7 @@ const getExam = asyncHandler(async (req, res) => {
           path: "GiangVien",
           select: "People"
         }
-      })
+      }).populate("DSCH")
   res.json(exam)
 })
 
@@ -56,9 +56,8 @@ const getExamByLecturer = asyncHandler(async (req, res) => {
       populate: {
         path: "MonHoc",
       }
-    })
+    }).populate("DSCH")
   const examsByLecturer = []
-  console.log(exams)
   exams.forEach(function (e) {
     if (e.CTMH != null) {
       if (e.CTMH.GiangVien == req.query.id) {
@@ -71,8 +70,6 @@ const getExamByLecturer = asyncHandler(async (req, res) => {
 })
 
 const getExamByStudent = asyncHandler(async (req, res) => {
-  console.log(req.user)
-  // This required alot of googling :))
   const submittions = await Submittion.find({SinhVien: req.query.id})
   const exams = await Exam.find(
     {
@@ -83,23 +80,7 @@ const getExamByStudent = asyncHandler(async (req, res) => {
         path: "CTMH",
         match: {DSSV: req.query.id},
         populate: {path: "MonHoc"}
-      }).populate({path: "DSCH", select: "-DapAn -Diem -PhanLoai"})
-  /* const examOnTime = []
-  const currentHour = parseInt(new Date().getHours())
-  const currentMinutes = parseInt(new Date().getMinutes())
-  const currentTime = currentHour * 60 + currentMinutes
-  exams.forEach(function (ex) {
-    const index = ex.ThoiGian.indexOf(":")
-    const hour = parseInt(ex.ThoiGian.substring(0, index))
-    const minutes = parseInt(ex.ThoiGian.substring(index + 1))
-    const time = hour * 60 + minutes
-    console.log(currentTime - time)
-    if (currentTime - time <= ex.ThoiLuong && currentTime - time >= 0) {
-      if (ex.CTMH != null) {
-        examOnTime.push(ex)
-      }
-    }
-  }) */
+      }).populate({path: "DSCH", select: "-Diem -PhanLoai"})
   res.json(exams)
 })
 

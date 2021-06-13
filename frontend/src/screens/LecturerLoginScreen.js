@@ -1,33 +1,38 @@
 import React, {useState, useEffect} from "react";
-import {Form, Button} from "react-bootstrap";
+import {Form, Button, Alert, Modal} from "react-bootstrap";
 import {useDispatch, useSelector} from "react-redux";
 import {Link} from "react-router-dom";
 import {lecturerLoginAction} from "../actions/LecturerActions";
 
 const LecturerLoginScreen = ({history}) => {
-  const isLogin = JSON.parse(localStorage.getItem("lecturerInfo"));
-  if (isLogin) {
-    history.push("/giangvien");
-  }
   const dispatch = useDispatch();
-  const [cmnd, setCMND] = useState("");
-  const [password, setPassword] = useState("");
-  const {loading, error, lecturer} = useSelector(
+  const {loading, error, lecturerInfo} = useSelector(
     (state) => state.lecturerLogin
   );
+
+  const [cmnd, setCMND] = useState("");
+  const [password, setPassword] = useState("");
 
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(lecturerLoginAction({cmnd, password}));
   };
 
-  useEffect(() => {
-    if (lecturer != null) {
-      history.push("/giangvien");
+  useEffect(() =>{
+    if(loading===false && lecturerInfo!=null){
+      history.push("/giangvien")
     }
-  });
+  },[lecturerInfo])
+
+  if(lecturerInfo !==null && lecturerInfo){
+    history.push("/giangvien")
+  }
 
   return (
+      <>
+        {error && <Alert variant={"danger"} className={"mt-4"}>
+          Sai cmnd hoặc mật khẩu
+        </Alert> }
     <div className="login-container">
       <Form className="login-form" onSubmit={submitHandler}>
         <Form.Group controlId="formBasicEmail">
@@ -58,6 +63,7 @@ const LecturerLoginScreen = ({history}) => {
         </Button>
       </Form>
     </div>
+          </>
   );
 };
 

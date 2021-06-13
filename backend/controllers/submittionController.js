@@ -1,5 +1,6 @@
 import asyncHandler from 'express-async-handler'
 import Submittion from '../models/submittionSchema.js'
+import Student from '../models/studentSchema.js'
 
 const getSubmittionList = asyncHandler(async (req, res) => {
   const submittions = await Submittion.find({})
@@ -12,12 +13,21 @@ const getSubmittion = asyncHandler(async (req, res) => {
 })
 
 const getSubmittionByStudent = asyncHandler(async (req, res) => {
-  const submittions = await Submittion.find({SinhVien: req.query.id})
+  const student = await Student.findOne({People: req.user._id})
+  const submittions = await Submittion.find({SinhVien: student._id})
+    .populate({
+      path: "De", select: "DSCH CTMH",
+      populate:
+      {
+        path: "CTMH", select: "MonHoc",
+        populate: {path: "MonHoc", select: "TenMH"}
+      }
+    })
   res.json(submittions)
 })
 
 const creatSubmittion = asyncHandler(async (req, res) => {
-  const existing = await Submittion.findOne({SinhVien: req.body.SinhVien})
+  const existing = await Submittion.findOne({SinhVien: req.body.SinhVien, De: req.body.De})
   if (existing) {
     res.status(400)
     throw new Error('Submittion already exists')

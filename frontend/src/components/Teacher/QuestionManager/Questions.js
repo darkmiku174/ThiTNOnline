@@ -8,6 +8,7 @@ import {
 } from "../../../actions/QuestionActions";
 import {useSelector} from "react-redux";
 import {useDispatch} from "react-redux";
+import AddQuestionModal from "./AddQuestionModal";
 
 const Questions = ({idMH}) => {
   const [show, setShow] = useState(false);
@@ -99,7 +100,8 @@ const Questions = ({idMH}) => {
         </Form>
         <Button onClick={() => setShow(true)}>Add question</Button>
         {show ? (
-          <AddQuestion show={show} onHide={() => setShow(false)} maMH={idMH} />
+          // <AddQuestion show={show} onHide={() => setShow(false)} maMH={idMH} />
+            <AddQuestionModal show={show} handleClose={() =>setShow(false)}/>
         ) : (
           ""
         )}

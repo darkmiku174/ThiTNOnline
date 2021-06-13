@@ -11,8 +11,6 @@ const studentSchema = new mongoose.Schema({
 })
 
 studentSchema.methods.matchPassword = async function (enteredPassword) {
-  console.log("enteredPassword:" + enteredPassword)
-  console.log(this.password)
   return await bcrypt.compare(enteredPassword, this.Password)
 }
 

@@ -198,9 +198,7 @@ const AddQuestion = ({ show, onHide, maMH }) => {
                 </option>
               </Form.Control>
             </Form.Group>
-
             <div className="break" />
-
             <Form.Group controlId="corect-answer first-child">
               <Form.Label>Chọn đáp án đúng</Form.Label>
               <Form.Control as="select">

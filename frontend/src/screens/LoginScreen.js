@@ -5,15 +5,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { studentLoginAction } from "../actions/StudentActions";
 
 const LoginScreen = ({ history }) => {
-  const isLogin = JSON.parse(localStorage.getItem("studentInfo"));
-  if (isLogin) {
-    history.push("/exams");
-  }
   const dispatch = useDispatch();
   const [cmnd, setCMND] = useState();
   const [password, setPassword] = useState();
 
-  const { loading, error, student } = useSelector(
+  const { loading, error, studentInfo } = useSelector(
     (state) => state.studentLogin
   );
   const submitHandler = (e) => {
@@ -21,8 +17,7 @@ const LoginScreen = ({ history }) => {
     dispatch(studentLoginAction({ cmnd, password }));
   };
   useEffect(() => {
-    console.log(student);
-    if (student != null) {
+    if (studentInfo != null) {
       history.push("/exams");
     }
   });

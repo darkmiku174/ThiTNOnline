@@ -4,7 +4,7 @@ import {postSubmittionAction} from "../actions/SubmittionActions";
 import {withRouter} from 'react-router-dom'
 
 const Timer = ({history}) => {
-  const exam = JSON.parse(localStorage.getItem("exam"));
+  const exam = JSON.parse(localStorage.getItem("temp"));
   const index = exam[0].ThoiGian.indexOf(":");
   const hour = parseInt(exam[0].ThoiGian.substring(0, index));
   const minutes = parseInt(exam[0].ThoiGian.substring(index + 1));
