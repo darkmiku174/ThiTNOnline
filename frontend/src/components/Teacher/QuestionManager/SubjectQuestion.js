@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 import {Container, Form, Table, Button, Alert} from "react-bootstrap";
-import {Link, Route} from "react-router-dom";
+import {Link} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {subjectDetailListAction} from "../../../actions/SubjectActions"
 import {ClipLoader} from "react-spinners";

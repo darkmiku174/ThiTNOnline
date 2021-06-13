@@ -48,8 +48,6 @@ export const tempExamReducer = (state = {}, action) => {
   switch (action.type) {
     case "ADD_TEMP_EXAM":
       return { tempExam: { ...state.tempExam, ...action.payload } };
-    case STUDENT_LOGOUT:
-      return {}
     default:
       return state ? state : "";
   }

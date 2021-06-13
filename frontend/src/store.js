@@ -40,13 +40,14 @@ const reducer = combineReducers({
   examListByStudent: getExamListBYStudentReducer,
   postSubmittion: postSubmittionReducer,
   questionIndex: changeQuestionIndex,
-    studentSubmittions:getStudentSubmittionReducer,
-  updateLecturerInfo:updateLecturerInfoReducer
+  studentSubmittions: getStudentSubmittionReducer,
+  updateLecturerInfo: updateLecturerInfoReducer
 });
 
 const tempExamInitial = {
   DSCH: [],
 };
+
 const studentInfoFromStorage = localStorage.getItem("studentInfo") ? JSON.parse(localStorage.getItem("studentInfo")) : null
 const lecturerInfoFromStorage = localStorage.getItem("lecturerInfo") ? JSON.parse(localStorage.getItem("lecturerInfo")) : null
 

@@ -1,16 +1,13 @@
 import {Container, Table, Form, Button, Modal, Alert} from "react-bootstrap";
-import AddQuestion from "./AddQuestion";
 import Announcement from "../../GlobalComponents/Announcement";
 import React, {useState, useEffect} from "react";
 import {
-  listQuestion,
   getQuestionListBySubjectAction,
 } from "../../../actions/QuestionActions";
 import {useSelector} from "react-redux";
 import {useDispatch} from "react-redux";
 import AddQuestionModal from "./AddQuestionModal";
 import QuestionDetails from "./QuestionDetails";
-import {ClipLoader} from "react-spinners";
 
 const Questions = ({idMH}) => {
   console.log("render")
