@@ -1,10 +1,8 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import {
-  Navbar,
-  Nav
+  Navbar
 } from "react-bootstrap";
-import {LinkContainer} from "react-router-bootstrap";
-import {Link, withRouter} from "react-router-dom";
+import {withRouter} from "react-router-dom";
 import Breadscrumbs from "./Breadscrumbs";
 import DropdownMenu from './DropdownMenu'
 

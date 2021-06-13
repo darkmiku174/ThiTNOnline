@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Form } from "react-bootstrap";
+import React, {useState} from "react";
+import {Form} from "react-bootstrap";
 
 const DragAndDrop = () => {
   const [dsDapAn, setDsDapAn] = useState(["A", "B", "C", "D"]);
@@ -40,7 +40,6 @@ const DragAndDrop = () => {
 
   const dragEnd = (e) => {
     e.target.classList.remove("dragging");
-    console.log(e.target);
   };
 
   return (

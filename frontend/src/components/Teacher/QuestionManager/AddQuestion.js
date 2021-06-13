@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Modal, Form, Button } from "react-bootstrap";
 import {
-  listQuestion,
   createQuestion,
   getQuestionListBySubjectAction,
 } from "../../../actions/QuestionActions";
@@ -51,7 +50,6 @@ const AddQuestion = ({ show, onHide, maMH }) => {
     /*e:["A","B","C","D"]*/
   }
   const onPickCorrectAnswer = (e) => {
-    let holder = "";
     switch (e.target.value) {
       case "A":
         onChangeHandler(dapAn, cauA);

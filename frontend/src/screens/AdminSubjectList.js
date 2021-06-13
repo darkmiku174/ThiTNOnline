@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import React, {useState } from "react";
+import { Container, Row, Col } from "react-bootstrap";
 import AdminSubjectTable from "../components/AdminSubjectTable";
-import SideNav from "../components/SideNav";
 import SubjectTimetable from "../components/SubjectTimetable";
 const AdminSubjectList = () => {
   const [options, setOptions] = useState("subjectlist");

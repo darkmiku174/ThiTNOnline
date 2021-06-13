@@ -1,11 +1,9 @@
 import React, {useEffect, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {Form, Modal, Table} from "react-bootstrap";
-import AddExamSubjectList from "./AddExamSubjectList";
-import AddExamQuestionList from "./AddExamQuestionList";
-import {set} from "mongoose";
+import {Alert, Modal, Table} from "react-bootstrap";
 import ExamDetail from "./ExamDetail";
-import {examAction} from "../../../actions/ExamActions";
+import ExamCallendar from "./ExamCallendar";
+import {ClipLoader} from "react-spinners";
 
 const ExamList = ({goToExam}) => {
   const dispatch=useDispatch()
@@ -38,52 +36,64 @@ const ExamList = ({goToExam}) => {
     }
   }, [exams]);
 
-  if (exams == null || pages.length === 0) return null;
-
   return (
     <>
-      <Modal show={show}>
-        <Modal.Header onHide={handleClose} closeButton/>
-        <ExamDetail examDetails={examDetails} handleClose={() =>setShow(false)}/>
-      </Modal>
-      <div className={"exam-list"}>
+      {
+          loading == null || loading || !pages || pages.length === 0 ?
+              <div className={"d-flex justify-content-center"}>
+              <ClipLoader color={"#2196f3"} size={100} />
+              </div>
+              :
+              error ?
+                  <Alert variant={"danger"}>Something wrong happen</Alert>
+                  :
+                  <>
+        <Modal show={show} onHide={handleClose} size={"lg"} >
+          <Modal.Header closeButton/>
+          <div style={{padding:"1.2rem"}}>
+            <ExamCallendar examDetails={examDetails}/>
+            <ExamDetail examDetails={examDetails} handleClose={() =>setShow(false)}/>
+          </div>
+        </Modal>
+        <div className={"exam-list"}>
         <Table striped={true} bordered={true}>
-          <thead>
-            {/*<th/>*/}
-            <th>Mã đề</th>
-            <th>Ngày thi</th>
-            <th>Thời lượng</th>
-            <th>Số câu hỏi</th>
-          </thead>
-          <tbody>
-            {pages[currentPage].map((ex) => (
-              <tr>
-                <td
-                  className={"text-primary"}
-                  style={{cursor: "pointer"}}
-                  onClick={() => showExmaDetail(ex)}
-                >
-                  {ex._id}
-                </td>
-                <td>{ex.NgayThi ? ex.NgayThi.substring(0, 10) : ""}</td>
-                <td>{ex.ThoiLuong ? ex.ThoiLuong : ""}</td>
-                <td>{ex.DSCH.length}</td>
-              </tr>
-            ))}
-          </tbody>
-        </Table>
-        {pages.map((q, index) => (
-          <button
-            onClick={(e) => setCurrentPage(index)}
-            className={`add-exam-table-pagination btn btn-sm mr-2 ${currentPage === index ? "btn-primary" : ""
-              }`}
-          >
-            {index + 1}
-          </button>
+        <thead>
+        <th>Mã đề</th>
+        <th>Ngày thi</th>
+        <th>Thời lượng</th>
+        <th>Số câu hỏi</th>
+        </thead>
+        <tbody>
+      {pages[currentPage].map((ex) => (
+        <tr>
+        <td
+        className={"text-primary"}
+        style={{cursor: "pointer"}}
+        onClick={() => showExmaDetail(ex)}
+        >
+      {ex._id}
+        </td>
+        <td>{ex.NgayThi ? ex.NgayThi.substring(0, 10) : ""}</td>
+        <td>{ex.ThoiLuong ? ex.ThoiLuong : ""}</td>
+        <td>{ex.DSCH.length}</td>
+        </tr>
         ))}
-      </div>
+        </tbody>
+        </Table>
+      {pages.map((q, index) => (
+        <button
+        onClick={(e) => setCurrentPage(index)}
+        className={`add-exam-table-pagination btn btn-sm mr-2 ${currentPage === index ? "btn-primary" : ""
+      }`}
+        >
+      {index + 1}
+        </button>
+        ))}
+        </div>
+                  </>
+      }
     </>
-  );
-};
+  )
+}
 
 export default ExamList;

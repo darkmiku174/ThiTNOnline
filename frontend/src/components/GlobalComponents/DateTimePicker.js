@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import { Form } from "react-bootstrap";
 
 const arr = (month, year) => {
@@ -8,7 +8,7 @@ const arr = (month, year) => {
     .filter((v) => v.getMonth() === month - 1);
 };
 
-const DateTimePicker = ({getISODate,initialDay,initialMonth,initialYear}) => {
+const DateTimePicker = ({initialDay,initialMonth,initialYear}) => {
   const monthList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
   const [month, setMonth] = useState(initialMonth? initialMonth : new Date().getMonth());
   const yearList = [];

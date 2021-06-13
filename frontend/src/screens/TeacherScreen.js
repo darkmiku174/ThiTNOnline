@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from "react";
-import {Container, Row, Col, Modal} from "react-bootstrap";
+import React from "react";
+import {Container, Row, Col} from "react-bootstrap";
 import {Link, withRouter} from "react-router-dom";
 import TeacherAccount from "../components/Teacher/TeacherAccount";
 import Questions from "../components/Teacher/QuestionManager/Questions";

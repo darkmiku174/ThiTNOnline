@@ -1,5 +1,4 @@
 import React from "react";
-import {Form,Button,Col,Row} from 'react-bootstrap'
 const SearchBar = () =>{
   return (
 	<form className="form-inline" style={{marginLeft:"65%"}}>

@@ -1,15 +1,12 @@
 import React from "react";
 import { Breadcrumb as Crumb } from "react-bootstrap";
-import { Link, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
 const Breadscrumbs = (props) => {
-  // console.log(props);
   const {
-    history,
     location: { pathname },
   } = props;
   const pathnames = pathname.split("/").filter((x) => x);
-  // console.log(pathnames);
   return (
     <div style={{ backgroundColor: "#eee" }}>
       <Crumb style={{ width: "90%", margin: "0 auto" }}>

@@ -18,8 +18,6 @@ const BaiThi = ({ ex,disabled }) => {
           <Card.Text>Ngày: {ex.NgayThi}</Card.Text>
           <Card.Text>Thời lượng: {ex.ThoiLuong}</Card.Text>
         </div>
-        <div className="break" />
-        <ProgressBar now={60} />
       </Card.Body>
     </Card>
   );

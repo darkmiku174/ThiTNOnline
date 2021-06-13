@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {Button, Form, Table} from "react-bootstrap";
+import {Alert, Button, Form, Table} from "react-bootstrap";
 import {createExamAction} from "../../../actions/ExamActions";
+import {ClipLoader} from "react-spinners";
 
 const AddExamQuestionList = ({handleClose}) => {
 
@@ -58,57 +59,65 @@ const AddExamQuestionList = ({handleClose}) => {
 
   return (
     <>
-      <div className="add-exam-question-list">
-        <Table striped bordered hover>
-          <thead>
-            <th />
-            <th>ID</th>
-            <th>Phần hỏi</th>
-            <th>Phân loại</th>
-          </thead>
-          <tbody>
-            {pages[currentPage].map((q, index) => (
-              <tr key={`tr-${currentPage}${index}`}>
-                <td>
-                  <Form.Check
-                    id={q._id}
-                    inline
-                    onChange={(e) => addQuestionToTempExam(e, q._id)}
-                    checked={tempExam.DSCH.includes(q._id)}
-                  />
-                </td>
-                <td>{q._id}</td>
-                <td>{q.PhanHoi}</td>
-                <td>
-                  {q.PhanLoai === 0
-                    ? "Dễ"
-                    : q.PhanLoai === 1
-                      ? "Trung bình"
-                      : q.PhanLoai === 2
-                        ? "Khó"
-                        : ""}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </Table>
-        <div className={"d-flex justify-content-between"}>
-          <div>
-            {pages.map((q, index) => (
-              <button
-                onClick={(e) => highlightCurrentPage(e, index)}
-                className={`add-exam-table-pagination btn btn-sm mr-2 ${currentPage === index ? "btn-primary" : ""
-                  }`}
-              >
-                {index + 1}
-              </button>
-            ))}
-          </div>
-          <Button className={"ml-4 mb-4"} onClick={(e) => createExam(e)}>
-            Tạo đề thi
-          </Button>
-        </div>
-      </div>
+      {
+        loading==null || loading ?
+        <ClipLoader color={"#A7c080"} size={100} />
+            :
+            error ?
+                <Alert variant={"danger"}>Something wrong happen</Alert>
+                :
+            <div className="add-exam-question-list">
+              <Table striped bordered hover>
+                <thead>
+                <th />
+                <th>ID</th>
+                <th>Phần hỏi</th>
+                <th>Phân loại</th>
+                </thead>
+                <tbody>
+                {pages[currentPage].map((q, index) => (
+                    <tr key={`tr-${currentPage}${index}`}>
+                      <td>
+                        <Form.Check
+                            id={q._id}
+                            inline
+                            onChange={(e) => addQuestionToTempExam(e, q._id)}
+                            checked={tempExam.DSCH.includes(q._id)}
+                        />
+                      </td>
+                      <td>{q._id}</td>
+                      <td>{q.PhanHoi}</td>
+                      <td>
+                        {q.PhanLoai === 0
+                            ? "Dễ"
+                            : q.PhanLoai === 1
+                                ? "Trung bình"
+                                : q.PhanLoai === 2
+                                    ? "Khó"
+                                    : ""}
+                      </td>
+                    </tr>
+                ))}
+                </tbody>
+              </Table>
+              <div className={"d-flex justify-content-between"}>
+                <div>
+                  {pages.map((q, index) => (
+                      <button
+                          onClick={(e) => highlightCurrentPage(e, index)}
+                          className={`add-exam-table-pagination btn btn-sm mr-2 ${currentPage === index ? "btn-primary" : ""
+                          }`}
+                      >
+                        {index + 1}
+                      </button>
+                  ))}
+                </div>
+                <Button className={"ml-4 mb-4"} onClick={(e) => createExam(e)}>
+                  Tạo đề thi
+                </Button>
+              </div>
+            </div>
+      }
     </>
   );
 };

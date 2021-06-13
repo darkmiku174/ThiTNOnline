@@ -1,5 +1,4 @@
 import React from "react";
-import {Container} from "react-bootstrap";
 import SideNav from "../components/SideNav";
 import AdminExamTable from "../components/AdminExamTable";
 const AdminExamList = () =>{

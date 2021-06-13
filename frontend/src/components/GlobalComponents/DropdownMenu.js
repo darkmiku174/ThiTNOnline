@@ -1,6 +1,5 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
-import {Link} from 'react-router-dom'
 import onClickOutside from 'react-onclickoutside'
 import {studentLogoutAction} from '../../actions/StudentActions'
 import {lecturerLogoutAction} from '../../actions/LecturerActions'

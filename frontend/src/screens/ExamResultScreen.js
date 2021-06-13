@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container,Card,ListGroup,Row,ProgressBar,Text,Button} from "react-bootstrap"
+import {Container,Card,Row,ProgressBar,Button} from "react-bootstrap"
 
 const ExamResultScreen = () => {
 	return(

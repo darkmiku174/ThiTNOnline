@@ -4,6 +4,7 @@ import DateTimePicker from "../GlobalComponents/DateTimePicker";
 import {useDispatch, useSelector} from "react-redux";
 import {lecturerLoginAction, lecturerLogoutAction, updateLecturerInfo} from "../../actions/LecturerActions";
 import {UPDATE_LECTURER_INFO_RESET} from "../../constants/LecturerConstants";
+import {ClipLoader} from "react-spinners";
 
 const TeacherAccount = () => {
   const dispatch=useDispatch()
@@ -38,7 +39,7 @@ const TeacherAccount = () => {
         year:new Date(lecturerInfo.NgaySinh).getFullYear()
       })
     }
-    if(message==="Updated profile"){
+    if(message && message.message==="Updated profile"){
       dispatch({type:UPDATE_LECTURER_INFO_RESET})
       dispatch(lecturerLoginAction({cmnd,password}))
     }
@@ -46,20 +47,29 @@ const TeacherAccount = () => {
 
   return (
       <>
+        {
+          loginLoading || loading?
+              <div className={"d-flex justify-content-center"}>
+                <ClipLoader color={"#2196f3"} size={100} />
+              </div>
+              :
+              error ?
+                  <Alert variant={"danger"}>Something wrong happen</Alert>
+                  :
+                  <>
         <Modal show={showConfirmPass} onHide={() => setShowConfirmPass(false)}>
-            <Modal.Header closeButton>
-              <Modal.Title>Nhập mật khẩu</Modal.Title>
-            </Modal.Header>
+          <Modal.Header closeButton>
+            <Modal.Title>Nhập mật khẩu</Modal.Title>
+          </Modal.Header>
           <Modal.Body id={"confirm-pass-form"}>
             <Form onSubmit={confirmPassHandler}>
               <Form.Group controlId={"confirm-pass-controlid"}>
                 <Form.Control type="password" placeholder={"Nhập mật khẩu"} onChange={(e) => setPassword(e.target.value)}/>
               </Form.Group>
-                <Button type={"submit"}>Xác nhận</Button>
+              <Button type={"submit"}>Xác nhận</Button>
             </Form>
           </Modal.Body>
         </Modal>
-        {!loginLoading &&
     <Container>
       {error &&
           <Alert variant={"danger"}>{error}</Alert>
@@ -128,6 +138,7 @@ const TeacherAccount = () => {
         </Col>
       </Row>
     </Container>
+                  </>
         }
       </>
   );

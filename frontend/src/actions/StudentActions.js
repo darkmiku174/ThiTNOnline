@@ -15,7 +15,7 @@ export const studentLoginAction = (input) => async (dispatch) => {
       `api/students/login?cmnd=${input.cmnd}&password=${input.password}`
     );
     localStorage.setItem("studentInfo", JSON.stringify(data));
-    dispatch({type: STUDENT_LOGIN_SUCCESS, payload:data});
+    dispatch({type: STUDENT_LOGIN_SUCCESS, payload: data});
   } catch (error) {
     dispatch({
       type: STUDENT_LOGIN_FAIL,
@@ -30,6 +30,7 @@ export const studentLoginAction = (input) => async (dispatch) => {
 export const studentLogoutAction = () => async (dispatch) => {
   localStorage.removeItem("studentInfo")
   localStorage.removeItem("exam")
+  localStorage.removeItem("temp")
   localStorage.removeItem("submittion")
   dispatch({type: STUDENT_LOGOUT})
 }

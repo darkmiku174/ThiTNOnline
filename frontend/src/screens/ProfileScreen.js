@@ -1,6 +1,5 @@
 import React, {useEffect} from "react";
-import students from "../studentSample";
-import {Container, Col, Row, Form, Button, Card} from "react-bootstrap";
+import {Container, Col, Row, Button, Card} from "react-bootstrap";
 import {useDispatch, useSelector} from "react-redux";
 import {getStudentSubmittionAction} from "../actions/SubmittionActions";
 
@@ -8,7 +7,6 @@ const ProfileScreen = () => {
   const dispatch=useDispatch()
   const {loading,error,studentInfo} = useSelector(state=>state.studentLogin)
     const {loading:submittionLoading,error:submittionError,submittions} = useSelector(state => state.studentSubmittions)
-    console.log(submittions)
     useEffect(() => {
         dispatch(getStudentSubmittionAction())
     }, []);

@@ -1,8 +1,9 @@
 import React, {useEffect} from "react";
-import {Container, Form, Table, Button} from "react-bootstrap";
+import {Container, Form, Table, Button, Alert} from "react-bootstrap";
 import {Link, Route} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {subjectDetailListAction} from "../../../actions/SubjectActions"
+import {ClipLoader} from "react-spinners";
 
 const SubjectQuestion = () => {
   const dispatch = useDispatch()
@@ -16,7 +17,14 @@ const SubjectQuestion = () => {
   return (
     <>
       {
-        error == null && subjectDetailList != null ?
+            loading == null || loading ?
+                <div className={"d-flex justify-content-center"}>
+                  <ClipLoader color={"#2196f3"} size={100} />
+                </div>
+                :
+                error ?
+                    <Alert variant={"danger"}>Something wrong happen</Alert>
+                    :
           <Container>
             <div
               style={{
@@ -55,7 +63,7 @@ const SubjectQuestion = () => {
                 ))}
               </tbody>
             </Table>
-          </Container> : ""
+          </Container>
       }
     </>
   );

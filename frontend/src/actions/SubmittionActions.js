@@ -23,6 +23,7 @@ export const postSubmittionAction = () => async (dispatch) => {
       const {data} = await axios.post("/api/submittions", submittion);
       localStorage.removeItem("submittion");
       localStorage.removeItem("exam")
+      localStorage.removeItem("temp")
       dispatch({type: POST_SUBMITTION_SUCESS, payload: {data}});
     }
   } catch (error) {
@@ -36,24 +37,24 @@ export const postSubmittionAction = () => async (dispatch) => {
   }
 };
 
-export const getStudentSubmittionAction=()=>async(dispatch,getState)=>{
-  try{
-    dispatch({type:GET_STUDENT_SUBMITTIONS_REQUEST})
+export const getStudentSubmittionAction = () => async (dispatch, getState) => {
+  try {
+    dispatch({type: GET_STUDENT_SUBMITTIONS_REQUEST})
     const {
-      studentLogin:{studentInfo}
+      studentLogin: {studentInfo}
     } = getState()
-    const config ={
-      headers:{
+    const config = {
+      headers: {
         Authorization: `Bearer ${studentInfo.token}`,
       }
     }
-    const {data} = await axios.get("/api/submittions/student",config)
-    dispatch({type:GET_STUDENT_SUBMITTIONS_SUCCESS,payload:data})
-  }catch(error){
+    const {data} = await axios.get("/api/submittions/student", config)
+    dispatch({type: GET_STUDENT_SUBMITTIONS_SUCCESS, payload: data})
+  } catch (error) {
     const message =
-        error.response && error.response.data.message
-            ? error.response.data.message
-            : error.message
+      error.response && error.response.data.message
+        ? error.response.data.message
+        : error.message
     if (message === 'Not authorized, token failed') {
       dispatch(studentLogoutAction())
     }

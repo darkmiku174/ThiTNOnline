@@ -1,14 +1,7 @@
-import React, {useEffect, useRef, useState} from 'react'
+import React, {useState} from 'react'
 import {Button, Form} from "react-bootstrap"
 
-const FillInBlankQuestion = ({phanHoi,
-    dapAn,
-                                 cauA,
-    cauB,
-    cauC,
-    cauD,
-                                 dsDapAn,onChangeHandler}) => {
-    console.log(cauA)
+const FillInBlankQuestion = ({phanHoi,dapAn, cauA,cauB,cauC,cauD,dsDapAn,onChangeHandler}) => {
     const [blur,setBlur]  = useState(true)
     const [selectionStart,setSelectionStart] = useState(0)
     const [selectionEnd,setSelectionEnd] = useState(0)
@@ -25,7 +18,6 @@ const FillInBlankQuestion = ({phanHoi,
         setBorder("1px solid #BCBCBC")
         setSelectionRange({ selectionStart,selectionEnd })
         onChangeHandler("phanHoiTemp",phanHoi.slice(0,selectionStart) + "@@" + phanHoi.slice(selectionEnd,phanHoi.length))
-        console.log(dapAn)
         onChangeHandler(dapAn,phanHoi.slice(selectionStart,selectionEnd))
     }
 

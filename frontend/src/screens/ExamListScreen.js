@@ -38,6 +38,8 @@ const ExamListScreen = () => {
                 o.push({ ...ex,active:0 })
             }
         })
+          console.log(exams)
+          console.log(o)
           setTemp(o)
       }
   }, [dispatch,exams]);

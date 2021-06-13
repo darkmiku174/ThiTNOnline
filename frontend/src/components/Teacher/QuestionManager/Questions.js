@@ -1,7 +1,7 @@
-import {Container, Table, Form, Button} from "react-bootstrap";
+import {Container, Table, Form, Button, Modal, Alert} from "react-bootstrap";
 import AddQuestion from "./AddQuestion";
 import Announcement from "../../GlobalComponents/Announcement";
-import {useState, useEffect} from "react";
+import React, {useState, useEffect} from "react";
 import {
   listQuestion,
   getQuestionListBySubjectAction,
@@ -9,14 +9,11 @@ import {
 import {useSelector} from "react-redux";
 import {useDispatch} from "react-redux";
 import AddQuestionModal from "./AddQuestionModal";
+import QuestionDetails from "./QuestionDetails";
+import {ClipLoader} from "react-spinners";
 
 const Questions = ({idMH}) => {
-  const [show, setShow] = useState(false);
-  const [showDialog, setShowDialog] = useState(false);
-  const [scroll, setScroll] = useState(false);
-  const [scrollTop, setScrollTop] = useState(false);
-  const [opacity, setOpacity] = useState(1);
-
+  console.log("render")
   const dispatch = useDispatch();
   const {loading, error, questions} = useSelector(
     (state) => state.questionListBySubject
@@ -24,9 +21,22 @@ const Questions = ({idMH}) => {
   const questionCreate = useSelector((state) => state.questionCreate);
   const {questionCreated} = questionCreate;
 
+  const [show, setShow] = useState(false);
+  const [detailsShow, setDetailsShow] = useState(false);
+  const [showDialog, setShowDialog] = useState(false);
+  const [scroll, setScroll] = useState(false);
+  const [scrollTop, setScrollTop] = useState(false);
+  const [opacity, setOpacity] = useState(1);
+  const [questionDetails, setQuestionDetails] = useState({});
+
   const closeDialog = () => {
     setShowDialog(false);
   };
+
+  const showQuestionDetails=(q)=>{
+    setDetailsShow(true)
+    setQuestionDetails(q)
+  }
 
   const scrollToQuestion = () => {
     setShow(false);
@@ -67,6 +77,12 @@ const Questions = ({idMH}) => {
   }, [idMH]);
 
   return (
+      <>
+
+        <Modal show={detailsShow} onHide={() => setDetailsShow(false)} size={"lg"}>
+          <Modal.Header closeButton/>
+          <QuestionDetails questionDetails={questionDetails}/>
+        </Modal>
     <Container>
       {showDialog === true ? (
         <Announcement
@@ -118,7 +134,9 @@ const Questions = ({idMH}) => {
           {questions != null
             ? questions.map((q, index) => (
               <tr key={index} id={q._id}>
-                <td>{q._id}</td>
+                <td className={"text-primary"} style={{cursor:"pointer"}} onClick={()=>showQuestionDetails(q)}>
+                  {q._id}
+                </td>
                 <td>{q.PhanHoi}</td>
                 <td>Very hard</td>
               </tr>
@@ -142,6 +160,7 @@ const Questions = ({idMH}) => {
         ""
       )}
     </Container>
+      </>
   );
 };
 export default Questions;

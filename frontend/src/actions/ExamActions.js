@@ -55,8 +55,6 @@ export const createExamAction = () => async (dispatch, getState) => {
       subjectDetailList: subjectDetailList
     } = getState();
     subjectDetailList.subjectDetailList.forEach(function (sd) {
-      console.log(sd.MonHoc._id)
-      console.log(tempExam.CTMH)
       if (sd.MonHoc._id == tempExam.CTMH) {
         tempExam.CTMH = sd._id
       }
@@ -76,7 +74,7 @@ export const createExamAction = () => async (dispatch, getState) => {
   }
 };
 
-export const getExamListByStudentAction = () => async (dispatch,getState) => {
+export const getExamListByStudentAction = () => async (dispatch, getState) => {
   try {
     dispatch({type: GET_EXAM_LIST_BY_STUDENT_REQUEST});
     const {
@@ -89,7 +87,7 @@ export const getExamListByStudentAction = () => async (dispatch,getState) => {
       },
     }
     const student = JSON.parse(localStorage.getItem("studentInfo"));
-    const {data} = await axios.get(`/api/exams/student?id=${student._id}`,config);
+    const {data} = await axios.get(`/api/exams/student?id=${student._id}`, config);
     // const result = await axios.get(`api/submittions/student?id=${student._id}`);
     // const submittion = result.data;
     // submittion.forEach(function (sb) {

@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import {examListAction} from "../../../actions/ExamActions";
 import {useDispatch} from "react-redux";
 import ExamList from "./ExamList";

@@ -6,7 +6,6 @@ import {
 } from "../constants/StudentConstants";
 
 export const studentLoginReducer = (state = {}, action) => {
-  console.log(action.type)
   switch (action.type) {
     case STUDENT_LOGIN_REQUEST:
       return {loading: true};

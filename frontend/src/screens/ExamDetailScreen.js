@@ -1,9 +1,9 @@
-import React, {useState, useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import {Container, Row, Col, Button} from "react-bootstrap";
 import Answer from "../components/Answer";
 import QuestionList from "../components/QuestionList";
 import dsHocSinh from "../studentSample";
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
 import {postSubmittionAction} from "../actions/SubmittionActions";
 import Timer from "../components/Timer";
 
@@ -13,7 +13,8 @@ const ExamDetailScreen = ({match, history}) => {
   const hocsinh = dsHocSinh.find((hocsinh) => hocsinh.id === "1");
 
   const exam = JSON.parse(localStorage.getItem("temp"));
-  const submittion = JSON.parse(localStorage.getItem("submittion"));
+  const s = JSON.parse(localStorage.getItem("submittion"));
+  const [submittion, setSubmittion] = useState(s);
 
   const submitAnswersHandler = () => {
     dispatch(postSubmittionAction());
@@ -48,8 +49,12 @@ const ExamDetailScreen = ({match, history}) => {
         "submittion",
         JSON.stringify({De: idDe, SinhVien: sinhvien, DapAnSV: []})
       );
+      setSubmittion({De: idDe, SinhVien: sinhvien, DapAnSV: []})
     }
-  }, []);
+  }, [submittion]);
+  if(submittion==null){
+    return null
+  }
 
   return (
     <>
@@ -81,7 +86,7 @@ const ExamDetailScreen = ({match, history}) => {
                 className="btn btn-block"
                 onClick={submitAnswersHandler}
                 style={{marginTop: "2rem"}}
-                disabled={submittion && submittion.DapAnSV.length < exam[0].DSCH.length/2}
+                disabled={s && s.DapAnSV.length < exam[0].DSCH.length/2}
               >
                 Kết thúc bài thi
               </Button>

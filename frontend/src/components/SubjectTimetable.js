@@ -1,5 +1,5 @@
 import React from "react";
-import {Form,Col,Row,InputGroup,FormControl,Button,Dropdown,Table} from "react-bootstrap"
+import {Table} from "react-bootstrap"
 const SubjectTimetable = () =>{
 	return (
 		<Table striped bordered hover>
