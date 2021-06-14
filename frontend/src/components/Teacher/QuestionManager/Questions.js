@@ -2,12 +2,14 @@ import {Container, Table, Form, Button, Modal, Alert} from "react-bootstrap";
 import Announcement from "../../GlobalComponents/Announcement";
 import React, {useState, useEffect} from "react";
 import {
+  deleteQuestionAction,
   getQuestionListBySubjectAction,
 } from "../../../actions/QuestionActions";
 import {useSelector} from "react-redux";
 import {useDispatch} from "react-redux";
 import AddQuestionModal from "./AddQuestionModal";
 import QuestionDetails from "./QuestionDetails";
+import {DELETE_QUESTION_RESET} from "../../../constants/QuestionConstants";
 
 const Questions = ({idMH}) => {
   console.log("render")
@@ -17,6 +19,7 @@ const Questions = ({idMH}) => {
   );
   const questionCreate = useSelector((state) => state.questionCreate);
   const {questionCreated} = questionCreate;
+  const {loading:deleteLoading,error:deleteError,message} = useSelector(state=>state.deleteQuestion)
 
   const [show, setShow] = useState(false);
   const [detailsShow, setDetailsShow] = useState(false);
@@ -33,6 +36,10 @@ const Questions = ({idMH}) => {
   const showQuestionDetails=(q)=>{
     setDetailsShow(true)
     setQuestionDetails(q)
+  }
+
+  const deleteQuestion=(id)=>{
+    dispatch(deleteQuestionAction(id))
   }
 
   const scrollToQuestion = () => {
@@ -70,8 +77,11 @@ const Questions = ({idMH}) => {
   }, [dispatch, questionCreated, questions, scroll, opacity]);
 
   useEffect(() => {
-    dispatch(getQuestionListBySubjectAction(idMH));
-  }, [idMH]);
+      if(loading == null || message){
+        dispatch({type:DELETE_QUESTION_RESET})
+        dispatch(getQuestionListBySubjectAction(idMH));
+      }
+  }, [idMH,message]);
 
   return (
       <>
@@ -125,6 +135,7 @@ const Questions = ({idMH}) => {
             <th>ID</th>
             <th>Câu hỏi</th>
             <th style={{width: "20%"}}>Level</th>
+            <td/>
           </tr>
         </thead>
         <tbody>
@@ -136,6 +147,11 @@ const Questions = ({idMH}) => {
                 </td>
                 <td>{q.PhanHoi}</td>
                 <td>Very hard</td>
+                <td>
+                  <div className={"text-danger d-flex justify-content-center"}>
+                    <i className="fas fa-trash p-1" style={{cursor:"pointer"}} onClick={() => deleteQuestion(q._id)}/>
+                  </div>
+                </td>
               </tr>
             ))
             : ""}

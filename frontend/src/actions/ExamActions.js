@@ -10,7 +10,7 @@ import {
   CREATE_EXAM_FAIL,
   GET_EXAM_LIST_BY_STUDENT_REQUEST,
   GET_EXAM_LIST_BY_STUDENT_SUCCESS,
-  GET_EXAM_LIST_BY_STUDENT_FAIL,
+  GET_EXAM_LIST_BY_STUDENT_FAIL, DELETE_EXAM_REQUEST, DELETE_EXAM_SUCCESS, DELETE_EXAM_FAIL,
 } from "../constants/ExamConstants";
 import axios from "axios";
 
@@ -111,3 +111,19 @@ export const getExamListByStudentAction = () => async (dispatch, getState) => {
     });
   }
 };
+
+export const deleteExamAction=(id)=>async (dispatch)=>{
+  try{
+    dispatch({type:DELETE_EXAM_REQUEST})
+    const {data} = await axios.delete(`/api/exams/${id}`)
+    dispatch({type:DELETE_EXAM_SUCCESS,payload:data})
+  }catch (error){
+    dispatch({
+      type: DELETE_EXAM_FAIL,
+      payload:
+          error.response && error.response.data.message
+              ? error.response.data.message
+              : error.message,
+    });
+  }
+}

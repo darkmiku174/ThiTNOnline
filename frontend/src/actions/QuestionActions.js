@@ -8,9 +8,10 @@ import {
   QUESTION_CREATE_FAIL,
   QUESTION_LIST_BY_SUBJECT_REQUEST,
   QUESTION_LIST_BY_SUBJECT_SUCCESS,
-  QUESTION_LIST_BY_SUBJECT_FAIL,
+  QUESTION_LIST_BY_SUBJECT_FAIL, DELETE_QUESTION_REQUEST, DELETE_QUESTION_SUCCESS, DELETE_QUESTION_FAIL,
 } from "../constants/QuestionConstants";
 import axios from "axios";
+import {DELETE_EXAM_FAIL} from "../constants/ExamConstants";
 
 export const listQuestion = () => async (dispatch) => {
   try {
@@ -60,3 +61,19 @@ export const getQuestionListBySubjectAction = (input) => async (dispatch) => {
     });
   }
 };
+export const deleteQuestionAction=(id)=>async(dispatch)=>{
+  try{
+      dispatch({type:DELETE_QUESTION_REQUEST})
+    const {data} = await axios.delete(`/api/questions/${id}`)
+
+    dispatch({type:DELETE_QUESTION_SUCCESS,payload:data})
+  }catch(error){
+    dispatch({
+      type: DELETE_QUESTION_FAIL,
+      payload:
+          error.response && error.response.data.message
+              ? error.response.data.message
+              : error.message,
+    });
+  }
+}

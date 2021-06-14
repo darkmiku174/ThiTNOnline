@@ -12,6 +12,10 @@ import {
   QUESTION_LIST_BY_SUBJECT_REQUEST,
   QUESTION_LIST_BY_SUBJECT_SUCCESS,
   QUESTION_LIST_BY_SUBJECT_FAIL,
+  DELETE_QUESTION_REQUEST,
+  DELETE_QUESTION_SUCCESS,
+  DELETE_QUESTION_FAIL,
+  DELETE_QUESTION_RESET,
 } from "../constants/QuestionConstants";
 
 export const questionListReducer = (state = {questions: []}, action) => {
@@ -74,3 +78,18 @@ export const getQuestionListBySubjectReducer = (
       return state;
   }
 };
+
+export const deleteQuestionReducer = (state={},action)=>{
+  switch (action.type){
+    case DELETE_QUESTION_REQUEST:
+      return {loading:true}
+    case DELETE_QUESTION_SUCCESS:
+      return {loading:false,message:action.payload}
+    case DELETE_QUESTION_FAIL:
+      return {loading:false,error:action.payload}
+    case DELETE_QUESTION_RESET:
+      return {}
+    default:
+      return state
+  }
+}

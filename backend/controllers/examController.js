@@ -83,4 +83,14 @@ const getExamByStudent = asyncHandler(async (req, res) => {
   res.json(exams)
 })
 
-export {getExams, createExam, getExam, getExamByLecturer, getExamByStudent}
+const deleteExam = asyncHandler(async (req, res) => {
+  console.log(req.query)
+  const exam = await Exam.findByIdAndDelete(req.params.id)
+  if (exam) {
+    res.status(200).json({message: "Delete success"})
+  } else {
+    res.status(404).json({message: "Exam not found"})
+  }
+})
+
+export {getExams, createExam, getExam, getExamByLecturer, getExamByStudent, deleteExam}

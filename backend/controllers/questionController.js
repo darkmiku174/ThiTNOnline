@@ -21,4 +21,13 @@ const createQuestion = asyncHandler(async (req, res) => {
   res.json(question)
 })
 
-export {getQuestionList, getQuestion, getQuestionBySubjectRequest, createQuestion}
+const deleteQuestion = asyncHandler(async (req, res) => {
+  const question = await Question.findByIdAndDelete(req.params.id)
+  if (question) {
+    res.status(200).json({message: "Delete question success"})
+  } else {
+    res.status(404).json({message: "Question not found"})
+  }
+})
+
+export {getQuestionList, getQuestion, getQuestionBySubjectRequest, createQuestion, deleteQuestion}

@@ -1,7 +1,7 @@
 import {
   CREATE_EXAM_FAIL,
   CREATE_EXAM_REQUEST,
-  CREATE_EXAM_SUCCESS,
+  CREATE_EXAM_SUCCESS, DELETE_EXAM_FAIL, DELETE_EXAM_REQUEST, DELETE_EXAM_RESET, DELETE_EXAM_SUCCESS,
   EXAM_LIST_FAIL,
   EXAM_LIST_REQUEST,
   EXAM_LIST_SUCCESS,
@@ -80,3 +80,18 @@ export const getExamListBYStudentReducer = (state = { exams: [] }, action) => {
       return state;
   }
 };
+
+export const deleteExamReducer=(state={},action)=>{
+  switch (action.type){
+    case DELETE_EXAM_REQUEST:
+      return {loading:true}
+    case DELETE_EXAM_SUCCESS:
+      return {loading:false,message:action.payload}
+    case DELETE_EXAM_FAIL:
+      return {loading:false,error:action.payload}
+    case DELETE_EXAM_RESET:
+      return {}
+    default:
+      return state
+  }
+}

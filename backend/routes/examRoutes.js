@@ -1,5 +1,5 @@
 import express from 'express'
-import {getExams, createExam, getExam, getExamByLecturer, getExamByStudent} from '../controllers/examController.js'
+import {getExams, createExam, getExam, getExamByLecturer, getExamByStudent,deleteExam} from '../controllers/examController.js'
 import protect from '../middlewares/authMiddlewares.js'
 
 const router = express.Router()
@@ -11,6 +11,7 @@ router.get("/lecturer", getExamByLecturer)
 router.route("/student").get(protect, getExamByStudent)
 router.get('/', getExams)
 router.post("/", createExam)
-router.get('/:Id', getExam)
+// router.get('/:Id', getExam)
+router.route("/:id").get(getExam).delete(deleteExam)
 
 export default router

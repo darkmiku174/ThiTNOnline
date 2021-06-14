@@ -4,11 +4,15 @@ import {Alert, Modal, Table} from "react-bootstrap";
 import ExamDetail from "./ExamDetail";
 import ExamCallendar from "./ExamCallendar";
 import {ClipLoader} from "react-spinners";
+import {deleteExamAction, examListAction} from "../../../actions/ExamActions";
+import {DELETE_EXAM_RESET} from "../../../constants/ExamConstants";
 
 const ExamList = ({goToExam}) => {
+    console.log("render")
   const dispatch=useDispatch()
   const examList = useSelector((state) => state.examList);
   const {loading, error, exams} = examList;
+  const {loading:deleteLoading,error:deleteError,message} = useSelector(state=>state.deleteExam)
 
   const [currentPage, setCurrentPage] = useState(0);
   const [pages, setPages] = useState([]);
@@ -22,6 +26,11 @@ const ExamList = ({goToExam}) => {
     setShow(true)
     setExamDetails(ex)
   }
+
+  const deleteExam=(id)=>{
+    dispatch(deleteExamAction(id))
+  }
+
   let temp = [];
 
   useEffect(() => {
@@ -34,7 +43,11 @@ const ExamList = ({goToExam}) => {
       }
       setPages(temp);
     }
-  }, [exams]);
+    if(message){
+      dispatch({type:DELETE_EXAM_RESET})
+      dispatch(examListAction());
+    }
+  }, [exams,message]);
 
   return (
     <>
@@ -62,6 +75,7 @@ const ExamList = ({goToExam}) => {
         <th>Ngày thi</th>
         <th>Thời lượng</th>
         <th>Số câu hỏi</th>
+        <th/>
         </thead>
         <tbody>
       {pages[currentPage].map((ex) => (
@@ -76,6 +90,11 @@ const ExamList = ({goToExam}) => {
         <td>{ex.NgayThi ? ex.NgayThi.substring(0, 10) : ""}</td>
         <td>{ex.ThoiLuong ? ex.ThoiLuong : ""}</td>
         <td>{ex.DSCH.length}</td>
+          <td>
+            <div className={"text-danger d-flex justify-content-center"}>
+              <i className="fas fa-trash p-1" style={{cursor:"pointer"}} onClick={() => deleteExam(ex._id)}/>
+            </div>
+          </td>
         </tr>
         ))}
         </tbody>

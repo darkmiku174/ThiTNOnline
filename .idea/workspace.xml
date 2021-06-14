@@ -3,11 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="d6382c8a-d8b4-4be7-8a96-76625ce3f259" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Teacher/QuestionManager/AddQuestion.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Teacher/QuestionManager/QuestionTypes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controllers/examController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/examController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controllers/questionController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/questionController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/examRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/examRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/questionRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/questionRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/actions/ExamActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/actions/ExamActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/actions/QuestionActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/actions/QuestionActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Teacher/ExamManager/ExamList.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Teacher/ExamManager/ExamList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Teacher/QuestionManager/Questions.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Teacher/QuestionManager/Questions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Teacher/QuestionManager/SubjectQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Teacher/QuestionManager/SubjectQuestion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/constants/ExamConstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/constants/ExamConstants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/constants/QuestionConstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/constants/QuestionConstants.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/reducers/ExamReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/reducers/ExamReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/reducers/QuestionReducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/reducers/QuestionReducers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +90,7 @@
       <workItem from="1623586556499" duration="12006000" />
       <workItem from="1623612829700" duration="3088000" />
       <workItem from="1623616041219" duration="59000" />
-      <workItem from="1623616104503" duration="7227000" />
+      <workItem from="1623616104503" duration="11257000" />
     </task>
     <servers />
   </component>
