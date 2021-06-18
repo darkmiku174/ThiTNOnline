@@ -23,7 +23,7 @@ const ExamListScreen = () => {
       if(studentInfo && loading == null){
         dispatch(getExamListByStudentAction());
       }
-
+      console.log(exams);
       if(exams){
         exams.forEach(function(ex){
             const hour = ex.ThoiGian.split(":")[0]
@@ -38,14 +38,14 @@ const ExamListScreen = () => {
                 o.push({ ...ex,active:0 })
             }
         })
-          console.log(exams)
+          // console.log(exams)
           console.log(o)
           setTemp(o)
       }
   }, [dispatch,exams]);
 
   return (
-    <Container className="normal-container" fluid>
+    <Container className="normal-container" fluid style={{border:'3px solid black',borderRadius:'1rem',width:'95%',padding:'1rem'}}>
       {!studentInfo ?
           <Alert variant={"danger"} className={"mt-4"}>
             Vui lòng đăng nhập để làm bài kiểm tra
@@ -54,6 +54,7 @@ const ExamListScreen = () => {
       <Row className="parent-row">
         <Col className="left child-col">
           <Row className="exam-list child-row">
+         
             {
               !exams || exams.length === 0 ?
                   <Alert variant={"warning"}>

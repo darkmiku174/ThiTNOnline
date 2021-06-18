@@ -6,6 +6,7 @@ const BaiThi = ({ ex,disabled }) => {
   return (
     <Card className="card-exam" style={{ margin: "1.2rem 0" }}>
       <Card.Body>
+      {/*<Card.Title>{ex.CTMH.MonHoc.TenMH}</Card.Title>*/}
         {disabled ?
             <Card.Title>{ex.CTMH.MonHoc.TenMH}</Card.Title>
             :

@@ -18,7 +18,7 @@ const TeacherScreen = ({location, match, history}) => {
   return (
       <>
           {lecturerInfo != null || lecturerInfo ?
-    <Container className="normal-container" fluid>
+    <Container className="normal-container" fluid style={{padding:'2rem',paddingTop:'1rem'}}>
       <Row className="parent-row shadow">
         <Col className="w-25 child-col">
           <Row

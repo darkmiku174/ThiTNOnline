@@ -70,16 +70,24 @@ const getExamByLecturer = asyncHandler(async (req, res) => {
 
 const getExamByStudent = asyncHandler(async (req, res) => {
   const submittions = await Submittion.find({SinhVien: req.query.id})
+ 
   const exams = await Exam.find(
+
     {
       _id: {$nin: submittions.map(s => s.De)},
       NgayThi: new Date().toLocaleDateString(),
-    }).populate(
+    })
+    
+
+    .populate(
       {
         path: "CTMH",
         match: {DSSV: req.query.id},
         populate: {path: "MonHoc"}
-      }).populate({path: "DSCH", select: "-Diem -PhanLoai"})
+      })
+
+    .populate({path: "DSCH", select: "-Diem -PhanLoai"})
+  console.log(exams);
   res.json(exams)
 })
 

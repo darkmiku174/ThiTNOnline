@@ -3,7 +3,7 @@ import mongoose from 'mongoose'
 const peopleSchema = new mongoose.Schema({
   CMND: String,
   HoTen: String,
-  NgaySinh: Date,
+  NgaySinh: String,
   GioiTinh: Number,
   AnhDaiDien: String,
   GhiChu: String

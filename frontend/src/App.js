@@ -23,7 +23,7 @@ function App() {
       <Header />
       <section
         className="main-content"
-        style={{width: "90%", margin: "0 auto"}}
+        style={{width: "100%", margin: "0 auto"}}
       >
         <Route path="/test" component={TestScreen} exact />
         <Route path="/profile" component={ProfileScreen} exact />
@@ -37,6 +37,7 @@ function App() {
         <Route path="/components/pictureanswer" component={ImageAnswer} />
         <Route path="/giangvien/login" component={LecturerLoginScreen} exact />
         <Route path={"/components/fillinblank"} component={FillInBlankQuestion} exact />
+
       </section>
     </Router>
   );

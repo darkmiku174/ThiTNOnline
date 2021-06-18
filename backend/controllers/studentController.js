@@ -5,6 +5,7 @@ import generateToken from '../ultils/generateToken.js'
 
 const getStudentList = asyncHandler(async (req, res) => {
   const students = await Student.find()
+
   res.json(students)
 })
 
@@ -14,7 +15,9 @@ const getStudent = asyncHandler(async (req, res) => {
 })
 
 const authStudent = asyncHandler(async (req, res) => {
-  const people = await People.findOne({CMND: req.query.cmnd})
+  const people = await People.findOne({CMND:req.query.cmnd})
+
+    console.log(req.query.cmnd);
   if (!people) {
     res.status(404)
     res.json({message: "User not found"})

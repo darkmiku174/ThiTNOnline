@@ -24,13 +24,16 @@ const Header = (props) => {
         bg="primary"
         expand="lg"
         style={{
-          width: "90%",
+          padding:'2rem',
+          width: "100%",
           margin: "auto",
           boxShadow: "none",
+          height:'4rem',
+          
           display: "flex", justifyContent: "space-between"
         }}
       >
-        <Navbar.Brand href="/">React-Bootstrap </Navbar.Brand>
+        <Navbar.Brand href="/"><img src="https://i.imgur.com/WjXsoar.png" style={{width:'3rem',height:'3rem'}} alt="huflit"/> </Navbar.Brand>
         <DropdownMenu pushToHome={pushToHome} pathname={pathname} redirectToProfile={redirectToProfile}/>
       </Navbar>
       {pathname == "/giangvien/login" ? "" : pathname == "/" ? "" : <Breadscrumbs />}

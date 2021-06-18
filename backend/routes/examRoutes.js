@@ -8,10 +8,10 @@ const router = express.Router()
 // tẩt cả các controller phải nằm trong file controlLErs
 // Tránh việc phải chạy qua lại giữa các file
 router.get("/lecturer", getExamByLecturer)
-router.route("/student").get(protect, getExamByStudent)
+router.route("/student").get( getExamByStudent)
 router.get('/', getExams)
 router.post("/", createExam)
-// router.get('/:Id', getExam)
+router.get('/:Id', getExam)
 router.route("/:id").get(getExam).delete(deleteExam)
 
 export default router

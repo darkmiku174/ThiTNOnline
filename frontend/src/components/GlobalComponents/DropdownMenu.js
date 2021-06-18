@@ -43,7 +43,7 @@ function DropdownMenu({pushToHome,pathname,redirectToProfile}) {
         <div className="profile-img">
           <img src={user.AnhDaiDien} />
         </div>
-        <div className="text-primary ">{user.HoTen}</div>
+        <div className="text-primary"  style={{width:'8rem'}}>{user.HoTen}</div>
       </div>
       {open ?
         <div className="drop-down-body bg-primary shadow">
