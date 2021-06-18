@@ -32,10 +32,10 @@ const AddExam = () => {
             padding: "1.2rem",
           }}
         >
-            <div className={"d-flex justify-content-between"}>
-                <AddExamSubjectList />
-                <TotalQuestion/>
-            </div>
+          <div className={"d-flex justify-content-between"}>
+            <AddExamSubjectList />
+            <TotalQuestion />
+          </div>
           <AddExamQuestionList handleClose={handleClose} />
         </div>
       </Modal>

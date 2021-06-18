@@ -4,7 +4,7 @@ import People from '../models/peopleSchema.js'
 import generateToken from '../ultils/generateToken.js'
 
 const getStudentList = asyncHandler(async (req, res) => {
-  const students = await Student.find()
+  const students = await Student.find({})
   res.json(students)
 })
 

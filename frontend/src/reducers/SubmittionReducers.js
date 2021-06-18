@@ -9,32 +9,40 @@ import {
 export const postSubmittionReducer = (state = {}, action) => {
   switch (action.type) {
     case POST_SUBMITTION_REQUEST:
-      return { loading: true };
+      return {loading: true};
     case POST_SUBMITTION_SUCESS:
-      return { loading: false, postedSubmittion: action.payload };
+      return {loading: false, postedSubmittion: action.payload};
     case POST_SUBMITTION_FAIL:
-      return { loading: false, error: action.payload };
+      return {loading: false, error: action.payload};
     default:
       return state;
   }
 };
 
-export const changeQuestionIndex = (state = { questionIndex: 0 }, action) => {
+export const changeQuestionIndex = (state = {questionIndex: 0}, action) => {
   if (action.type === "CHANGE_QUESTION_INDEX") {
-    return { questionIndex: action.payload };
+    return {questionIndex: action.payload};
   }
   return state;
 };
 
-export const getStudentSubmittionReducer=(state={},action)=>{
-  switch (action.type){
+export const getStudentSubmittionReducer = (state = {}, action) => {
+  switch (action.type) {
     case GET_STUDENT_SUBMITTIONS_REQUEST:
-      return {loading:true}
+      return {loading: true}
     case GET_STUDENT_SUBMITTIONS_SUCCESS:
-      return {loading:false,submittions:action.payload}
+      return {loading: false, submittions: action.payload}
     case GET_STUDENT_SUBMITTIONS_FAIL:
-      return {loading:false,error:action.payload}
+      return {loading: false, error: action.payload}
     default:
       return state
   }
+}
+
+export const studentDidQuestionReducer = (state = {}, action) => {
+  if (action.type === "STUDENT_DID_QUESTION") {
+    const submittion = JSON.parse(localStorage.getItem("submittion"))
+    return {submittion: submittion}
+  }
+  return state
 }

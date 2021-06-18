@@ -19,17 +19,20 @@ const getSubjectDetails = asyncHandler(async (req, res) => {
     })
     .populate("MonHoc")
   const subjectDetailsActive = []
+
   subjectDetails.forEach(function (s) {
     if (new Date(s.KhoaHoc).getFullYear() !== new Date().getFullYear()) {
       return;
     }
-    if (new Date(s.KhoaHoc).getMonth() > 5 - new Date().getMonth()) {
+    const isActive = new Date().getMonth() - new Date(s.KhoaHoc).getMonth()
+    if (isActive < 0 || isActive > 5) {
       return;
     }
     subjectDetailsActive.push(s)
   })
   res.json(subjectDetailsActive)
 })
+
 
 // const getSubjectDetail = asyncHandler(async (req, res) => {
 //   const subjectDetail = await SubjectDetail.findById(req.params.Id)

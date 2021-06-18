@@ -80,6 +80,7 @@ const getExamByStudent = asyncHandler(async (req, res) => {
         match: {DSSV: req.query.id},
         populate: {path: "MonHoc"}
       }).populate({path: "DSCH", select: "-Diem -PhanLoai"})
+  console.log(exams)
   res.json(exams)
 })
 

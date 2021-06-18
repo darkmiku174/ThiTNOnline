@@ -1,6 +1,7 @@
 import {
   CREATE_EXAM_FAIL,
   CREATE_EXAM_REQUEST,
+  CREATE_EXAM_RESET,
   CREATE_EXAM_SUCCESS, DELETE_EXAM_FAIL, DELETE_EXAM_REQUEST, DELETE_EXAM_RESET, DELETE_EXAM_SUCCESS,
   EXAM_LIST_FAIL,
   EXAM_LIST_REQUEST,
@@ -14,14 +15,14 @@ import {
 } from "../constants/ExamConstants";
 import {STUDENT_LOGOUT} from "../constants/StudentConstants";
 
-export const examListReducer = (state = { exams: [] }, action) => {
+export const examListReducer = (state = {exams: []}, action) => {
   switch (action.type) {
     case EXAM_LIST_REQUEST:
-      return { loading: true };
+      return {loading: true};
     case EXAM_LIST_SUCCESS:
-      return { loading: false, exams: action.payload };
+      return {loading: false, exams: action.payload};
     case EXAM_LIST_FAIL:
-      return { loading: false, error: action.payload };
+      return {loading: false, error: action.payload};
     case STUDENT_LOGOUT:
       return {}
     default:
@@ -29,14 +30,14 @@ export const examListReducer = (state = { exams: [] }, action) => {
   }
 };
 
-export const examReducer = (state = { exam: {} }, action) => {
+export const examReducer = (state = {exam: {}}, action) => {
   switch (action.type) {
     case GET_EXAM_REQUEST:
-      return { loading: true };
+      return {loading: true};
     case GET_EXAM_SUCCESS:
-      return { loading: false, exam: action.payload };
+      return {loading: false, exam: action.payload};
     case GET_EXAM_FAIL:
-      return { loading: false, error: action.payload };
+      return {loading: false, error: action.payload};
     case STUDENT_LOGOUT:
       return {}
     default:
@@ -47,33 +48,35 @@ export const examReducer = (state = { exam: {} }, action) => {
 export const tempExamReducer = (state = {}, action) => {
   switch (action.type) {
     case "ADD_TEMP_EXAM":
-      return { tempExam: { ...state.tempExam, ...action.payload } };
+      return {tempExam: {...state.tempExam, ...action.payload}};
     default:
       return state ? state : "";
   }
 };
 
-export const createExamReducer = (state = { exam: {} }, action) => {
+export const createExamReducer = (state = {exam: {}}, action) => {
   switch (action.type) {
     case CREATE_EXAM_REQUEST:
-      return { loading: true };
+      return {loading: true};
     case CREATE_EXAM_SUCCESS:
-      return { loading: false, exam: action.payload };
+      return {loading: false, exam: action.payload};
     case CREATE_EXAM_FAIL:
-      return { loading: false, errro: action.payload };
+      return {loading: false, errro: action.payload};
+    case CREATE_EXAM_RESET:
+      return {}
     default:
       return state;
   }
 };
 
-export const getExamListBYStudentReducer = (state = { exams: [] }, action) => {
+export const getExamListBYStudentReducer = (state = {exams: []}, action) => {
   switch (action.type) {
     case GET_EXAM_LIST_BY_STUDENT_REQUEST:
-      return { loading: true, exams: [] };
+      return {loading: true, exams: []};
     case GET_EXAM_LIST_BY_STUDENT_SUCCESS:
-      return { loading: false, exams: action.payload };
+      return {loading: false, exams: action.payload};
     case GET_EXAM_LIST_BY_STUDENT_FAIL:
-      return { loading: false, error: action.payload };
+      return {loading: false, error: action.payload};
     case STUDENT_LOGOUT:
       return {}
     default:
@@ -81,14 +84,14 @@ export const getExamListBYStudentReducer = (state = { exams: [] }, action) => {
   }
 };
 
-export const deleteExamReducer=(state={},action)=>{
-  switch (action.type){
+export const deleteExamReducer = (state = {}, action) => {
+  switch (action.type) {
     case DELETE_EXAM_REQUEST:
-      return {loading:true}
+      return {loading: true}
     case DELETE_EXAM_SUCCESS:
-      return {loading:false,message:action.payload}
+      return {loading: false, message: action.payload}
     case DELETE_EXAM_FAIL:
-      return {loading:false,error:action.payload}
+      return {loading: false, error: action.payload}
     case DELETE_EXAM_RESET:
       return {}
     default:

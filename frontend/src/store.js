@@ -22,7 +22,7 @@ import {lecturerLoginReducer, updateLecturerInfoReducer} from "./reducers/Lectur
 import {studentLoginReducer} from "./reducers/StudentReducer";
 import {
   postSubmittionReducer,
-  changeQuestionIndex, getStudentSubmittionReducer,
+  changeQuestionIndex, getStudentSubmittionReducer, studentDidQuestionReducer,
 } from "./reducers/SubmittionReducers";
 
 const reducer = combineReducers({
@@ -42,21 +42,26 @@ const reducer = combineReducers({
   questionIndex: changeQuestionIndex,
   studentSubmittions: getStudentSubmittionReducer,
   updateLecturerInfo: updateLecturerInfoReducer,
-  deleteExam:deleteExamReducer,
-  deleteQuestion:deleteQuestionReducer
+  deleteExam: deleteExamReducer,
+  deleteQuestion: deleteQuestionReducer,
+  studentDidQuestion: studentDidQuestionReducer
 });
 
 const tempExamInitial = {
   DSCH: [],
 };
 
+const submittion = localStorage.getItem("submittion") ? JSON.parse(localStorage.getItem("submittion")) : null
+
 const studentInfoFromStorage = localStorage.getItem("studentInfo") ? JSON.parse(localStorage.getItem("studentInfo")) : null
 const lecturerInfoFromStorage = localStorage.getItem("lecturerInfo") ? JSON.parse(localStorage.getItem("lecturerInfo")) : null
+
 
 const initialState = {
   tempExam: {tempExam: tempExamInitial},
   studentLogin: {studentInfo: studentInfoFromStorage},
-  lecturerLogin: {lecturerInfo: lecturerInfoFromStorage}
+  lecturerLogin: {lecturerInfo: lecturerInfoFromStorage},
+  studentDidQuestion: {submittion: submittion}
 };
 
 const middleware = [thunk];

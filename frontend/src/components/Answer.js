@@ -36,21 +36,22 @@ const Answer = ({exam}) => {
       });
     }
     localStorage.setItem("submittion", JSON.stringify(submittion));
+    dispatch({type: "STUDENT_DID_QUESTION"})
   };
 
   useEffect(() => {
     const current = exam[0].DSCH[questionIndex]
-      let isDone = null
-       submittion.DapAnSV.forEach(function(i){
-        if(i.CauHoi === current._id){
-          isDone=i.DapAn
-        }
-      })
+    let isDone = null
+    submittion.DapAnSV.forEach(function (i) {
+      if (i.CauHoi === current._id) {
+        isDone = i.DapAn
+      }
+    })
     const correctElment = Array.from(document.getElementsByClassName("correct-answer"))
     if (correctElment.length > 0) {
       correctElment.map(c => c.classList.remove("correct-answer"))
     }
-    if(isDone != null){
+    if (isDone != null) {
       document.getElementById(`normal-answer-${questionIndex}-${isDone}`).classList.add("correct-answer")
     }
   }, [question]);
@@ -61,12 +62,12 @@ const Answer = ({exam}) => {
         {
           question.PhanHoi.match(/[\/.](gif|jpg|jpeg|tiff|png)$/i)
             ?
-              <ImageQuestion question={question.PhanHoi}/>
-              :
-              question.PhanHoi.includes("@@")
+            <ImageQuestion question={question.PhanHoi} />
+            :
+            question.PhanHoi.includes("@@")
               ?
-                  <FillInBlankQuestion question={question}/>
-                  :
+              <FillInBlankQuestion question={question} />
+              :
               <h2 className="question">{question.PhanHoi}</h2>
         }
         {dsDapAn.map((d) => (
