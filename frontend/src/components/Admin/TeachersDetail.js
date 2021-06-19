@@ -1,120 +1,78 @@
-import React from 'react'
-import {Col,Row,Button,Form,Container} from 'react-bootstrap'
+import React, { Component } from 'react'
+import { Col, Row, Button, Form } from 'react-bootstrap'
+import axios from 'axios'
 
-const TeachersDetail = () => {
-  return(
-    <div>
-      <Row>
+class TeachersDetail extends Component {
 
-        <Col
-          md={4}
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
-          <img src="/images/user.png" style={{width: "90%"}} />
-        </Col>
+	constructor(props) {
+		super(props);
+		this.state = {
+			teacher: {}
+		}
+	}
 
-        <Col
-          md={4}
-          style={{
-            display: "flex",
-            flexDirection: "column",
-          }}
-        >
-         <Form inline>
-          <Form.Label>Mã GV: </Form.Label>
-          <Form.Control placeholder="GV0001" disabled />
-         </Form>
-          <Form inline>
-          <Form.Label>Họ và tên: </Form.Label>
-          <Form.Control placeholder="Trần Văn A" disabled />
-         </Form>
-          <Form inline>
-          <Form.Label>Giới tính: </Form.Label>
-          <Form.Control placeholder="Nam" disabled />
-         </Form>
-        </Col>
+	componentDidMount() {
+		axios({
+			method: 'GET',
+			url: 'http://localhost:5000/api/lecturers/detail/' + this.props.match.params.id,
+			data: null
+		}).then(res => {
+			console.log(res);
+			this.setState({
+				teacher: res.data
+			});
+		}).catch(err => {
+			console.log(err);
+		})
+	}
 
-         <Col
-          md={4}
-          style={{
-            display: "flex",
-            flexDirection: "column",
-          }}
-        >
-         <Form inline>
-          <Form.Label>Email trường: </Form.Label>
-          <Form.Control placeholder="avc@huflit.edu.vn " disabled />
-         </Form>
-        </Col>
+	render() {
+		var { teacher } = this.state
+		return (
+			<div>
+				<Row>
 
-      </Row>
+					<Col
+						md={4}
+						style={{
+							display: "flex",
+							flexDirection: "column",
+							alignItems: "center",
+						}}
+					>
+						<img src={teacher.People?.AnhDaiDien} style={{ width: "90%" }} />
+					</Col>
 
-      <Row style={{marginTop:'1rem'}}>
-        <Col md={6}  
-          style={{
-            display: "flex",
-            flexDirection: "column",
+					<Col
+						md={4}
+						style={{
+							display: "flex",
+							flexDirection: "column",
+						}}
+					>
+						<Form inline>
+							<Form.Label>Mã GV: </Form.Label>
+							<Form.Control placeholder="GV0001" value={teacher._id} disabled />
+						</Form>
+						<Form inline>
+							<Form.Label>Họ và tên: </Form.Label>
+							<Form.Control placeholder="Trần Văn A" value={teacher.People?.HoTen} disabled />
+						</Form>
+						<Form inline>
+							<Form.Label>Giới tính: </Form.Label>
+							<Form.Control placeholder="Nam" value={teacher.People?.GioiTinh == 1 ? "Nam" : "Nữ"} disabled />
+						</Form>
+						<Form inline>
+							<Form.Label>Ngày sinh: </Form.Label>
+							<Form.Control placeholder="01/01/2000" value={teacher.People?.NgaySinh} disabled />
+						</Form>
+					</Col>
 
-          }}>
-          <h4 style={{borderBottom: "2px solid black"}}>Thông tin giảng dạy</h4>
-          <Form inline>
-            <Form.Label>Chức vụ: </Form.Label>
-            <Form.Label style={{marginLeft:'1rem'}}>Giảng viên </Form.Label>
-           </Form>
-           <Form inline>
-            <Form.Label>Lớp phụ trách: </Form.Label>
-            <a href="#" style={{marginLeft:'1rem'}}>Chi tiết</a>
-           </Form>
-           <Form inline>
-            <Form.Label>Môn giảng dạy: </Form.Label>
-            <a href="#" style={{marginLeft:'1rem'}}>Chi tiết</a>
-           </Form>
-          <Form inline>
-            <Form.Label>Ngày vào đảng: </Form.Label>
-            <Form.Label style={{marginLeft:'1rem'}}>23/4/2018</Form.Label>
-           </Form>
-           <Form inline>
-            <Form.Label>Thời gian công tác: </Form.Label>
-            <Form.Label style={{marginLeft:'1rem'}}>3 năm </Form.Label>
-           </Form>
-          
-        </Col>
+				</Row>
 
-        <Col md={6}  
-          style={{
-            display: "flex",
-            flexDirection: "column",
-          }}>
-          <h4 style={{borderBottom: "2px solid black"}}>Thông tin Liên lạc</h4>
-          <Form inline>
-            <Form.Label>Tôn giáo: </Form.Label>
-            <Form.Label style={{marginLeft:'1rem'}}>Trúa </Form.Label>
-           </Form>
-           <Form inline>
-            <Form.Label>Dân tộc: </Form.Label>
-            <Form.Label style={{marginLeft:'1rem'}}>Kinh </Form.Label>
-           </Form>
-           <Form inline>
-            <Form.Label>Địa chỉ: </Form.Label>
-            <Form.Label style={{marginLeft:'1rem'}}>214/5,Q10,TP.HCM </Form.Label>
-           </Form>
-           <Form inline>
-            <Form.Label>SĐT: </Form.Label>
-            <Form.Label style={{marginLeft:'1rem'}}>1900068696 </Form.Label>
-           </Form>
-
-        </Col>
-      </Row>
-      <Row style={{marginTop:'2rem'}}>
-        <Button style={{marginLeft:'40%'}}>Thay đổi</Button>
-      </Row>
-
-    </div>
-  );
+			</div>
+		);
+	}
 };
 
 export default TeachersDetail;

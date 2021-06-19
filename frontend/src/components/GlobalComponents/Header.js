@@ -1,15 +1,5 @@
-import React, { useState, useEffect } from "react";
-import {
-  Navbar,
-  Nav,
-  Image,
-  NavDropdown,
-  Form,
-  FormControl,
-  Button,
-  Container,
-} from "react-bootstrap";
-import { LinkContainer } from "react-router-bootstrap";
+import React from "react";
+import {Navbar, Nav} from "react-bootstrap";
 import { Link, withRouter } from "react-router-dom";
 import Breadscrumbs from "./Breadscrumbs";
 
@@ -38,7 +28,7 @@ const Header = (props) => {
           <Nav className="ml-auto">
             <Nav.Link href="/profile" className="expand">
               <Navbar.Text>
-                <i className="fas fa-user"/> Profile{" "}
+                <i className="fas fa-user" /> Profile{" "}
               </Navbar.Text>
             </Nav.Link>
           </Nav>
